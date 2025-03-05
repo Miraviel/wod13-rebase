@@ -45,8 +45,6 @@
 	description = "Powered suits for protection against low-humor environments."
 	prereq_ids = list(TECHWEB_NODE_MOD_SUIT)
 	design_ids = list(
-		"mod_plating_cosmohonk",
-		"mod_bikehorn",
 		"mod_microwave_beam",
 		"mod_waddle",
 	)

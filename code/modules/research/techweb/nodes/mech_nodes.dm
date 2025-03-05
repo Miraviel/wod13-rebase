@@ -38,31 +38,6 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SCIENCE)
 
-/datum/techweb_node/mech_clown
-	id = TECHWEB_NODE_MECH_CLOWN
-	display_name = "Funny Robots"
-	description = "Fueled by laughter."
-	prereq_ids = list(TECHWEB_NODE_MECH_ASSEMBLY)
-	design_ids = list(
-		"honk_chassis",
-		"honk_torso",
-		"honk_head",
-		"honk_left_arm",
-		"honk_right_arm",
-		"honk_left_leg",
-		"honk_right_leg",
-		"honker_main",
-		"honker_peri",
-		"honker_targ",
-		"mech_banana_mortar",
-		"mech_honker",
-		"mech_mousetrap_mortar",
-		"mech_punching_face",
-		"borg_transform_clown",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
-	announce_channels = list(RADIO_CHANNEL_SCIENCE, RADIO_CHANNEL_SECURITY) //The dread upon security when they hear this...
-
 /datum/techweb_node/mech_medical
 	id = TECHWEB_NODE_MECH_MEDICAL
 	display_name = "Medical Exosuit"
