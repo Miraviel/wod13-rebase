@@ -500,35 +500,6 @@
 	icon_state = "foodtray"
 	desc = "A cheap metal tray to pile today's meal onto."
 
-/*
- * Chemistry bag
- */
-
-/obj/item/storage/bag/chemistry
-	name = "chemistry bag"
-	icon = 'icons/obj/medical/chemical.dmi'
-	icon_state = "bag"
-	worn_icon_state = "chembag"
-	desc = "A bag for storing pills, patches, and bottles."
-	resistance_flags = FLAMMABLE
-
-/obj/item/storage/bag/chemistry/Initialize(mapload)
-	. = ..()
-	atom_storage.max_total_storage = 200
-	atom_storage.max_slots = 50
-	atom_storage.set_holdable(list(
-		/obj/item/reagent_containers/chem_pack,
-		/obj/item/reagent_containers/dropper,
-		/obj/item/reagent_containers/cup/glass/waterbottle,
-		/obj/item/reagent_containers/cup/beaker,
-		/obj/item/reagent_containers/cup/bottle,
-		/obj/item/reagent_containers/cup/tube,
-		/obj/item/reagent_containers/medigel,
-		/obj/item/reagent_containers/pill,
-		/obj/item/reagent_containers/syringe,
-	))
-
-
 /obj/item/storage/bag/bio
 	name = "bio bag"
 	icon = 'icons/obj/medical/chemical.dmi'

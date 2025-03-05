@@ -73,52 +73,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 /obj/item/vending_refill/wardrobe/sec_wardrobe
 	machine_name = "SecDrobe"
 
-/obj/machinery/vending/wardrobe/medi_wardrobe
-	name = "\improper MediDrobe"
-	desc = "A vending machine rumoured to be capable of dispensing clothing for medical personnel."
-	icon_state = "medidrobe"
-	product_ads = "Make those blood stains look fashionable!!"
-	vend_reply = "Thank you for using the MediDrobe!"
-	products = list(
-		/obj/item/clothing/accessory/pocketprotector = 4,
-		/obj/item/clothing/head/costume/nursehat = 4,
-		/obj/item/clothing/head/beret/medical = 4,
-		/obj/item/clothing/head/utility/surgerycap = 4,
-		/obj/item/clothing/head/utility/surgerycap/purple = 4,
-		/obj/item/clothing/head/utility/surgerycap/green = 4,
-		/obj/item/clothing/head/beret/medical/paramedic = 4,
-		/obj/item/clothing/head/soft/paramedic = 4,
-		/obj/item/clothing/head/utility/head_mirror = 4,
-		/obj/item/clothing/mask/bandana/striped/medical = 4,
-		/obj/item/clothing/mask/surgical = 4,
-		/obj/item/clothing/under/rank/medical/doctor = 4,
-		/obj/item/clothing/under/rank/medical/doctor/skirt = 4,
-		/obj/item/clothing/under/rank/medical/scrubs/blue = 4,
-		/obj/item/clothing/under/rank/medical/scrubs/green = 4,
-		/obj/item/clothing/under/rank/medical/scrubs/purple = 4,
-		/obj/item/clothing/under/rank/medical/paramedic = 4,
-		/obj/item/clothing/under/rank/medical/paramedic/skirt = 4,
-		/obj/item/clothing/suit/toggle/labcoat = 4,
-		/obj/item/clothing/suit/toggle/labcoat/paramedic = 4,
-		/obj/item/clothing/suit/apron/surgical = 4,
-		/obj/item/clothing/suit/hooded/wintercoat/medical = 4,
-		/obj/item/clothing/suit/hooded/wintercoat/medical/paramedic = 4,
-		/obj/item/clothing/shoes/sneakers/white = 4,
-		/obj/item/clothing/shoes/sneakers/blue = 4,
-		/obj/item/clothing/gloves/latex/nitrile = 4,
-		/obj/item/clothing/gloves/latex = 4,
-		/obj/item/storage/backpack/duffelbag/med = 4,
-		/obj/item/storage/backpack/medic = 4,
-		/obj/item/storage/backpack/satchel/med = 4,
-		/obj/item/storage/backpack/messenger/med = 4,
-		/obj/item/radio/headset/headset_med = 4,
-	)
-	refill_canister = /obj/item/vending_refill/wardrobe/medi_wardrobe
-	payment_department = ACCOUNT_MED
-
-/obj/item/vending_refill/wardrobe/medi_wardrobe
-	machine_name = "MediDrobe"
-
 /obj/machinery/vending/wardrobe/robo_wardrobe
 	name = "RoboDrobe"
 	desc = "A vending machine designed to dispense clothing known only to roboticists."
@@ -448,37 +402,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 /obj/item/vending_refill/wardrobe/chap_wardrobe
 	machine_name = "DeusVend"
 
-/obj/machinery/vending/wardrobe/chem_wardrobe
-	name = "ChemDrobe"
-	desc = "A vending machine for dispensing chemistry related clothing."
-	icon_state = "chemdrobe"
-	product_ads = "Our clothes are 0.5% more resistant to acid spills! Get yours now!"
-	vend_reply = "Thank you for using the ChemDrobe!"
-	products = list(
-		/obj/item/clothing/head/beret/medical = 2,
-		/obj/item/clothing/under/rank/medical/chemist = 2,
-		/obj/item/clothing/under/rank/medical/chemist/skirt = 2,
-		/obj/item/clothing/suit/toggle/labcoat/chemist = 2,
-		/obj/item/clothing/suit/hooded/wintercoat/medical/chemistry = 2,
-		/obj/item/clothing/gloves/latex = 2,
-		/obj/item/clothing/shoes/sneakers/white = 2,
-		/obj/item/storage/backpack/chemistry = 2,
-		/obj/item/storage/backpack/satchel/chem = 2,
-		/obj/item/storage/backpack/duffelbag/chemistry = 2,
-		/obj/item/storage/backpack/messenger/chem = 2,
-		/obj/item/storage/bag/chemistry = 2,
-		/obj/item/ph_booklet = 3,
-		/obj/item/radio/headset/headset_med = 2,
-	)
-	contraband = list(
-		/obj/item/reagent_containers/spray/syndicate = 2,
-	)
-	refill_canister = /obj/item/vending_refill/wardrobe/chem_wardrobe
-	payment_department = ACCOUNT_MED
-
-/obj/item/vending_refill/wardrobe/chem_wardrobe
-	machine_name = "ChemDrobe"
-
 /obj/machinery/vending/wardrobe/gene_wardrobe
 	name = "GeneDrobe"
 	desc = "A machine for dispensing clothing related to genetics."
@@ -503,33 +426,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 
 /obj/item/vending_refill/wardrobe/gene_wardrobe
 	machine_name = "GeneDrobe"
-
-/obj/machinery/vending/wardrobe/viro_wardrobe
-	name = "ViroDrobe"
-	desc = "An unsterilized machine for dispensing virology related clothing."
-	icon_state = "virodrobe"
-	product_ads = " Viruses getting you down? Then upgrade to sterilized clothing today!"
-	vend_reply = "Thank you for using the ViroDrobe"
-	products = list(
-		/obj/item/clothing/mask/surgical = 2,
-		/obj/item/clothing/under/rank/medical/virologist = 2,
-		/obj/item/clothing/under/rank/medical/virologist/skirt = 2,
-		/obj/item/clothing/head/beret/medical = 2,
-		/obj/item/clothing/shoes/sneakers/white = 2,
-		/obj/item/clothing/suit/toggle/labcoat/virologist = 2,
-		/obj/item/clothing/suit/hooded/wintercoat/medical/viro = 2,
-		/obj/item/clothing/gloves/latex = 2,
-		/obj/item/storage/backpack/virology = 2,
-		/obj/item/storage/backpack/satchel/vir = 2,
-		/obj/item/storage/backpack/duffelbag/virology = 2,
-		/obj/item/storage/backpack/messenger/vir = 2,
-		/obj/item/radio/headset/headset_med = 2,
-	)
-	refill_canister = /obj/item/vending_refill/wardrobe/viro_wardrobe
-	payment_department = ACCOUNT_MED
-
-/obj/item/vending_refill/wardrobe/viro_wardrobe
-	machine_name = "ViroDrobe"
 
 /obj/machinery/vending/wardrobe/det_wardrobe
 	name = "\improper DetDrobe"

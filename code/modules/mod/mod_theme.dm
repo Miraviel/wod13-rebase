@@ -501,7 +501,6 @@
 		/obj/item/stack/medical,
 		/obj/item/sensor_device,
 		/obj/item/storage/pill_bottle,
-		/obj/item/storage/bag/chemistry,
 		/obj/item/storage/bag/bio,
 	)
 	variants = list(
@@ -612,7 +611,6 @@
 		/obj/item/stack/medical,
 		/obj/item/sensor_device,
 		/obj/item/storage/pill_bottle,
-		/obj/item/storage/bag/chemistry,
 		/obj/item/storage/bag/bio,
 		/obj/item/melee/baton/telescopic,
 	)
@@ -1292,7 +1290,6 @@
 		/obj/item/shield/energy,
 		/obj/item/stack/medical,
 		/obj/item/storage/bag/bio,
-		/obj/item/storage/bag/chemistry,
 		/obj/item/storage/pill_bottle,
 	)
 	variants = list(

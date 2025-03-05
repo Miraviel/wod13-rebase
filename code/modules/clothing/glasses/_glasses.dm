@@ -115,40 +115,6 @@
 	hitsound = 'sound/items/weapons/bladeslice.ogg'
 	sharpness = SHARP_EDGED
 
-/obj/item/clothing/glasses/science
-	name = "science goggles"
-	desc = "A pair of snazzy goggles used to protect against chemical spills. Fitted with an analyzer for scanning items and reagents."
-	icon_state = "purple"
-	inhand_icon_state = "glasses"
-	glass_colour_type = /datum/client_colour/glass_colour/purple
-	flags_cover = GLASSESCOVERSEYES
-	resistance_flags = ACID_PROOF
-	armor_type = /datum/armor/glasses_science
-	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_RESEARCH_SCANNER)
-
-/datum/armor/glasses_science
-	fire = 80
-	acid = 100
-
-/obj/item/clothing/glasses/science/suicide_act(mob/living/carbon/user)
-	user.visible_message(span_suicide("[user] is tightening \the [src]'s straps around [user.p_their()] neck! It looks like [user.p_theyre()] trying to commit suicide!"))
-	return OXYLOSS
-
-/obj/item/clothing/glasses/science/night
-	name = "night vision science goggles"
-	desc = "Lets the user see in the dark and recognize chemical compounds at a glance."
-	icon_state = "scihudnight"
-	flash_protect = FLASH_PROTECTION_SENSITIVE
-	// Real vivid purple
-	color_cutoffs = list(30, 5, 15)
-	glass_colour_type = /datum/client_colour/glass_colour/lightpurple
-	actions_types = list(/datum/action/item_action/toggle_nv)
-	forced_glass_color = TRUE
-
-/obj/item/clothing/glasses/science/night/update_icon_state()
-	. = ..()
-	icon_state = length(color_cutoffs) ? initial(icon_state) : "night_off"
-
 /obj/item/clothing/glasses/night
 	name = "night vision goggles"
 	desc = "You can totally see in the dark now!"
@@ -377,7 +343,7 @@
 	add_glasses_slapcraft_component()
 
 /obj/item/clothing/glasses/sunglasses/proc/add_glasses_slapcraft_component()
-	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/hudsunsec, /datum/crafting_recipe/hudsunmed, /datum/crafting_recipe/hudsundiag, /datum/crafting_recipe/scienceglasses)
+	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/hudsunsec, /datum/crafting_recipe/hudsunmed, /datum/crafting_recipe/hudsundiag)
 
 	AddElement(
 		/datum/element/slapcrafting,\
@@ -389,20 +355,6 @@
 	icon_state = "sunhudbeer"
 	desc = "A pair of sunglasses outfitted with apparatus to scan reagents, as well as providing an innate understanding of liquid viscosity while in motion."
 	clothing_traits = list(TRAIT_BOOZE_SLIDER, TRAIT_REAGENT_SCANNER)
-
-/obj/item/clothing/glasses/sunglasses/chemical
-	name = "science glasses"
-	icon_state = "sunhudsci"
-	desc = "A pair of tacky purple sunglasses that allow the wearer to recognize various chemical compounds with only a glance."
-	clothing_traits = list(TRAIT_REAGENT_SCANNER, TRAIT_RESEARCH_SCANNER)
-
-/obj/item/clothing/glasses/sunglasses/chemical/add_glasses_slapcraft_component()
-	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/scienceglassesremoval)
-
-	AddElement(
-		/datum/element/slapcrafting,\
-		slapcraft_recipes = slapcraft_recipe_list,\
-	)
 
 /obj/item/clothing/glasses/sunglasses/gar
 	name = "black gar glasses"

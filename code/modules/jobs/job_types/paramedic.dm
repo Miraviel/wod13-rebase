@@ -51,7 +51,6 @@
 		/obj/item/emergency_bed = 1,
 		)
 	belt = /obj/item/storage/belt/medical/paramedic
-	ears = /obj/item/radio/headset/headset_med
 	head = /obj/item/clothing/head/soft/paramedic
 	gloves = /obj/item/clothing/gloves/latex/nitrile
 	shoes = /obj/item/clothing/shoes/sneakers/blue
@@ -63,6 +62,5 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/med
 	messenger = /obj/item/storage/backpack/messenger/med
 
-	box = /obj/item/storage/box/survival/medical
 	chameleon_extras = /obj/item/gun/syringe
 	pda_slot = ITEM_SLOT_LPOCKET

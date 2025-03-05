@@ -349,22 +349,6 @@
 	icon_state = "hood_cmo"
 	armor_type = /datum/armor/medical_cmo
 
-// Chemist
-/obj/item/clothing/suit/hooded/wintercoat/medical/chemistry
-	name = "chemistry winter coat"
-	desc = "A lab-grade winter coat made with acid resistant polymers. For the enterprising chemist who was exiled to a frozen wasteland on the go."
-	icon_state = "coatchemistry"
-	inhand_icon_state = null
-	hoodtype = /obj/item/clothing/head/hooded/winterhood/medical/chemistry
-
-/obj/item/clothing/suit/hooded/wintercoat/medical/chemistry/Initialize(mapload)
-	. = ..()
-	allowed += /obj/item/storage/bag/chemistry
-
-/obj/item/clothing/head/hooded/winterhood/medical/chemistry
-	desc = "A white winter coat hood."
-	icon_state = "hood_chemistry"
-
 // Coroner
 /obj/item/clothing/suit/hooded/wintercoat/medical/coroner
 	name = "coroner winter coat"

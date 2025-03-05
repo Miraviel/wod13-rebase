@@ -414,7 +414,6 @@ GLOBAL_LIST_INIT(phobia_objs, list(
 		/obj/item/ammo_casing,
 		/obj/item/gun/ballistic,
 		/obj/item/gun/blastcannon,
-		/obj/item/gun/chem,
 		/obj/item/gun/energy,
 		/obj/item/gun/grenadelauncher,
 		/obj/item/gun/syringe,

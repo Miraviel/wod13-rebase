@@ -55,11 +55,6 @@
 					chosen_type = /datum/bounty/reagent/simple_drink
 				else
 					chosen_type = /datum/bounty/reagent/complex_drink
-			if(CIV_JOB_CHEM)
-				if(prob(50))
-					chosen_type = /datum/bounty/reagent/chemical_simple
-				else
-					chosen_type = /datum/bounty/reagent/chemical_complex
 			if(CIV_JOB_VIRO)
 				chosen_type = pick(subtypesof(/datum/bounty/virus))
 			if(CIV_JOB_SCI)

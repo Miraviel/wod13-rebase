@@ -61,7 +61,6 @@
 					/obj/item/reagent_containers/cup/bottle/ethanol,
 					/obj/item/reagent_containers/cup/bottle/potassium,
 					/obj/item/reagent_containers/cup/bottle/sugar,
-					/obj/item/clothing/glasses/science,
 					/obj/item/reagent_containers/dropper,
 					/obj/item/storage/box/beakers,
 				)

@@ -63,26 +63,12 @@
 	greyscale_config = /datum/greyscale_config/encryptionkey_engineering
 	greyscale_colors = "#793a80#dca01b"
 
-/obj/item/encryptionkey/headset_med
-	name = "medical radio encryption key"
-	icon_state = "cypherkey_medical"
-	channels = list(RADIO_CHANNEL_MEDICAL = 1)
-	greyscale_config = /datum/greyscale_config/encryptionkey_medical
-	greyscale_colors = "#ebebeb#69abd1"
-
 /obj/item/encryptionkey/headset_sci
 	name = "science radio encryption key"
 	icon_state = "cypherkey_research"
 	channels = list(RADIO_CHANNEL_SCIENCE = 1)
 	greyscale_config = /datum/greyscale_config/encryptionkey_research
 	greyscale_colors = "#793a80#bc4a9b"
-
-/obj/item/encryptionkey/headset_medsci
-	name = "medical research radio encryption key"
-	icon_state = "cypherkey_medical"
-	channels = list(RADIO_CHANNEL_SCIENCE = 1, RADIO_CHANNEL_MEDICAL = 1)
-	greyscale_config = /datum/greyscale_config/encryptionkey_medical
-	greyscale_colors = "#ebebeb#9d1de8"
 
 /obj/item/encryptionkey/headset_srvsec
 	name = "law and order radio encryption key"
@@ -136,13 +122,6 @@
 	channels = list(RADIO_CHANNEL_ENGINEERING = 1, RADIO_CHANNEL_COMMAND = 1)
 	greyscale_config = /datum/greyscale_config/encryptionkey_engineering
 	greyscale_colors = "#dca01b#f8d860"
-
-/obj/item/encryptionkey/heads/cmo
-	name = "\proper the chief medical officer's encryption key"
-	icon_state = "cypherkey_medical"
-	channels = list(RADIO_CHANNEL_MEDICAL = 1, RADIO_CHANNEL_COMMAND = 1)
-	greyscale_config = /datum/greyscale_config/encryptionkey_medical
-	greyscale_colors = "#ebebeb#2b2793"
 
 /obj/item/encryptionkey/heads/hop
 	name = "\proper the head of personnel's encryption key"

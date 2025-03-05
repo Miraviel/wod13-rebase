@@ -119,13 +119,6 @@
 	new /obj/item/clothing/accessory/armband/science(src)
 	new /obj/item/encryptionkey/headset_sci(src)
 
-/obj/structure/closet/secure_closet/security/med
-
-/obj/structure/closet/secure_closet/security/med/PopulateContents()
-	..()
-	new /obj/item/clothing/accessory/armband/medblue(src)
-	new /obj/item/encryptionkey/headset_med(src)
-
 /obj/structure/closet/secure_closet/detective
 	name = "\improper detective's cabinet"
 	icon_state = "cabinet"

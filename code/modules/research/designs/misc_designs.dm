@@ -301,35 +301,6 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
 
-/datum/design/sci_goggles
-	name = "Science Goggles"
-	desc = "Goggles fitted with a portable analyzer capable of determining the research worth of an item or components of a machine."
-	id = "scigoggles"
-	build_type = PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/iron =SMALL_MATERIAL_AMOUNT*5, /datum/material/glass =SMALL_MATERIAL_AMOUNT*5)
-	build_path = /obj/item/clothing/glasses/science
-	category = list(
-		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_CHEMISTRY
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_MEDICAL
-
-/datum/design/nv_sci_goggles
-	name = "Night Vision Science Goggles"
-	desc = "Goggles that lets the user see in the dark and recognize chemical compounds at a glance."
-	id = "nv_scigoggles"
-	build_type = PROTOLATHE | AWAY_LATHE
-	materials = list(
-		/datum/material/iron = SMALL_MATERIAL_AMOUNT*6,
-		/datum/material/glass = SMALL_MATERIAL_AMOUNT*6,
-		/datum/material/plasma = SMALL_MATERIAL_AMOUNT*3.5,
-		/datum/material/uranium =HALF_SHEET_MATERIAL_AMOUNT,
-	)
-	build_path = /obj/item/clothing/glasses/science/night
-	category = list(
-		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_CHEMISTRY
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_MEDICAL
-
 /datum/design/roastingstick
 	name = "Advanced Roasting Stick"
 	desc = "A roasting stick for cooking sausages in exotic ovens."

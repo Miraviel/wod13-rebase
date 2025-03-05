@@ -170,7 +170,6 @@
 	gloves = /obj/item/clothing/gloves/latex
 	neck = /obj/item/clothing/neck/stethoscope
 	glasses = /obj/item/clothing/glasses/hud/health
-	mask = /obj/item/clothing/mask/breath/medical
 	faction = "Interdyne Pharmaceutics"
 
 /datum/outfit/syndicate/reinforcement/mi13

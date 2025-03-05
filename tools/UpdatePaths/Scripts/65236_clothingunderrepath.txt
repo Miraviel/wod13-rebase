@@ -147,8 +147,6 @@
 /obj/item/clothing/under/rank/geneticist/skirt : /obj/item/clothing/under/rank/rnd/geneticist/skirt
 /obj/item/clothing/under/rank/virologist : /obj/item/clothing/under/rank/medical/virologist
 /obj/item/clothing/under/rank/virologist/skirt : /obj/item/clothing/under/rank/medical/virologist/skirt
-/obj/item/clothing/under/rank/chemist : /obj/item/clothing/under/rank/medical/chemist
-/obj/item/clothing/under/rank/chemist/skirt : /obj/item/clothing/under/rank/medical/chemist/skirt
 
 /obj/item/clothing/under/rank/chief_engineer : /obj/item/clothing/under/rank/engineering/chief_engineer
 /obj/item/clothing/under/rank/chief_engineer/skirt : /obj/item/clothing/under/rank/engineering/chief_engineer/skirt

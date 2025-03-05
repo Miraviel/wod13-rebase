@@ -259,7 +259,6 @@
 	var/static/list/job_to_cybernetic = list(
 		/datum/job/assistant = /obj/item/organ/heart/cybernetic, //real cardiac
 		/datum/job/chaplain = /obj/item/organ/cyberimp/brain/anti_drop,
-		/datum/job/chemist = /obj/item/organ/liver/cybernetic/tier2,
 		/datum/job/chief_engineer = /obj/item/organ/cyberimp/chest/thrusters,
 		/datum/job/chief_medical_officer = /obj/item/organ/cyberimp/chest/reviver,
 		/datum/job/clown = /obj/item/organ/cyberimp/brain/anti_stun, //HONK!

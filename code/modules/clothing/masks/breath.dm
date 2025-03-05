@@ -31,14 +31,3 @@
 /obj/item/clothing/mask/breath/examine(mob/user)
 	. = ..()
 	. += span_notice("Alt-click [src] to adjust it.")
-
-/obj/item/clothing/mask/breath/medical
-	desc = "A close-fitting sterile mask that can be connected to an air supply."
-	name = "medical mask"
-	icon_state = "medical"
-	inhand_icon_state = "m_mask"
-	armor_type = /datum/armor/breath_medical
-	equip_delay_other = 10
-
-/datum/armor/breath_medical
-	bio = 90

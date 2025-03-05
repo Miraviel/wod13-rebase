@@ -169,18 +169,6 @@
 	contains = list(/obj/item/vending_refill/wardrobe/jani_wardrobe)
 	crate_name = "janidrobe supply crate"
 
-/datum/supply_pack/vending/wardrobes/medical
-	name = "Medical Wardrobe Supply Crate"
-	desc = "This crate contains refills for the MediDrobe, \
-		ChemDrobe, ViroDrobe, and MortiDrobe."
-	cost = CARGO_CRATE_VALUE * 6
-	contains = list(/obj/item/vending_refill/wardrobe/medi_wardrobe,
-					/obj/item/vending_refill/wardrobe/chem_wardrobe,
-					/obj/item/vending_refill/wardrobe/viro_wardrobe,
-					/obj/item/vending_refill/wardrobe/coroner_wardrobe,
-				)
-	crate_name = "medical department wardrobe supply crate"
-
 /datum/supply_pack/vending/wardrobes/science
 	name = "Science Wardrobe Supply Crate"
 	desc = "This crate contains refills for the SciDrobe, \

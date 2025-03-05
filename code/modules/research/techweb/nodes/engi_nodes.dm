@@ -253,7 +253,6 @@
 		"health_hud_night",
 		"night_visision_goggles",
 		"nvgmesons",
-		"nv_scigoggles",
 		"security_hud_night",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)

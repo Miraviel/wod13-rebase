@@ -63,7 +63,6 @@
 		/obj/item/melee/baton/telescopic/silver = 1,
 		)
 	belt = /obj/item/modular_computer/pda/heads/cmo
-	ears = /obj/item/radio/headset/heads/cmo
 	shoes = /obj/item/clothing/shoes/sneakers/blue
 	l_pocket = /obj/item/laser_pointer/blue
 	r_pocket = /obj/item/pinpointer/crew
@@ -74,7 +73,6 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/med
 	messenger = /obj/item/storage/backpack/messenger/med
 
-	box = /obj/item/storage/box/survival/medical
 	chameleon_extras = list(
 		/obj/item/gun/syringe,
 		/obj/item/stamp/head/cmo,
@@ -89,6 +87,5 @@
 	suit = null
 	head = null
 	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer
-	mask = /obj/item/clothing/mask/breath/medical
 	r_pocket = /obj/item/flashlight/pen/paramedic
 	internals_slot = ITEM_SLOT_SUITSTORE

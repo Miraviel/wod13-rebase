@@ -269,7 +269,6 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	keyslot2 = /obj/item/encryptionkey/headset_cargo
 /obj/item/radio/headset/headset_sec/alt/department/med
 	keyslot = /obj/item/encryptionkey/headset_sec
-	keyslot2 = /obj/item/encryptionkey/headset_med
 
 /obj/item/radio/headset/headset_sec/alt/department/sci
 	keyslot = /obj/item/encryptionkey/headset_sec

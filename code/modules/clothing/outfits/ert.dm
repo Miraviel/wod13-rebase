@@ -102,7 +102,6 @@
 	l_hand = /obj/item/storage/medkit/regular
 	r_hand = /obj/item/gun/energy/e_gun
 	l_pocket = /obj/item/healthanalyzer/advanced
-	additional_radio = /obj/item/encryptionkey/heads/cmo
 
 	skillchips = list(/obj/item/skillchip/entrails_reader)
 
@@ -523,8 +522,6 @@
 	)
 	belt = /obj/item/storage/belt/medical/paramedic
 	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
-	additional_radio = /obj/item/encryptionkey/heads/cmo
-
 
 	skillchips = list(/obj/item/skillchip/entrails_reader)
 
@@ -590,7 +587,6 @@
 	)
 	belt = /obj/item/storage/belt/medical/ert
 	glasses = /obj/item/clothing/glasses/hud/health/sunglasses
-	additional_radio = /obj/item/encryptionkey/heads/cmo
 	mask = /obj/item/clothing/mask/surgical
 	back = /obj/item/mod/control/pre_equipped/emergency_medical/corpsman
 	gloves = null
@@ -614,7 +610,6 @@
 	mask = /obj/item/clothing/mask/surgical
 	belt = /obj/item/storage/belt/medical/ert
 	glasses = /obj/item/clothing/glasses/hud/health
-	additional_radio = /obj/item/encryptionkey/heads/cmo
 	shoes = /obj/item/clothing/shoes/sneakers/blue
 	back = /obj/item/mod/control/pre_equipped/emergency_medical
 	gloves = null

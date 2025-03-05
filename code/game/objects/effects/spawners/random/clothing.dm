@@ -100,18 +100,6 @@
 	icon_state = "locker_clothing"
 	loot = list(
 		/obj/structure/closet/gmcloset,
-		/obj/structure/closet/chefcloset,
-		/obj/structure/closet/jcloset,
-		/obj/structure/closet/lawcloset,
-		/obj/structure/closet/wardrobe/chaplain_black,
-		/obj/structure/closet/wardrobe/red,
-		/obj/structure/closet/wardrobe/white/medical,
-		/obj/structure/closet/wardrobe/robotics_black,
-		/obj/structure/closet/wardrobe/chemistry_white,
-		/obj/structure/closet/wardrobe/genetics_white,
-		/obj/structure/closet/wardrobe/virology_white,
-		/obj/structure/closet/wardrobe/science_white,
-		/obj/structure/closet/wardrobe/curator,
 		/obj/structure/closet/wardrobe/pjs,
 	)
 
@@ -135,41 +123,9 @@
 	icon_state = "backpack"
 	loot = list(
 		/obj/item/storage/backpack,
-		/obj/item/storage/backpack/clown,
-		/obj/item/storage/backpack/explorer,
-		/obj/item/storage/backpack/mime,
-		/obj/item/storage/backpack/medic,
-		/obj/item/storage/backpack/security,
-		/obj/item/storage/backpack/chemistry,
-		/obj/item/storage/backpack/genetics,
-		/obj/item/storage/backpack/science,
-		/obj/item/storage/backpack/virology,
 		/obj/item/storage/backpack/satchel,
-		/obj/item/storage/backpack/satchel/leather,
-		/obj/item/storage/backpack/satchel/med,
-		/obj/item/storage/backpack/satchel/vir,
-		/obj/item/storage/backpack/satchel/chem,
-		/obj/item/storage/backpack/satchel/gen,
-		/obj/item/storage/backpack/satchel/science,
-		/obj/item/storage/backpack/satchel/sec,
-		/obj/item/storage/backpack/satchel/explorer,
 		/obj/item/storage/backpack/duffelbag,
-		/obj/item/storage/backpack/duffelbag/med,
-		/obj/item/storage/backpack/duffelbag/explorer,
-		/obj/item/storage/backpack/duffelbag/chemistry,
-		/obj/item/storage/backpack/duffelbag/genetics,
-		/obj/item/storage/backpack/duffelbag/science,
-		/obj/item/storage/backpack/duffelbag/virology,
-		/obj/item/storage/backpack/duffelbag/sec,
-		/obj/item/storage/backpack/duffelbag/clown,
-		/obj/item/storage/backpack/messenger,
-		/obj/item/storage/backpack/messenger/med,
-		/obj/item/storage/backpack/messenger/vir,
-		/obj/item/storage/backpack/messenger/chem,
-		/obj/item/storage/backpack/messenger/gen,
-		/obj/item/storage/backpack/messenger/science,
-		/obj/item/storage/backpack/messenger/sec,
-		/obj/item/storage/backpack/messenger/explorer,
+		/obj/item/storage/backpack/messenger
 	)
 
 /obj/effect/spawner/random/clothing/funny_hats

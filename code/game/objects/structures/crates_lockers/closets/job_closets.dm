@@ -174,25 +174,6 @@
 		new /obj/item/clothing/mask/bandana/skull/black(src)
 	return
 
-
-/obj/structure/closet/wardrobe/chemistry_white
-	name = "chemistry wardrobe"
-	icon_door = "chem_wardrobe"
-
-/obj/structure/closet/wardrobe/chemistry_white/PopulateContents()
-	var/static/items_inside = list(
-		/obj/item/clothing/under/rank/medical/chemist = 2,
-		/obj/item/clothing/shoes/sneakers/white = 2,
-		/obj/item/clothing/suit/toggle/labcoat/chemist = 2,
-		/obj/item/storage/backpack/chemistry = 2,
-		/obj/item/storage/backpack/satchel/chem = 2,
-		/obj/item/storage/backpack/messenger/chem = 2,
-		/obj/item/storage/backpack/duffelbag/chemistry = 2,
-		/obj/item/storage/bag/chemistry = 2)
-	generate_items_inside(items_inside,src)
-	return
-
-
 /obj/structure/closet/wardrobe/genetics_white
 	name = "genetics wardrobe"
 	icon_door = "gen_wardrobe"

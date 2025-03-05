@@ -386,19 +386,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /obj/item/clothing/accessory/medal/gold/captain/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/clothing/accessory/medal/gold/captain)
 
-/datum/objective_item/steal/hypo
-	name = "the hypospray"
-	targetitem = /obj/item/reagent_containers/hypospray/cmo
-	excludefromjob = list(JOB_CHIEF_MEDICAL_OFFICER)
-	item_owner = list(JOB_CHIEF_MEDICAL_OFFICER)
-	exists_on_map = TRUE
-	difficulty = 3
-	steal_hint = "The Chief Medical Officer's personal medical injector. \
-		Usually found amongst their medical supplies on their person, in their belt, or otherwise in their locker."
-
-/obj/item/reagent_containers/hypospray/cmo/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/reagent_containers/hypospray/cmo)
-
 /datum/objective_item/steal/nukedisc
 	name = "the nuclear authentication disk"
 	targetitem = /obj/item/disk/nuclear
@@ -545,17 +532,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 /obj/item/clothing/gloves/color/yellow/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/clothing/gloves/color/yellow)
-
-/datum/objective_item/steal/traitor/moth_plush
-	name = "a cute moth plush toy"
-	targetitem = /obj/item/toy/plush/moth
-	excludefromjob = list(JOB_PSYCHOLOGIST, JOB_PARAMEDIC, JOB_CHEMIST, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CORONER)
-	exists_on_map = TRUE
-	difficulty = 1
-	steal_hint = "A moth plush toy. The Psychologist has one to help console patients."
-
-/obj/item/toy/plush/moth/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/toy/plush/moth)
 
 /datum/objective_item/steal/traitor/lizard_plush
 	name = "a cute lizard plush toy"

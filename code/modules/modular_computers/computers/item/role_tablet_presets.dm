@@ -195,11 +195,6 @@
 		/datum/computer_file/program/radar/lifeline,
 	)
 
-/obj/item/modular_computer/pda/chemist
-	name = "chemist PDA"
-	greyscale_config = /datum/greyscale_config/tablet/stripe_thick
-	greyscale_colors = "#FAFAFA#355FAC#EA6400"
-
 /obj/item/modular_computer/pda/coroner
 	name = "coroner PDA"
 	greyscale_config = /datum/greyscale_config/tablet/stripe_thick

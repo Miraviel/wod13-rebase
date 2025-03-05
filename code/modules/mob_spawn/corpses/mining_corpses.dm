@@ -276,7 +276,6 @@
 			/obj/item/clothing/glasses/hud/diagnostic = 2,
 			/obj/item/clothing/glasses/hud/health = 2,
 			/obj/item/clothing/glasses/meson = 2,
-			/obj/item/clothing/glasses/science = 2,
 			/obj/item/clothing/glasses/welding = 2,
 			/obj/item/clothing/glasses/night = 1,
 		))

@@ -157,12 +157,6 @@
 	icon_state = "backpack-captain"
 	inhand_icon_state = "captainpack"
 
-/obj/item/storage/backpack/chemistry
-	name = "chemistry backpack"
-	desc = "A backpack specially designed to repel stains and hazardous liquids."
-	icon_state = "backpack-chemistry"
-	inhand_icon_state = "chempack"
-
 /obj/item/storage/backpack/genetics
 	name = "genetics backpack"
 	desc = "A bag designed to be super tough, just in case someone hulks out on you."
@@ -313,12 +307,6 @@
 	desc = "A sterile satchel with virologist colours."
 	icon_state = "satchel-virology"
 	inhand_icon_state = "satchel-vir"
-
-/obj/item/storage/backpack/satchel/chem
-	name = "chemist satchel"
-	desc = "A sterile satchel with chemist colours."
-	icon_state = "satchel-chemistry"
-	inhand_icon_state = "satchel-chem"
 
 /obj/item/storage/backpack/satchel/coroner
 	name = "coroner satchel"
@@ -524,12 +512,6 @@
 	desc = "A large duffel bag for holding extra exotic treasures."
 	icon_state = "duffel-explorer"
 	inhand_icon_state = "duffel-explorer"
-
-/obj/item/storage/backpack/duffelbag/chemistry
-	name = "chemistry duffel bag"
-	desc = "A large duffel bag for holding extra chemical substances."
-	icon_state = "duffel-chemistry"
-	inhand_icon_state = "duffel-chemistry"
 
 /obj/item/storage/backpack/duffelbag/genetics
 	name = "geneticist's duffel bag"
@@ -794,12 +776,6 @@
 	desc = "A sterile messenger bag with virologist colours, useful for deploying biohazards in record times."
 	icon_state = "messenger_virology"
 	inhand_icon_state = "messenger_virology"
-
-/obj/item/storage/backpack/messenger/chem
-	name = "chemist messenger bag"
-	desc = "A sterile messenger bag with chemist colours, good for getting to your alleyway deals on time."
-	icon_state = "messenger_chemistry"
-	inhand_icon_state = "messenger_chemistry"
 
 /obj/item/storage/backpack/messenger/coroner
 	name = "coroner messenger bag"

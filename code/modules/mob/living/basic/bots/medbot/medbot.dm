@@ -16,7 +16,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/bot/medbot
 
 	req_one_access = list(ACCESS_ROBOTICS, ACCESS_MEDICAL)
-	radio_key = /obj/item/encryptionkey/headset_med
+	//radio_key = /obj/item/encryptionkey/headset_med
 	radio_channel = RADIO_CHANNEL_MEDICAL
 	bot_type = MED_BOT
 	data_hud_type = DATA_HUD_MEDICAL_ADVANCED

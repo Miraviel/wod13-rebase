@@ -671,18 +671,15 @@
 		/obj/machinery/vending/wardrobe/bar_wardrobe = "BarDrobe",
 		/obj/machinery/vending/wardrobe/chap_wardrobe = "ChapDrobe",
 		/obj/machinery/vending/wardrobe/chef_wardrobe = "ChefDrobe",
-		/obj/machinery/vending/wardrobe/chem_wardrobe = "ChemDrobe",
 		/obj/machinery/vending/wardrobe/coroner_wardrobe = "MortiDrobe",
 		/obj/machinery/vending/wardrobe/curator_wardrobe = "CuraDrobe",
 		/obj/machinery/vending/wardrobe/det_wardrobe = "DetDrobe",
 		/obj/machinery/vending/wardrobe/gene_wardrobe = "GeneDrobe",
 		/obj/machinery/vending/wardrobe/jani_wardrobe = "JaniDrobe",
 		/obj/machinery/vending/wardrobe/law_wardrobe = "LawDrobe",
-		/obj/machinery/vending/wardrobe/medi_wardrobe = "MediDrobe",
 		/obj/machinery/vending/wardrobe/robo_wardrobe = "RoboDrobe",
 		/obj/machinery/vending/wardrobe/science_wardrobe = "SciDrobe",
 		/obj/machinery/vending/wardrobe/sec_wardrobe = "SecDrobe",
-		/obj/machinery/vending/wardrobe/viro_wardrobe = "ViroDrobe",
 	)
 
 /obj/item/circuitboard/machine/vendor/screwdriver_act(mob/living/user, obj/item/tool)

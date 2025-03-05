@@ -187,24 +187,6 @@
 	reqs = list(/obj/item/clothing/glasses/hud/diagnostic/sunglasses = 1)
 	category = CAT_EQUIPMENT
 
-/datum/crafting_recipe/scienceglasses
-	name = "Science Glasses"
-	result = /obj/item/clothing/glasses/sunglasses/chemical
-	time = 2 SECONDS
-	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	reqs = list(/obj/item/clothing/glasses/science = 1,
-				  /obj/item/clothing/glasses/sunglasses = 1,
-				  /obj/item/stack/cable_coil = 5)
-	category = CAT_EQUIPMENT
-
-/datum/crafting_recipe/scienceglassesremoval
-	name = "Chemical Scanner removal"
-	result = /obj/item/clothing/glasses/sunglasses
-	time = 2 SECONDS
-	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	reqs = list(/obj/item/clothing/glasses/sunglasses/chemical = 1)
-	category = CAT_EQUIPMENT
-
 /datum/crafting_recipe/ghostsheet
 	name = "Ghost Sheet"
 	result = /obj/item/clothing/suit/costume/ghost_sheet

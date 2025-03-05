@@ -198,26 +198,12 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	worn_icon_state = "rob_headset"
 	keyslot = /obj/item/encryptionkey/headset_rob
 
-/obj/item/radio/headset/headset_med
-	name = "medical radio headset"
-	desc = "A headset for the trained staff of the medbay."
-	icon_state = "med_headset"
-	worn_icon_state = "med_headset"
-	keyslot = /obj/item/encryptionkey/headset_med
-
 /obj/item/radio/headset/headset_sci
 	name = "science radio headset"
 	desc = "A sciency headset. Like usual."
 	icon_state = "sci_headset"
 	worn_icon_state = "sci_headset"
 	keyslot = /obj/item/encryptionkey/headset_sci
-
-/obj/item/radio/headset/headset_medsci
-	name = "medical research radio headset"
-	desc = "A headset that is a result of the mating between medical and science."
-	icon_state = "medsci_headset"
-	worn_icon_state = "medsci_headset"
-	keyslot = /obj/item/encryptionkey/headset_medsci
 
 /obj/item/radio/headset/headset_srvsec
 	name = "law and order headset"
@@ -305,13 +291,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	icon_state = "com_headset"
 	worn_icon_state = "com_headset"
 	keyslot = /obj/item/encryptionkey/heads/ce
-
-/obj/item/radio/headset/heads/cmo
-	name = "\proper the chief medical officer's headset"
-	desc = "The headset of the highly trained medical chief."
-	icon_state = "com_headset"
-	worn_icon_state = "com_headset"
-	keyslot = /obj/item/encryptionkey/heads/cmo
 
 /obj/item/radio/headset/heads/hop
 	name = "\proper the head of personnel's headset"

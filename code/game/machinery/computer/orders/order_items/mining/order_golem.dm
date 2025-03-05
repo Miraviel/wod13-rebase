@@ -5,10 +5,6 @@
 	purchase_path = /obj/item/card/id/advanced/mining
 	cost_per_order = 200
 
-/datum/orderable_item/golem/science_goggles
-	purchase_path = /obj/item/clothing/glasses/science
-	cost_per_order = 200
-
 /datum/orderable_item/golem/monkeycubes
 	purchase_path = /obj/item/food/monkeycube
 	cost_per_order = 250

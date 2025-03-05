@@ -51,7 +51,6 @@
 		/obj/item/bikehorn/rubberducky,
 		/obj/item/clothing/mask/surgical,
 		/obj/item/clothing/mask/breath,
-		/obj/item/clothing/mask/breath/medical,
 		/obj/item/surgical_drapes,
 		/obj/item/scalpel,
 		/obj/item/circular_saw,

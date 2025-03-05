@@ -45,13 +45,6 @@
 	else
 		DIRECT_OUTPUT(user, browse(WIKI_PAGE_IFRAME(wiki_url, page_link), "window=manual;size=[BOOK_WINDOW_BROWSE_SIZE]")) // if you change this GUARANTEE that it works.
 
-/obj/item/book/manual/wiki/chemistry
-	name = "Chemistry Textbook"
-	icon_state ="chemistrybook"
-	starting_author = "Nanotrasen"
-	starting_title = "Chemistry Textbook"
-	page_link = "Guide_to_chemistry"
-
 /obj/item/book/manual/wiki/engineering_construction
 	name = "Station Repairs and Construction"
 	icon_state ="bookEngineering"

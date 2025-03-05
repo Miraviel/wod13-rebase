@@ -108,7 +108,6 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		JOB_DETECTIVE = 17,
 		// 20-29: Medbay
 		JOB_CHIEF_MEDICAL_OFFICER = 20,
-		JOB_CHEMIST = 21,
 		JOB_MEDICAL_DOCTOR = 22,
 		JOB_PARAMEDIC = 23,
 		JOB_CORONER = 24,

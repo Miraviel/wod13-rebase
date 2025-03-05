@@ -183,6 +183,7 @@
 
 	return ..()
 
+
 /datum/id_trim/job/chaplain
 	assignment = JOB_CHAPLAIN
 	trim_state = "trim_chaplain"
@@ -206,31 +207,6 @@
 	job = /datum/job/chaplain
 	honorifics = list("Chaplain", "Reverend")
 	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
-
-/datum/id_trim/job/chemist
-	assignment = JOB_CHEMIST
-	trim_state = "trim_chemist"
-	department_color = COLOR_MEDICAL_BLUE
-	subdepartment_color = COLOR_MEDICAL_BLUE
-	sechud_icon_state = SECHUD_CHEMIST
-	minimal_access = list(
-		ACCESS_MECH_MEDICAL,
-		ACCESS_MEDICAL,
-		ACCESS_MINERAL_STOREROOM,
-		ACCESS_PHARMACY,
-		ACCESS_PLUMBING,
-		)
-	extra_access = list(
-		ACCESS_MORGUE,
-		ACCESS_SURGERY,
-		ACCESS_VIROLOGY,
-		)
-	template_access = list(
-		ACCESS_PRINCE,
-		ACCESS_CHANGE_IDS,
-		ACCESS_CMO,
-		)
-	job = /datum/job/chemist
 
 /datum/id_trim/job/chief_engineer
 	assignment = JOB_CHIEF_ENGINEER
