@@ -239,11 +239,6 @@
 	name = "\improper DNA injector (Anti-Chav)"
 	remove_mutations = list(/datum/mutation/human/chav)
 
-/obj/item/dnainjector/clumsymut
-	name = "\improper DNA injector (Clumsy)"
-	desc = "Makes clown minions."
-	add_mutations = list(/datum/mutation/human/clumsy)
-
 /obj/item/dnainjector/anticlumsy
 	name = "\improper DNA injector (Anti-Clumsy)"
 	desc = "Apply this for Security Clown."

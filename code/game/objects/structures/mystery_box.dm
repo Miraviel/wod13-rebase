@@ -77,7 +77,6 @@ GLOBAL_LIST_INIT(mystery_magic, list(
 	/obj/item/gun/magic/staff/healing,
 	/obj/item/gun/magic/staff/chaos,
 	/obj/item/gun/magic/staff/door,
-	/obj/item/gun/magic/staff/honk,
 	/obj/item/gun/magic/staff/spellblade,
 	/obj/item/gun/magic/staff/flying,
 	/obj/item/gun/magic/staff/babel,

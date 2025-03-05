@@ -86,7 +86,6 @@
 #define JOB_COOK "Cook"
 #define JOB_CHEF "Chef" // Alternate cook title.
 #define JOB_JANITOR "Janitor"
-#define JOB_CLOWN "Clown"
 #define JOB_MIME "Mime"
 #define JOB_CURATOR "Curator"
 #define JOB_LAWYER "Lawyer"
@@ -132,7 +131,6 @@
 #define JOB_DISPLAY_ORDER_BRIDGE_ASSISTANT 4
 #define JOB_DISPLAY_ORDER_COOK 7
 #define JOB_DISPLAY_ORDER_JANITOR 8
-#define JOB_DISPLAY_ORDER_CLOWN 9
 #define JOB_DISPLAY_ORDER_MIME 10
 #define JOB_DISPLAY_ORDER_CURATOR 11
 #define JOB_DISPLAY_ORDER_LAWYER 12

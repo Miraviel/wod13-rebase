@@ -23,7 +23,6 @@ materials = {
     "bluespace crystal": {"total": 0, "spent": 0, "obtained": 0},
     "diamond": {"total": 0, "spent": 0, "obtained": 0},
     "plasma": {"total": 0, "spent": 0, "obtained": 0},
-    "bananium": {"total": 0, "spent": 0, "obtained": 0},
     "plastic": {"total": 0, "spent": 0, "obtained": 0},
 }
 
@@ -37,7 +36,6 @@ grand_total = {
     "bluespace crystal": {"grand_total": 0, "grand_spent": 0, "grand_obtained": 0},
     "diamond": {"grand_total": 0, "grand_spent": 0, "grand_obtained": 0},
     "plasma": {"grand_total": 0, "grand_spent": 0, "grand_obtained": 0},
-    "bananium": {"grand_total": 0, "grand_spent": 0, "grand_obtained": 0},
     "plastic": {"grand_total": 0, "grand_spent": 0, "grand_obtained": 0},
 }
 

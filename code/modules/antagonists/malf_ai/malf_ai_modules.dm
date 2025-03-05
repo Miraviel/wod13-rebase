@@ -20,7 +20,6 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 		/obj/machinery/nuclearbomb/syndicate,
 		/obj/machinery/syndicatebomb,
 		/obj/machinery/syndicatebomb/badmin,
-		/obj/machinery/syndicatebomb/badmin/clown,
 		/obj/machinery/syndicatebomb/empty,
 		/obj/machinery/syndicatebomb/self_destruct,
 		/obj/machinery/syndicatebomb/training,
@@ -600,37 +599,6 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/ai_module/malf))
 	desc = "[initial(desc)] It has [uses] use\s remaining."
 	build_all_button_icons()
 
-/// HIGH IMPACT HONKING
-/datum/ai_module/malf/destructive/megahonk
-	name = "Percussive Intercomm Interference"
-	description = "Emit a debilitatingly percussive auditory blast through the station intercoms. Does not overpower hearing protection. Two uses per purchase."
-	cost = 20
-	power_type = /datum/action/innate/ai/honk
-	unlock_text = span_notice("You upload a sinister sound file into every intercom...")
-	unlock_sound = 'sound/items/airhorn/airhorn.ogg'
-
-/datum/action/innate/ai/honk
-	name = "Percussive Intercomm Interference"
-	desc = "Rock the station's intercom system with an obnoxious HONK!"
-	button_icon = 'icons/obj/machines/wallmounts.dmi'
-	button_icon_state = "intercom"
-	uses = 2
-
-/datum/action/innate/ai/honk/Activate()
-	to_chat(owner, span_clown("The intercom system plays your prepared file as commanded."))
-	for(var/obj/item/radio/intercom/found_intercom as anything in GLOB.intercoms_list)
-		if(!found_intercom.is_on() || !found_intercom.get_listening() || found_intercom.wires.is_cut(WIRE_RX)) //Only operating intercoms play the honk
-			continue
-		found_intercom.audible_message(message = "[found_intercom] crackles for a split second.", hearing_distance = 3)
-		playsound(found_intercom, 'sound/items/airhorn/airhorn.ogg', 100, TRUE)
-		for(var/mob/living/carbon/honk_victim in ohearers(6, found_intercom))
-			var/turf/victim_turf = get_turf(honk_victim)
-			if(isspaceturf(victim_turf) && !victim_turf.Adjacent(found_intercom)) //Prevents getting honked in space
-				continue
-			if(honk_victim.soundbang_act(intensity = 1, stun_pwr = 20, damage_pwr = 30, deafen_pwr = 60)) //Ear protection will prevent these effects
-				honk_victim.set_jitter_if_lower(120 SECONDS)
-				to_chat(honk_victim, span_clown("HOOOOONK!"))
-
 /// Robotic Factory: Places a large machine that converts humans that go through it into cyborgs. Unlocking this ability removes shunting.
 /datum/ai_module/malf/utility/place_cyborg_transformer
 	name = "Robotic Factory (Removes Shunting)"
@@ -959,7 +927,7 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/ai_module/malf))
 	/// Saved span state, used to restore after a voice change
 	var/prev_span
 	/// The list of available voices
-	var/static/list/voice_options = list("normal", SPAN_ROBOT, SPAN_YELL, SPAN_CLOWN)
+	var/static/list/voice_options = list("normal", SPAN_ROBOT, SPAN_YELL)
 
 /obj/machinery/ai_voicechanger/Initialize(mapload)
 	. = ..()

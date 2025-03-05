@@ -128,7 +128,6 @@ GLOBAL_DATUM_INIT(crewmonitor, /datum/crewmonitor, new)
 		JOB_COOK = 63,
 		JOB_CURATOR = 65,
 		JOB_CHAPLAIN = 66,
-		JOB_CLOWN = 67,
 		JOB_MIME = 68,
 		JOB_JANITOR = 69,
 		JOB_LAWYER = 71,

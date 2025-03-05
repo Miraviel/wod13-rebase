@@ -156,77 +156,11 @@
 	icon_state = "hugbox_black"
 	illustration = "heart_black"
 
-// clown box, we also use this for the honk bot assembly
-/obj/item/storage/box/clown
-	name = "clown box"
-	desc = "A colorful cardboard box for the clown"
-	illustration = "clown"
-
-/obj/item/storage/box/clown/tool_act(mob/living/user, obj/item/tool, list/modifiers)
-	if(!istype(tool, /obj/item/bodypart/arm/left/robot) && !istype(tool, /obj/item/bodypart/arm/right/robot))
-		return ..()
-	if(contents.len) //prevent accidently deleting contents
-		balloon_alert(user, "items inside!")
-		return ITEM_INTERACT_BLOCKING
-	if(!user.temporarilyRemoveItemFromInventory(tool))
-		return ITEM_INTERACT_BLOCKING
-	qdel(tool)
-	loc.balloon_alert(user, "wheels added, honk!")
-	var/obj/item/bot_assembly/honkbot/A = new
-	qdel(src)
-	user.put_in_hands(A)
-	return ITEM_INTERACT_SUCCESS
-
-/obj/item/storage/box/clown/suicide_act(mob/living/user)
-	user.visible_message(span_suicide("[user] opens [src] and gets consumed by [p_them()]! It looks like [user.p_theyre()] trying to commit suicide!"))
-	playsound(user, 'sound/misc/scary_horn.ogg', 70, vary = TRUE)
-	forceMove(user.drop_location())
-	var/obj/item/clothing/head/mob_holder/consumed = new(src, user)
-	consumed.desc = "It's [user.real_name]! It looks like [user.p_they()] committed suicide!"
-	return OXYLOSS
-
 // Special stuff for medical hugboxes.
 /obj/item/storage/box/hug/medical/PopulateContents()
 	new /obj/item/stack/medical/bruise_pack(src)
 	new /obj/item/stack/medical/ointment(src)
 	new /obj/item/reagent_containers/hypospray/medipen(src)
-
-//Clown survival box
-/obj/item/storage/box/survival/hug
-	name = "box of hugs"
-	desc = "A special box for sensitive people."
-	icon_state = "hugbox"
-	illustration = "heart"
-	foldable_result = null
-	mask_type = null
-	var/random_funny_internals = TRUE
-
-/obj/item/storage/box/survival/hug/PopulateContents()
-	if(!random_funny_internals)
-		return ..()
-	internal_type = pick(
-			/obj/item/tank/internals/emergency_oxygen/engi/clown/n2o,
-			/obj/item/tank/internals/emergency_oxygen/engi/clown/bz,
-			/obj/item/tank/internals/emergency_oxygen/engi/clown/helium,
-			)
-	return ..()
-
-//Mime survival box
-/obj/item/storage/box/survival/hug/black
-	icon_state = "hugbox_black"
-	illustration = "heart_black"
-	random_funny_internals = FALSE
-
-//Duplicated suicide/attack self procs, since the survival boxes are a subtype of box/survival
-/obj/item/storage/box/survival/hug/suicide_act(mob/living/user)
-	user.visible_message(span_suicide("[user] clamps the box of hugs on [user.p_their()] jugular! Guess it wasn't such a hugbox after all.."))
-	return BRUTELOSS
-
-/obj/item/storage/box/survival/hug/attack_self(mob/user)
-	..()
-	user.changeNext_move(CLICK_CD_MELEE)
-	playsound(loc, SFX_RUSTLE, 50, vary=TRUE, extrarange=-5)
-	user.visible_message(span_notice("[user] hugs [src]."),span_notice("You hug [src]."))
 
 /obj/item/storage/box/hug/plushes
 	name = "tactical cuddle kit"

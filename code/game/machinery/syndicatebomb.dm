@@ -278,13 +278,6 @@
 	desc = "Oh god what is in this thing?"
 	payload = /obj/item/bombcore/badmin/summon
 
-/obj/machinery/syndicatebomb/badmin/clown
-	name = "clown bomb"
-	icon_state = "clown-bomb"
-	desc = "HONK."
-	payload = /obj/item/bombcore/badmin/summon/clown
-	beepsound = 'sound/items/bikehorn.ogg'
-
 /obj/machinery/syndicatebomb/empty
 	name = "bomb"
 	icon_state = "base-bomb"
@@ -415,16 +408,6 @@
 	spawn_and_random_walk(summon_path, src, amt_summon, walk_chance=50, admin_spawn=TRUE, cardinals_only = FALSE)
 	qdel(B)
 	qdel(src)
-
-/obj/item/bombcore/badmin/summon/clown
-	name = "bananium payload"
-	desc = "Clowns delivered fast and cheap!"
-	summon_path = /mob/living/basic/clown
-	amt_summon = 50
-
-/obj/item/bombcore/badmin/summon/clown/defuse()
-	playsound(src, 'sound/misc/sadtrombone.ogg', 50)
-	..()
 
 /obj/item/bombcore/large
 	name = "large bomb payload"

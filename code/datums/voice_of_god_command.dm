@@ -427,17 +427,6 @@ GLOBAL_LIST_INIT(voice_of_god_commands, init_voice_of_god_commands())
 			addtimer(CALLBACK(target, TYPE_PROC_REF(/mob/living/, emote), "jump"), 0.5 SECONDS * iteration)
 		iteration++
 
-///This command plays a bikehorn sound after 2 seconds and a half have passed, and also slips listeners if the user is a clown.
-/datum/voice_of_god_command/honk
-	trigger = "ho+nk"
-
-/datum/voice_of_god_command/honk/execute(list/listeners, mob/living/user, power_multiplier = 1, message)
-	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), get_turf(user), 'sound/items/bikehorn.ogg', 300, 1), 2.5 SECONDS)
-	if(is_clown_job(user.mind?.assigned_role))
-		. = COOLDOWN_STUN //it slips.
-		for(var/mob/living/carbon/target in listeners)
-			target.slip(14 SECONDS * power_multiplier)
-
 ///This command spins the listeners 1800° degrees clockwise.
 /datum/voice_of_god_command/multispin
 	trigger = "like\\s*a\\s*record\\s*baby|right\\s*round"

@@ -824,25 +824,6 @@
 	foodtypes = MEAT | SUGAR
 	crafting_complexity = FOOD_COMPLEXITY_2
 
-/obj/item/food/meatclown
-	name = "meat clown"
-	desc = "A delicious, round piece of meat clown. How horrifying."
-	icon = 'icons/obj/food/meat.dmi'
-	icon_state = "meatclown"
-	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 5,
-		/datum/reagent/consumable/nutriment/vitamin = 1,
-		/datum/reagent/consumable/banana = 2,
-	)
-	tastes = list("meat" = 5, "clowns" = 3, "sixteen teslas" = 1)
-	w_class = WEIGHT_CLASS_SMALL
-	foodtypes = MEAT | FRUIT
-	crafting_complexity = FOOD_COMPLEXITY_2
-
-/obj/item/food/meatclown/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/slippery, 3 SECONDS)
-
 /obj/item/food/lasagna
 	name = "Lasagna"
 	desc = "A slice of lasagna. Perfect for a Monday afternoon."

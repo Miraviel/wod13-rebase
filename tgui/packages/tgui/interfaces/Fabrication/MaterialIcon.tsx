@@ -37,11 +37,6 @@ const MATERIAL_ICONS: Record<string, [number, string][]> = {
     [17, 'sheet-uranium_2'],
     [34, 'sheet-uranium_3'],
   ],
-  bananium: [
-    [0, 'sheet-bananium'],
-    [17, 'sheet-bananium_2'],
-    [34, 'sheet-bananium_3'],
-  ],
   titanium: [
     [0, 'sheet-titanium'],
     [17, 'sheet-titanium_2'],

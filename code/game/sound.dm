@@ -362,24 +362,6 @@
 				'sound/mobs/non-humanoids/beepsky/radio.ogg',
 				'sound/mobs/non-humanoids/beepsky/secureday.ogg',
 			))
-		if(SFX_HONKBOT_E)
-			soundin = pick(list(
-				'sound/effects/pray.ogg',
-				'sound/mobs/non-humanoids/frog/reee.ogg',
-				'sound/items/airhorn/AirHorn.ogg',
-				'sound/items/airhorn/AirHorn2.ogg',
-				'sound/items/bikehorn.ogg',
-				'sound/items/WEEOO1.ogg',
-				'sound/machines/buzz/buzz-sigh.ogg',
-				'sound/machines/ping.ogg',
-				'sound/effects/magic/Fireball.ogg',
-				'sound/misc/sadtrombone.ogg',
-				'sound/mobs/non-humanoids/beepsky/creep.ogg',
-				'sound/mobs/non-humanoids/beepsky/iamthelaw.ogg',
-				'sound/mobs/non-humanoids/hiss/hiss1.ogg',
-				'sound/items/weapons/bladeslice.ogg',
-				'sound/items/weapons/flashbang.ogg',
-			))
 		if(SFX_GOOSE)
 			soundin = pick(
 				'sound/mobs/non-humanoids/goose/goose1.ogg',
@@ -772,11 +754,6 @@
 				'sound/effects/writing_pen/writing_pen5.ogg',
 				'sound/effects/writing_pen/writing_pen6.ogg',
 				'sound/effects/writing_pen/writing_pen7.ogg',
-			)
-		if(SFX_CLOWN_CAR_LOAD)
-			soundin = pick(
-				'sound/vehicles/clown_car/clowncar_load1.ogg',
-				'sound/vehicles/clown_car/clowncar_load2.ogg',
 			)
 		if(SFX_SEATBELT_BUCKLE)
 			soundin = pick(

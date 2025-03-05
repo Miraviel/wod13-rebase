@@ -166,17 +166,6 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SERVICE
 
-/datum/design/clown_firing_pin
-	name = "Hilarious Firing Pin"
-	id = "clown_firing_pin"
-	build_type = PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/iron =SMALL_MATERIAL_AMOUNT*5, /datum/material/glass =SMALL_MATERIAL_AMOUNT * 3, /datum/material/bananium =SMALL_MATERIAL_AMOUNT*5)
-	build_path = /obj/item/firing_pin/clown
-	category = list(
-		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SERVICE
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SERVICE
-
 /datum/design/water_balloon
 	name = "Water Balloon"
 	id = "water_balloon"
@@ -441,18 +430,6 @@
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_CARGO | DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
-
-/datum/design/plasticducky
-	name = "Rubber Ducky"
-	desc = "The classic Nanotrasen design for competitively priced bath based duck toys. No need for fancy Waffle Corp. rubber, buy Plastic Ducks today!"
-	id = "plasticducky"
-	build_type = PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/plastic =HALF_SHEET_MATERIAL_AMOUNT)
-	build_path = /obj/item/bikehorn/rubberducky/plasticducky
-	category = list(
-		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_SERVICE
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SERVICE
 
 /datum/design/pneumatic_seal
 	name = "Pneumatic Airlock Seal"

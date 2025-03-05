@@ -389,8 +389,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 		/obj/item/toy/plush/ratplush = 1,
 		/obj/item/toy/plush/narplush = 1,
 		/obj/item/clothing/head/chaplain/medievaljewhat = 3,
-		/obj/item/clothing/head/chaplain/clownmitre = 1,
-		/obj/item/clothing/suit/chaplainsuit/clownpriest = 1,
 	)
 	premium = list(
 		/obj/item/clothing/head/chaplain/bishopmitre = 1,

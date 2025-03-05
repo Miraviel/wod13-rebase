@@ -515,12 +515,6 @@
 	name = "makarov 9mm magazine case"
 	weapon_to_spawn = /obj/item/ammo_box/magazine/m9mm
 
-/obj/item/storage/toolbox/guncase/traitor/donksoft
-	name = "\improper Donksoft riot pistol gun case"
-	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/toy/riot/clandestine
-	extra_to_spawn = /obj/item/ammo_box/magazine/toy/pistol/riot
-	ammo_box_to_spawn = /obj/item/ammo_box/foambox/riot
-
 /obj/item/storage/toolbox/guncase/traitor/ammunition/donksoft
 	name = "\improper Donksoft riot pistol magazine case"
 	weapon_to_spawn = /obj/item/ammo_box/magazine/toy/pistol/riot
@@ -636,65 +630,3 @@
 	inhand_icon_state = "sakhno_case"
 	weapon_to_spawn = /obj/effect/spawner/random/sakhno
 	extra_to_spawn = /obj/effect/spawner/random/sakhno/ammo
-
-/obj/item/storage/toolbox/guncase/monkeycase
-	name = "monkey gun case"
-	desc = "Everything a monkey needs to truly go ape-shit. There's a paw-shaped hand scanner lock on the front of the case."
-
-/obj/item/storage/toolbox/guncase/monkeycase/Initialize(mapload)
-	. = ..()
-	atom_storage.locked = STORAGE_SOFT_LOCKED
-
-/obj/item/storage/toolbox/guncase/monkeycase/attack_self(mob/user, modifiers)
-	if(!monkey_check(user))
-		return
-	return ..()
-
-/obj/item/storage/toolbox/guncase/monkeycase/attack_self_secondary(mob/user, modifiers)
-	attack_self(user, modifiers)
-	return
-
-/obj/item/storage/toolbox/guncase/monkeycase/attack_hand(mob/user, list/modifiers)
-	if(!monkey_check(user))
-		return
-	return ..()
-
-/obj/item/storage/toolbox/guncase/monkeycase/proc/monkey_check(mob/user)
-	if(atom_storage.locked == STORAGE_NOT_LOCKED)
-		return TRUE
-
-	if(is_simian(user))
-		atom_storage.locked = STORAGE_NOT_LOCKED
-		to_chat(user, span_notice("You place your paw on the paw scanner, and hear a soft click as [src] unlocks!"))
-		playsound(src, 'sound/items/click.ogg', 25, TRUE)
-		return TRUE
-	to_chat(user, span_warning("You put your hand on the hand scanner, and it rejects it with an angry chimpanzee screech!"))
-	playsound(src, SFX_SCREECH, 75, TRUE)
-	return FALSE
-
-/obj/item/storage/toolbox/guncase/monkeycase/PopulateContents()
-	switch(rand(1, 3))
-		if(1)
-			// Uzi with a boxcutter.
-			new /obj/item/gun/ballistic/automatic/mini_uzi/chimpgun(src)
-			new /obj/item/ammo_box/magazine/uzim9mm(src)
-			new /obj/item/ammo_box/magazine/uzim9mm(src)
-			new /obj/item/boxcutter/extended(src)
-		if(2)
-			// Thompson with a boxcutter.
-			new /obj/item/gun/ballistic/automatic/tommygun/chimpgun(src)
-			new /obj/item/ammo_box/magazine/tommygunm45(src)
-			new /obj/item/ammo_box/magazine/tommygunm45(src)
-			new /obj/item/boxcutter/extended(src)
-		if(3)
-			// M1911 with a switchblade and an extra banana bomb.
-			new /obj/item/gun/ballistic/automatic/pistol/m1911/chimpgun(src)
-			new /obj/item/ammo_box/magazine/m45(src)
-			new /obj/item/ammo_box/magazine/m45(src)
-			new /obj/item/switchblade/extended(src)
-			new /obj/item/food/grown/banana/bunch/monkeybomb(src)
-
-	// Banana bomb! Basically a tiny flashbang for monkeys.
-	new /obj/item/food/grown/banana/bunch/monkeybomb(src)
-	// Somewhere to store it all.
-	new /obj/item/storage/backpack/messenger(src)

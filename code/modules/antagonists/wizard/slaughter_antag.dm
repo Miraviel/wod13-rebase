@@ -64,8 +64,3 @@
 		report += "<span class='greentext big'>The [name] survived!</span>"
 
 	return report.Join("<br>")
-
-/datum/antagonist/slaughter/laughter
-	name = "Laughter demon"
-	objective_verb = "Hug and tickle"
-	fluff = "You're a Demon of Envy, sometimes dragged into reality by wizards as a way to cause wanton chaos."

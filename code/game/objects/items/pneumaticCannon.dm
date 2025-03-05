@@ -306,38 +306,6 @@
 		loaded++
 		CHECK_TICK
 
-/obj/item/pneumatic_cannon/pie
-	name = "pie cannon"
-	desc = "Load cream pie for optimal results."
-	force = 10
-	icon_state = "piecannon"
-	gasPerThrow = 0
-	checktank = FALSE
-	range_multiplier = 3
-	fire_mode = PCANNON_FIFO
-	throw_amount = 1
-	maxWeightClass = 150 //50 pies. :^)
-	needs_air = FALSE
-	clumsyCheck = FALSE
-	var/static/list/pie_typecache = typecacheof(/obj/item/food/pie)
-
-/obj/item/pneumatic_cannon/pie/Initialize(mapload)
-	. = ..()
-	allowed_typecache = pie_typecache
-
-/obj/item/pneumatic_cannon/pie/selfcharge
-	automatic = TRUE
-	selfcharge = TRUE
-	charge_type = /obj/item/food/pie/cream
-	maxWeightClass = 60 //20 pies.
-
-/obj/item/pneumatic_cannon/pie/selfcharge/cyborg
-	name = "low velocity pie cannon"
-	automatic = FALSE
-	charge_type = /obj/item/food/pie/cream/nostun
-	maxWeightClass = 6 //2 pies
-	charge_ticks = 2 //4 second/pie
-
 #undef PCANNON_FIREALL
 #undef PCANNON_FILO
 #undef PCANNON_FIFO

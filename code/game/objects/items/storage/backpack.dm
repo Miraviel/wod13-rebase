@@ -115,12 +115,6 @@
 	inhand_icon_state = "backpack"
 	alternate_worn_layer = ABOVE_BODY_FRONT_HEAD_LAYER
 
-/obj/item/storage/backpack/clown
-	name = "Giggles von Honkerton"
-	desc = "It's a backpack made by Honk! Co."
-	icon_state = "backpack-clown"
-	inhand_icon_state = "clownpack"
-
 /obj/item/storage/backpack/explorer
 	name = "explorer bag"
 	desc = "A robust backpack for stashing your loot."
@@ -207,11 +201,6 @@
 	name = "emergency response team janitor backpack"
 	desc = "A spacious backpack with lots of pockets, worn by Janitors of an Emergency Response Team."
 	icon_state = "ert_janitor"
-
-/obj/item/storage/backpack/ert/clown
-	name = "emergency response team clown backpack"
-	desc = "A spacious backpack with lots of pockets, worn by Clowns of an Emergency Response Team."
-	icon_state = "ert_clown"
 
 /obj/item/storage/backpack/saddlepack
 	name = "saddlepack"
@@ -569,16 +558,6 @@
 	new /obj/item/wirecutters(src)
 	new /obj/item/multitool(src)
 
-/obj/item/storage/backpack/duffelbag/clown
-	name = "clown's duffel bag"
-	desc = "A large duffel bag for holding lots of funny gags!"
-	icon_state = "duffel-clown"
-	inhand_icon_state = "duffel-clown"
-
-/obj/item/storage/backpack/duffelbag/clown/cream_pie/PopulateContents()
-	for(var/i in 1 to 10)
-		new /obj/item/food/pie/cream(src)
-
 /obj/item/storage/backpack/fireproof
 	resistance_flags = FIRE_PROOF
 
@@ -673,7 +652,6 @@
 /obj/item/storage/backpack/duffelbag/syndie/med/medicalbundle/PopulateContents()
 	new /obj/item/mod/module/magboot(src)
 	new /obj/item/storage/medkit/tactical/premium(src)
-	new /obj/item/gun/ballistic/automatic/l6_saw/toy(src)
 	new /obj/item/ammo_box/foambox/riot(src)
 
 /obj/item/storage/backpack/duffelbag/syndie/med/bioterrorbundle
@@ -683,7 +661,6 @@
 	new /obj/item/reagent_containers/spray/chemsprayer/bioterror(src)
 	new /obj/item/storage/box/syndie_kit/chemical(src)
 	new /obj/item/gun/syringe/syndicate(src)
-	new /obj/item/gun/ballistic/automatic/c20r/toy(src)
 	new /obj/item/storage/box/syringes(src)
 	new /obj/item/ammo_box/foambox/riot(src)
 	new /obj/item/grenade/chem_grenade/bioterrorfoam(src)
@@ -710,18 +687,6 @@
 	new /obj/item/reagent_containers/cup/glass/bottle/vodka/badminka(src)
 	new /obj/item/reagent_containers/hypospray/medipen/stimulants(src)
 	new /obj/item/grenade/syndieminibomb(src)
-
-// For ClownOps.
-/obj/item/storage/backpack/duffelbag/clown/syndie
-	storage_type = /datum/storage/duffel/syndicate
-
-/obj/item/storage/backpack/duffelbag/clown/syndie/PopulateContents()
-	new /obj/item/modular_computer/pda/clown(src)
-	new /obj/item/clothing/under/rank/civilian/clown(src)
-	new /obj/item/clothing/shoes/clown_shoes(src)
-	new /obj/item/clothing/mask/gas/clown_hat(src)
-	new /obj/item/bikehorn(src)
-	new /obj/item/implanter/sad_trombone(src)
 
 /obj/item/storage/backpack/henchmen
 	name = "wings"
@@ -812,9 +777,3 @@
 	desc = "An exclusive messenger bag for Nanotrasen officers, made of real whale leather."
 	icon_state = "messenger_captain"
 	inhand_icon_state = "messenger_captain"
-
-/obj/item/storage/backpack/messenger/clown
-	name = "Giggles von Honkerton Jr."
-	desc = "The latest in storage 'technology' from Honk Co. Hey, how does this fit so much with such a small profile anyway? The wearer will definitely never tell you."
-	icon_state = "messenger_clown"
-	inhand_icon_state = "messenger_clown"

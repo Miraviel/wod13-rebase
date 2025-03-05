@@ -45,18 +45,6 @@
 	result = /obj/item/food/sundae
 	category = CAT_ICE
 
-/datum/crafting_recipe/food/honkdae
-	name ="Honkdae"
-	reqs = list(
-		/datum/reagent/consumable/cream = 5,
-		/obj/item/clothing/mask/gas/clown_hat = 1,
-		/obj/item/food/grown/cherries = 1,
-		/obj/item/food/grown/banana = 2,
-		/obj/item/food/icecream = 1
-	)
-	result = /obj/item/food/honkdae
-	category = CAT_ICE
-
 /datum/crafting_recipe/food/cornuto
 	name = "Cornuto"
 	reqs = list(

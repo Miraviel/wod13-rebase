@@ -101,15 +101,6 @@
 	result = /obj/item/food/burger/ghost
 	category = CAT_BURGER
 
-/datum/crafting_recipe/food/clownburger
-	name = "Clown burger"
-	reqs = list(
-		/obj/item/clothing/mask/gas/clown_hat = 1,
-		/obj/item/food/bun = 1
-	)
-	result = /obj/item/food/burger/clown
-	category = CAT_BURGER
-
 /datum/crafting_recipe/food/mimeburger
 	name = "Mime burger"
 	reqs = list(

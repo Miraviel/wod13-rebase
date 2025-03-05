@@ -340,44 +340,6 @@
 		return FALSE
 	return TRUE
 
-/obj/item/robot_model/clown
-	name = "Clown"
-	basic_modules = list(
-		/obj/item/assembly/flash/cyborg,
-		/obj/item/toy/crayon/rainbow,
-		/obj/item/instrument/bikehorn,
-		/obj/item/stamp/clown,
-		/obj/item/bikehorn,
-		/obj/item/bikehorn/airhorn,
-		/obj/item/paint/anycolor/cyborg,
-		/obj/item/soap/nanotrasen/cyborg,
-		/obj/item/pneumatic_cannon/pie/selfcharge/cyborg,
-		/obj/item/razor, //killbait material
-		/obj/item/lipstick/purple,
-		/obj/item/reagent_containers/spray/waterflower/cyborg,
-		/obj/item/borg/cyborghug/peacekeeper,
-		/obj/item/borg/lollipop,
-		/obj/item/picket_sign/cyborg,
-		/obj/item/reagent_containers/borghypo/clown,
-		/obj/item/extinguisher/mini,
-	)
-	emag_modules = list(
-		/obj/item/reagent_containers/borghypo/clown/hacked,
-		/obj/item/reagent_containers/spray/waterflower/cyborg/hacked,
-	)
-	model_select_icon = "service"
-	cyborg_base_icon = "clown"
-	hat_offset = list("north" = list(0, -2), "south" = list(0, -2), "east" = list(4, -2), "west" = list(-4, -2))
-
-/obj/item/robot_model/clown/respawn_consumable(mob/living/silicon/robot/cyborg, coeff = 1)
-	. = ..()
-	var/obj/item/soap/nanotrasen/cyborg/soap = locate(/obj/item/soap/nanotrasen/cyborg) in basic_modules
-	if(!soap)
-		return
-	if(soap.uses < initial(soap.uses))
-		. = TRUE
-		soap.uses += ROUND_UP(initial(soap.uses) / 100) * coeff
-
 /obj/item/robot_model/engineering
 	name = "Engineering"
 	basic_modules = list(

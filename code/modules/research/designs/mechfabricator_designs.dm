@@ -522,104 +522,6 @@
 		RND_CATEGORY_MECHFAB_DURAND + RND_SUBCATEGORY_MECHFAB_CHASSIS
 	)
 
-//H.O.N.K
-/datum/design/honk_chassis
-	name = "Exosuit Chassis (\"H.O.N.K\")"
-	id = "honk_chassis"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/chassis/honker
-	materials = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT*10)
-	construction_time = 10 SECONDS
-	category = list(
-		RND_CATEGORY_MECHFAB_HONK + RND_SUBCATEGORY_MECHFAB_CHASSIS
-	)
-
-/datum/design/honk_torso
-	name = "Exosuit Torso (\"H.O.N.K\")"
-	id = "honk_torso"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/part/honker_torso
-	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*10,
-		/datum/material/glass =SHEET_MATERIAL_AMOUNT*5,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT*5,
-	)
-	construction_time = 30 SECONDS
-	category = list(
-		RND_CATEGORY_MECHFAB_HONK + RND_SUBCATEGORY_MECHFAB_CHASSIS
-	)
-
-/datum/design/honk_head
-	name = "Exosuit Head (\"H.O.N.K\")"
-	id = "honk_head"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/part/honker_head
-	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*5,
-		/datum/material/glass =SHEET_MATERIAL_AMOUNT * 2.5,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT * 2.5,
-	)
-	construction_time = 20 SECONDS
-	category = list(
-		RND_CATEGORY_MECHFAB_HONK + RND_SUBCATEGORY_MECHFAB_CHASSIS
-	)
-
-/datum/design/honk_left_arm
-	name = "Exosuit Left Arm (\"H.O.N.K\")"
-	id = "honk_left_arm"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/part/honker_left_arm
-	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*7.5,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT * 2.5,
-	)
-	construction_time = 20 SECONDS
-	category = list(
-		RND_CATEGORY_MECHFAB_HONK + RND_SUBCATEGORY_MECHFAB_CHASSIS
-	)
-
-/datum/design/honk_right_arm
-	name = "Exosuit Right Arm (\"H.O.N.K\")"
-	id = "honk_right_arm"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/part/honker_right_arm
-	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*7.5,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT * 2.5,
-	)
-	construction_time = 20 SECONDS
-	category = list(
-		RND_CATEGORY_MECHFAB_HONK + RND_SUBCATEGORY_MECHFAB_CHASSIS
-	)
-
-/datum/design/honk_left_leg
-	name = "Exosuit Left Leg (\"H.O.N.K\")"
-	id = "honk_left_leg"
-	build_type = MECHFAB
-	build_path =/obj/item/mecha_parts/part/honker_left_leg
-	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*7.5,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT * 2.5,
-	)
-	construction_time = 20 SECONDS
-	category = list(
-		RND_CATEGORY_MECHFAB_HONK + RND_SUBCATEGORY_MECHFAB_CHASSIS
-	)
-
-/datum/design/honk_right_leg
-	name = "Exosuit Right Leg (\"H.O.N.K\")"
-	id = "honk_right_leg"
-	build_type = MECHFAB
-	build_path = /obj/item/mecha_parts/part/honker_right_leg
-	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*7.5,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT * 2.5,
-	)
-	construction_time = 20 SECONDS
-	category = list(
-		RND_CATEGORY_MECHFAB_HONK + RND_SUBCATEGORY_MECHFAB_CHASSIS
-	)
-
 //Phazon
 /datum/design/phazon_chassis
 	name = "Exosuit Chassis (\"Phazon\")"
@@ -1199,8 +1101,7 @@
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/mousetrap_mortar
 	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*10,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT * 2.5,
+		/datum/material/iron=SHEET_MATERIAL_AMOUNT*10
 	)
 	construction_time = 30 SECONDS
 	category = list(
@@ -1215,8 +1116,7 @@
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/banana_mortar
 	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*10,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT * 2.5,
+		/datum/material/iron=SHEET_MATERIAL_AMOUNT*10
 	)
 	construction_time = 30 SECONDS
 	category = list(
@@ -1231,8 +1131,7 @@
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/honker
 	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*10,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT*5,
+		/datum/material/iron=SHEET_MATERIAL_AMOUNT*10
 	)
 	construction_time = 50 SECONDS
 	category = list(
@@ -1247,8 +1146,7 @@
 	build_type = MECHFAB
 	build_path = /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/launcher/punching_glove
 	materials = list(
-		/datum/material/iron=SHEET_MATERIAL_AMOUNT*10,
-		/datum/material/bananium=SHEET_MATERIAL_AMOUNT*3.75,
+		/datum/material/iron=SHEET_MATERIAL_AMOUNT*10
 	)
 	construction_time = 40 SECONDS
 	category = list(
@@ -1408,21 +1306,6 @@
 		/datum/material/iron =SHEET_MATERIAL_AMOUNT*7.5,
 		/datum/material/glass =SHEET_MATERIAL_AMOUNT*7.5,
 		/datum/material/diamond =SHEET_MATERIAL_AMOUNT*5,
-	)
-	construction_time = 12 SECONDS
-	category = list(
-		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_ALL
-	)
-
-/datum/design/borg_transform_clown
-	name = "Clown Module"
-	id = "borg_transform_clown"
-	build_type = MECHFAB
-	build_path = /obj/item/borg/upgrade/transform/clown
-	materials = list(
-		/datum/material/iron =SHEET_MATERIAL_AMOUNT*7.5,
-		/datum/material/glass =SHEET_MATERIAL_AMOUNT*7.5,
-		/datum/material/bananium =HALF_SHEET_MATERIAL_AMOUNT,
 	)
 	construction_time = 12 SECONDS
 	category = list(
@@ -2094,19 +1977,6 @@
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
 	research_icon_state = "security-plating"
 
-/datum/design/mod_plating/cosmohonk
-	name = "MOD Cosmohonk Plating"
-	id = "mod_plating_cosmohonk"
-	build_path = /obj/item/mod/construction/plating/cosmohonk
-	materials = list(
-		/datum/material/iron =SHEET_MATERIAL_AMOUNT*3,
-		/datum/material/bananium =SHEET_MATERIAL_AMOUNT,
-		/datum/material/glass =HALF_SHEET_MATERIAL_AMOUNT,
-		/datum/material/plasma =HALF_SHEET_MATERIAL_AMOUNT,
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SERVICE
-	research_icon_state = "cosmohonk-plating"
-
 /datum/design/mod_paint_kit
 	name = "MOD Paint Kit"
 	desc = "A paint kit for Modular Suits."
@@ -2423,18 +2293,6 @@
 	build_path = /obj/item/mod/module/injector
 	category = list(
 		RND_CATEGORY_MODSUIT_MODULES + RND_SUBCATEGORY_MODSUIT_MODULES_MEDICAL
-	)
-
-/datum/design/module/mod_bikehorn
-	name = "Bike Horn Module"
-	id = "mod_bikehorn"
-	materials = list(
-		/datum/material/plastic =SMALL_MATERIAL_AMOUNT*5,
-		/datum/material/iron =SMALL_MATERIAL_AMOUNT*5,
-	)
-	build_path = /obj/item/mod/module/bikehorn
-	category = list(
-		RND_CATEGORY_MODSUIT_MODULES + RND_SUBCATEGORY_MODSUIT_MODULES_SERVICE
 	)
 
 /datum/design/module/mod_microwave_beam

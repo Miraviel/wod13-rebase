@@ -11,15 +11,3 @@
 	close_sound_volume = 50
 	paint_jobs = null
 	cutting_tool = /obj/item/crowbar
-
-/obj/structure/closet/crate/wooden/toy
-	name = "toy box"
-	desc = "It has the words \"Clown + Mime\" written underneath of it with marker."
-
-/obj/structure/closet/crate/wooden/toy/PopulateContents()
-	. = ..()
-	new /obj/item/megaphone/clown(src)
-	new /obj/item/reagent_containers/cup/soda_cans/canned_laughter(src)
-	new /obj/item/pneumatic_cannon/pie(src)
-	new /obj/item/food/pie/cream(src)
-	new /obj/item/storage/crayons(src)

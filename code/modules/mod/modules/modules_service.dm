@@ -1,21 +1,5 @@
 //Service modules for MODsuits
 
-///Bike Horn - Plays a bike horn sound.
-/obj/item/mod/module/bikehorn
-	name = "MOD bike horn module"
-	desc = "A shoulder-mounted piece of heavy sonic artillery, this module uses the finest femto-manipulator technology to \
-		precisely deliver an almost lethal squeeze to... a bike horn, producing a significantly memorable sound."
-	icon_state = "bikehorn"
-	module_type = MODULE_USABLE
-	complexity = 1
-	use_energy_cost = DEFAULT_CHARGE_DRAIN
-	incompatible_modules = list(/obj/item/mod/module/bikehorn)
-	cooldown_time = 1 SECONDS
-
-/obj/item/mod/module/bikehorn/on_use()
-	playsound(src, 'sound/items/bikehorn.ogg', 100, FALSE)
-	drain_power(use_energy_cost)
-
 ///Advanced Balloon Blower - Blows a long balloon.
 /obj/item/mod/module/balloon/advanced
 	name = "MOD advanced balloon blower module"
@@ -81,16 +65,12 @@
 	if(shoes)
 		shoes.AddComponent(/datum/component/squeak, list('sound/effects/footstep/clownstep1.ogg'=1,'sound/effects/footstep/clownstep2.ogg'=1), 50, falloff_exponent = 20) //die off quick please
 	mod.wearer.AddElementTrait(TRAIT_WADDLING, REF(src), /datum/element/waddling)
-	if(is_clown_job(mod.wearer.mind?.assigned_role))
-		mod.wearer.add_mood_event("clownshoes", /datum/mood_event/clownshoes)
 
 /obj/item/mod/module/waddle/on_part_deactivation(deleting = FALSE)
 	var/obj/item/shoes = mod.get_part_from_slot(ITEM_SLOT_FEET)
 	if(shoes && !deleting)
 		qdel(shoes.GetComponent(/datum/component/squeak))
 	REMOVE_TRAIT(mod.wearer, TRAIT_WADDLING, REF(src))
-	if(is_clown_job(mod.wearer.mind?.assigned_role))
-		mod.wearer.clear_mood_event("clownshoes")
 
 // recharging cleaner spray module
 /obj/item/mod/module/mister/cleaner

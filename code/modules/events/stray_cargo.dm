@@ -164,7 +164,6 @@
 	var/list/possible_uplinks = list(
 		"Traitor" = UPLINK_TRAITORS,
 		"Nuke Op" = UPLINK_NUKE_OPS,
-		"Clown Op" = UPLINK_CLOWN_OPS,
 		"Lone Op" = UPLINK_LONE_OP,
 		"Spy" = UPLINK_SPY
 		)

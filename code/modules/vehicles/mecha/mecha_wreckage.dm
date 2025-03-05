@@ -186,19 +186,6 @@
 	welder_salvage = list(/obj/item/stack/sheet/mineral/plastitanium, /obj/item/stack/sheet/mineral/diamond, /obj/item/stack/sheet/iron, /obj/item/stack/rods)
 	parts = null
 
-/obj/structure/mecha_wreckage/honker
-	name = "\improper H.O.N.K wreckage"
-	icon_state = "honker-broken"
-	desc = "All is right in the universe."
-	welder_salvage = list(/obj/item/stack/sheet/mineral/bananium, /obj/item/grown/bananapeel, /obj/item/stack/sheet/iron)
-	parts = list(
-				/obj/item/mecha_parts/part/honker_torso,
-				/obj/item/mecha_parts/part/honker_head,
-				/obj/item/mecha_parts/part/honker_left_arm,
-				/obj/item/mecha_parts/part/honker_right_arm,
-				/obj/item/mecha_parts/part/honker_left_leg,
-				/obj/item/mecha_parts/part/honker_right_leg)
-
 /obj/structure/mecha_wreckage/durand
 	name = "\improper Durand wreckage"
 	icon_state = "durand-broken"

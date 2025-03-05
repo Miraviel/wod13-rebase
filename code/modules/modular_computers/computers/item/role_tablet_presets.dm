@@ -249,49 +249,6 @@
 	name = "cook PDA"
 	greyscale_colors = "#FAFAFA#A92323"
 
-/obj/item/modular_computer/pda/clown
-	name = "clown PDA"
-	inserted_disk = /obj/item/computer_disk/virus/clown
-	icon_state = "pda-clown"
-	greyscale_config = null
-	greyscale_colors = null
-	inserted_item = /obj/item/toy/crayon/rainbow
-
-/obj/item/modular_computer/pda/clown/Initialize(mapload)
-	. = ..()
-	AddComponent(\
-		/datum/component/slippery,\
-		knockdown = 12 SECONDS,\
-		lube_flags = NO_SLIP_WHEN_WALKING,\
-		on_slip_callback = CALLBACK(src, PROC_REF(AfterSlip)),\
-		can_slip_callback = CALLBACK(src, PROC_REF(try_slip)),\
-		slot_whitelist = list(ITEM_SLOT_ID, ITEM_SLOT_BELT),\
-	)
-	AddComponent(/datum/component/wearertargeting/sitcomlaughter, CALLBACK(src, PROC_REF(after_sitcom_laugh)))
-
-/// Returns whether the PDA can slip or not, if we have a wearer then check if they are in a position to slip someone.
-/obj/item/modular_computer/pda/clown/proc/try_slip(mob/living/slipper, mob/living/slippee)
-	if(isnull(slipper))
-		return TRUE
-	if(!istype(slipper.get_item_by_slot(ITEM_SLOT_FEET), /obj/item/clothing/shoes/clown_shoes))
-		to_chat(slipper,span_warning("[src] failed to slip anyone. Perhaps I shouldn't have abandoned my legacy..."))
-		return FALSE
-	return TRUE
-
-/obj/item/modular_computer/pda/clown/update_overlays()
-	. = ..()
-	. += mutable_appearance(icon, "pda_stripe_clown") // clowns have eyes that go over their screen, so it needs to be compiled last
-
-/obj/item/modular_computer/pda/clown/proc/AfterSlip(mob/living/carbon/human/M)
-	if (istype(M) && (M.real_name != saved_identification))
-		var/obj/item/computer_disk/virus/clown/cart = inserted_disk
-		if(istype(cart) && cart.charges < 5)
-			cart.charges++
-			playsound(src,'sound/machines/ping.ogg',30,TRUE)
-
-/obj/item/modular_computer/pda/clown/proc/after_sitcom_laugh(mob/victim)
-	victim.visible_message("[src] lets out a burst of laughter!")
-
 /obj/item/modular_computer/pda/mime
 	name = "mime PDA"
 	inserted_disk = /obj/item/computer_disk/virus/mime

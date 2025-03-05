@@ -1,10 +1,11 @@
 /datum/escape_menu/proc/show_leave_body_page()
 	PRIVATE_PROC(TRUE)
 
-	var/static/dead_clown
-	if (isnull(dead_clown))
+	var/static/dead_assistant
+
+	if (isnull(dead_assistant))
 		if (MC_RUNNING(SSatoms.init_stage)) // We're about to create a bunch of atoms for a human
-			dead_clown = create_dead_clown()
+			dead_assistant = create_dead_assistant()
 		else
 			stack_trace("The leave body menu was opened before the atoms SS. This shouldn't be possible, as the leave body menu should only be accessible when you have a body.")
 
@@ -15,7 +16,7 @@
 		"Perform a dramatic suicide in game",
 		/* pixel_offset = */ -105,
 		CALLBACK(src, PROC_REF(leave_suicide)),
-		/* button_overlay = */ dead_clown,
+		/* button_overlay = */ dead_assistant,
 	))
 
 	page_holder.give_screen_object(
@@ -41,24 +42,6 @@
 			/* button_overlay = */ "back",
 		)
 	)
-
-/datum/escape_menu/proc/create_dead_clown()
-	PRIVATE_PROC(TRUE)
-
-	var/mob/living/carbon/human/consistent/human = new
-	human.equipOutfit(/datum/outfit/job/clown)
-
-	var/mutable_appearance/appearance = new(human.appearance)
-	appearance.plane = ESCAPE_MENU_PLANE
-
-	// SpacemanDMM bug prevents us from just chain applying these :(
-	appearance.transform = appearance.transform.Scale(2.5, 2.5)
-	appearance.transform = appearance.transform.Turn(90)
-	appearance.transform = appearance.transform.Translate(34, 24)
-
-	qdel(human)
-
-	return appearance
 
 /datum/escape_menu/proc/leave_ghost()
 	PRIVATE_PROC(TRUE)
@@ -128,3 +111,22 @@
 
 	hovered = FALSE
 	closeToolTip(usr)
+
+// WOD13TODO: Create dead Citizen?
+/datum/escape_menu/proc/create_dead_assistant()
+	PRIVATE_PROC(TRUE)
+
+	var/mob/living/carbon/human/consistent/human = new
+	human.equipOutfit(/datum/outfit/job/assistant)
+
+	var/mutable_appearance/appearance = new(human.appearance)
+	appearance.plane = ESCAPE_MENU_PLANE
+
+	// SpacemanDMM bug prevents us from just chain applying these :(
+	appearance.transform = appearance.transform.Scale(2.5, 2.5)
+	appearance.transform = appearance.transform.Turn(90)
+	appearance.transform = appearance.transform.Translate(34, 24)
+
+	qdel(human)
+
+	return appearance

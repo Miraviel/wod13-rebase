@@ -120,50 +120,6 @@
 		/obj/item/toy/crayon/spraycan)
 		)
 
-/datum/storage/pockets/shoes/clown/New(
-	atom/parent,
-	max_slots,
-	max_specific_storage,
-	max_total_storage,
-)
-	. = ..()
-	set_holdable(
-		can_hold_list = list(
-			/obj/item/ammo_box/magazine/m10mm,
-			/obj/item/ammo_box/magazine/m45,
-			/obj/item/ammo_box/magazine/m9mm,
-			/obj/item/ammo_casing,
-			/obj/item/bikehorn,
-			/obj/item/cigarette,
-			/obj/item/dnainjector,
-			/obj/item/firing_pin,
-			/obj/item/holochip,
-			/obj/item/implanter,
-			/obj/item/knife,
-			/obj/item/lighter,
-			/obj/item/lipstick,
-			/obj/item/match,
-			/obj/item/pen,
-			/obj/item/reagent_containers/cup/glass/flask,
-			/obj/item/reagent_containers/dropper,
-			/obj/item/reagent_containers/hypospray/medipen,
-			/obj/item/reagent_containers/syringe,
-			/obj/item/scalpel,
-			/obj/item/screwdriver,
-			/obj/item/spess_knife,
-			/obj/item/suppressor,
-			/obj/item/switchblade,
-			/obj/item/toy/crayon,
-			/obj/item/weldingtool/mini,
-		),
-		cant_hold_list = list(
-			/obj/item/ammo_casing/rocket,
-			/obj/item/cigarette/pipe,
-			/obj/item/screwdriver/power,
-			/obj/item/toy/crayon/spraycan,
-		),
-	)
-
 /datum/storage/pockets/pocketprotector
 	max_slots = 3
 	max_specific_storage = WEIGHT_CLASS_TINY

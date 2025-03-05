@@ -56,9 +56,6 @@
 /datum/crafting_recipe/food/reaction/soup/coldchili
 	reaction = /datum/chemical_reaction/food/soup/coldchili
 
-/datum/crafting_recipe/food/reaction/soup/clownchili
-	reaction = /datum/chemical_reaction/food/soup/clownchili
-
 /datum/crafting_recipe/food/reaction/soup/tomatosoup
 	reaction = /datum/chemical_reaction/food/soup/tomatosoup
 
@@ -82,9 +79,6 @@
 
 /datum/crafting_recipe/food/reaction/soup/slimesoup_alt
 	reaction = /datum/chemical_reaction/food/soup/slimesoup/alt
-
-/datum/crafting_recipe/food/reaction/soup/clownstears
-	reaction = /datum/chemical_reaction/food/soup/clownstears
 
 /datum/crafting_recipe/food/reaction/soup/mysterysoup
 	reaction = /datum/chemical_reaction/food/soup/mysterysoup

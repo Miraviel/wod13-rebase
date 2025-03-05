@@ -552,41 +552,6 @@
 	ingredient_reagent_multiplier = 0.33 // Chilis have a TON of frost oil naturally
 	percentage_of_nutriment_converted = 0
 
-// Chili (Clownish)
-/datum/reagent/consumable/nutriment/soup/clownchili
-	name = "Chili Con Carnival"
-	description = "A delicious stew of meat, chiles, and salty, salty clown tears."
-	data = list(
-		"tomato" = 1,
-		"hot peppers" = 2,
-		"clown feet" = 2,
-		"kind of funny" = 2,
-		"someone's parents" = 2,
-	)
-	glass_price = FOOD_PRICE_EXOTIC
-	color = COLOR_RED
-
-/datum/glass_style/has_foodtype/soup/clownchili
-	required_drink_type = /datum/reagent/consumable/nutriment/soup/clownchili
-	icon_state = "clownchili"
-	drink_type = VEGETABLES | MEAT
-
-/datum/chemical_reaction/food/soup/clownchili
-	required_reagents = list(/datum/reagent/water = 50)
-	required_ingredients = list(
-		/obj/item/food/meat/cutlet = 2,
-		/obj/item/food/grown/chili = 1,
-		/obj/item/food/grown/tomato = 1,
-		/obj/item/clothing/shoes/clown_shoes = 1,
-	)
-	results = list(
-		/datum/reagent/consumable/nutriment/soup/clownchili = 30,
-		/datum/reagent/consumable/tomatojuice = 8,
-		/datum/reagent/consumable/laughter = 4,
-		/datum/reagent/consumable/banana = 4,
-	)
-	percentage_of_nutriment_converted = 0.15
-
 // Vegan Chili
 /datum/reagent/consumable/nutriment/soup/chili_sin_carne
 	name = "Chili Sin Carne"
@@ -766,38 +731,6 @@
 		/datum/reagent/toxin/slimejelly = 20,
 	)
 	required_ingredients = null
-
-// Clown Tear soup
-/datum/reagent/consumable/nutriment/soup/clown_tears
-	name = "Clown's Tears"
-	description = "The sorrow and melancholy of a thousand bereaved clowns, forever denied their Honkmechs."
-	nutriment_factor = 5
-	ph = 9.2
-	data = list("a bad joke" = 1, "mournful honking" = 1)
-	color = "#EEF442"
-
-/datum/glass_style/has_foodtype/soup/clown_tears
-	required_drink_type = /datum/reagent/consumable/nutriment/soup/clown_tears
-	name = "clown's tears"
-	desc = "Not very funny."
-	icon_state = "clownstears"
-	drink_type = FRUIT | SUGAR
-
-/datum/chemical_reaction/food/soup/clownstears
-	required_reagents = list(
-		/datum/reagent/lube = 30,
-	)
-	required_ingredients = list(
-		/obj/item/food/grown/banana = 1,
-		/obj/item/stack/sheet/mineral/bananium = 1,
-	)
-	results = list(
-		/datum/reagent/consumable/nutriment/soup/clown_tears = 30,
-		/datum/reagent/consumable/banana = 8,
-		/datum/reagent/consumable/nutriment/vitamin = 12,
-		/datum/reagent/lube = 5,
-	)
-	percentage_of_nutriment_converted = 0 // Bananas have a small amount of nutrition naturally
 
 // Mystery soup
 // Acts a little funny, because when it's mixed it gains a new random reagent as well

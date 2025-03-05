@@ -39,11 +39,6 @@
 	material_id = /datum/material/plasma
 	message = "cm3 of plasma"
 
-/datum/export/material/bananium
-	cost = CARGO_CRATE_VALUE * 2
-	material_id = /datum/material/bananium
-	message = "cm3 of bananium"
-
 /datum/export/material/diamond
 	cost = CARGO_CRATE_VALUE
 	material_id = /datum/material/adamantine

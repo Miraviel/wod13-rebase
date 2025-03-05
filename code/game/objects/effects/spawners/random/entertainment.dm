@@ -27,7 +27,6 @@
 		/obj/item/instrument/trombone = 5,
 		/obj/item/instrument/recorder = 5,
 		/obj/item/instrument/harmonica = 5,
-		/obj/item/instrument/bikehorn = 2,
 		/obj/item/instrument/violin/golden = 2,
 		/obj/item/instrument/musicalmoth = 1,
 	)
@@ -56,7 +55,6 @@
 		/obj/item/coin/uranium = 3,
 		/obj/item/coin/titanium = 3,
 		/obj/item/coin/diamond = 2,
-		/obj/item/coin/bananium = 2,
 		/obj/item/coin/adamantine = 2,
 		/obj/item/coin/runite = 2,
 		/obj/item/food/chococoin = 2,

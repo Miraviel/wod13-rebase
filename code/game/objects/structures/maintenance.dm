@@ -24,7 +24,6 @@ at the cost of risking a vicious bite.**/
 		/obj/item/restraints/handcuffs/cable/green = 1,
 		/obj/item/restraints/handcuffs/cable/pink = 1,
 		/obj/item/restraints/handcuffs/alien = 2,
-		/obj/item/coin/bananium = 10,
 		/obj/item/knife/butcher = 5,
 	)
 

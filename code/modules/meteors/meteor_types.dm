@@ -335,31 +335,6 @@
 	if(prob(35))
 		do_teleport(src, get_turf(src), 6, asoundin = 'sound/effects/phasein.ogg', channel = TELEPORT_CHANNEL_BLUESPACE)
 
-/obj/effect/meteor/banana
-	name = "bananium meteor"
-	desc = "Maybe it's a chunk blasted off of the legendary Clown Planet... How annoying."
-	icon_state = "bananium"
-	dropamt = 4
-	hits = 175 //Honks everything, including space tiles. Depending on the angle/how much stuff it hits, there's a fair chance that it will spare the station from the actual explosion
-	meteordrop = list(/obj/item/stack/ore/bananium)
-	meteorsound = 'sound/items/bikehorn.ogg'
-	threat = 15
-	movement_type = PHASING
-	signature = "comedy"
-
-/obj/effect/meteor/banana/meteor_effect()
-	..()
-	playsound(src, 'sound/items/airhorn/AirHorn.ogg', 100, TRUE, -1)
-	for(var/atom/movable/object in view(4, get_turf(src)))
-		var/turf/throwtarget = get_edge_target_turf(get_turf(src), get_dir(get_turf(src), get_step_away(object, get_turf(src))))
-		object.safe_throw_at(throwtarget, 5, 1, force = MOVE_FORCE_STRONG)
-
-/obj/effect/meteor/banana/ram_turf(turf/bumped)
-	for(var/mob/living/slipped in get_turf(bumped))
-		slipped.slip(100, slipped.loc,- GALOSHES_DONT_HELP|SLIDE)
-		slipped.visible_message(span_warning("[src] honks [slipped] to the floor!"), span_userdanger("[src] harmlessly passes through you, knocking you over."))
-	get_hit()
-
 /obj/effect/meteor/emp
 	name = "electromagnetically charged meteor"
 	desc = "It radiates with captive energy, ready to be let loose upon the world."

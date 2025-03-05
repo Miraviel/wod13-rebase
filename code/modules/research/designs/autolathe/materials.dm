@@ -98,17 +98,6 @@
 		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
 	)
 
-/datum/design/bananium
-	name = "Bananium"
-	id = "bananium"
-	build_type = AUTOLATHE
-	materials = list(/datum/material/bananium = SHEET_MATERIAL_AMOUNT)
-	build_path = /obj/item/stack/sheet/mineral/bananium
-	category = list(
-		RND_CATEGORY_INITIAL,
-		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MATERIALS,
-	)
-
 /datum/design/titanium
 	name = "Titanium"
 	id = "titanium"

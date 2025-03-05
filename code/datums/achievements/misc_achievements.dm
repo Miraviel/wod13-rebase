@@ -20,12 +20,6 @@
 	database_id = MEDAL_TIMEWASTE
 	icon_state = "timewaste"
 
-/datum/award/achievement/misc/round_and_full
-	name = "Round and Full"
-	desc = "Well at least you aren't down the river, I hear they eat people there."
-	database_id = MEDAL_CLOWNCARKING
-	icon_state = "clownking"
-
 /datum/award/achievement/misc/the_best_driver
 	name = "The Best Driver"
 	desc = "100 honks later"

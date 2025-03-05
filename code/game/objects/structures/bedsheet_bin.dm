@@ -205,13 +205,6 @@ LINEN BINS
 	inhand_icon_state = "sheetmime"
 	dream_messages = list("silence", "gestures", "a pale face", "a gaping mouth", "the mime")
 
-/obj/item/bedsheet/clown
-	name = "clown's blanket"
-	desc = "A rainbow blanket with a clown mask woven in. It smells faintly of bananas."
-	icon_state = "sheetclown"
-	inhand_icon_state = "sheetrainbow"
-	dream_messages = list("honk", "laughter", "a prank", "a joke", "a smiling face", "the clown")
-
 /obj/item/bedsheet/captain
 	name = "captain's bedsheet"
 	desc = "It has a Nanotrasen symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains."
@@ -464,11 +457,6 @@ LINEN BINS
 /obj/item/bedsheet/mime/double
 	icon_state = "double_sheetmime"
 	worn_icon_state = "sheetmime"
-	bedsheet_type = BEDSHEET_DOUBLE
-
-/obj/item/bedsheet/clown/double
-	icon_state = "double_sheetclown"
-	worn_icon_state = "sheetclown"
 	bedsheet_type = BEDSHEET_DOUBLE
 
 /obj/item/bedsheet/captain/double

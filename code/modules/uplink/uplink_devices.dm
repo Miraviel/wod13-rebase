@@ -72,9 +72,6 @@
 /obj/item/uplink/loneop
 	uplink_flag = UPLINK_LONE_OP
 
-/obj/item/uplink/clownop
-	uplink_flag = UPLINK_CLOWN_OPS
-
 /obj/item/uplink/old
 	name = "dusty radio"
 	desc = "A dusty looking radio."

@@ -133,7 +133,7 @@
 	name = "Saltwater Spring"
 	shelter_id = "fishing_beach"
 	mappath = "_maps/templates/fishing_saltwater.dmm"
-	description = "A spring from which you can fish several saltwater fish, including clownfish, pufferfish and stingrays."
+	description = "A spring from which you can fish several saltwater fish, including pufferfish and stingrays."
 	radial_icon = "seaboat"
 
 /datum/map_template/shelter/fishing/tizira

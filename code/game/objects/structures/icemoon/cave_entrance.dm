@@ -5,7 +5,6 @@ GLOBAL_LIST_INIT(ore_probability, list(
 	/obj/item/stack/ore/silver = 50,
 	/obj/item/stack/ore/gold = 50,
 	/obj/item/stack/ore/diamond = 25,
-	/obj/item/stack/ore/bananium = 5,
 	/obj/item/stack/ore/titanium = 75,
 	))
 
@@ -195,7 +194,7 @@ GLOBAL_LIST_INIT(ore_probability, list(
 		if(24)
 			new /obj/structure/elite_tumor(loc)
 		if(25)
-			new /mob/living/basic/clown/clownhulk(loc)
+			new /obj/structure/elite_tumor(loc)
 		if(26)
 			new /obj/item/clothing/shoes/winterboots/ice_boots(loc)
 		if(27)

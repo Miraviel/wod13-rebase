@@ -88,7 +88,6 @@
 
 /obj/item/storage/fish_case/blackmarket/get_fish_type()
 	var/static/list/weighted_list = list(
-		/obj/item/fish/clownfish/lube = 2,
 		/obj/item/fish/pufferfish = 2,
 		/obj/item/fish/emulsijack = 2,
 		/obj/item/fish/sludgefish/purple = 2,

@@ -164,9 +164,6 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 			return FALSE
 	return TRUE
 
-/obj/item/nuclear_challenge/clownops
-	uplink_type = /obj/item/uplink/clownop
-
 /// Subtype that does nothing but plays the war op message. Intended for debugging
 /obj/item/nuclear_challenge/literally_just_does_the_message
 	name = "\"Declaration of War\""

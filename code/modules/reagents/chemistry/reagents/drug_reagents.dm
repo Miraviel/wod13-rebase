@@ -876,7 +876,7 @@
 	var/greatest_fear
 	if(HAS_TRAIT(liver, TRAIT_LAW_ENFORCEMENT_METABOLISM))
 		greatest_fear = /datum/hallucination/delusion/preset/syndies
-	else if(HAS_TRAIT(liver, TRAIT_MAINTENANCE_METABOLISM) || HAS_TRAIT(liver, TRAIT_COMEDY_METABOLISM))
+	else if(HAS_TRAIT(liver, TRAIT_MAINTENANCE_METABOLISM))
 		greatest_fear = /datum/hallucination/delusion/preset/seccies
 
 	if(greatest_fear)

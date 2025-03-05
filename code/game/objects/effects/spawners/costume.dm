@@ -192,13 +192,6 @@
 		/obj/item/staff,
 	)
 
-/obj/effect/spawner/costume/sexyclown
-	name = "sexy clown costume spawner"
-	items = list(
-		/obj/item/clothing/mask/gas/sexyclown,
-		/obj/item/clothing/under/rank/civilian/clown/sexy,
-	)
-
 /obj/effect/spawner/costume/sexymime
 	name = "sexy mime costume spawner"
 	items = list(

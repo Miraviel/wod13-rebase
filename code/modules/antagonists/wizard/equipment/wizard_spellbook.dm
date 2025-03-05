@@ -94,20 +94,6 @@
 		contract_entry.times--
 		qdel(O)
 
-	else if(istype(O, /obj/item/antag_spawner/slaughter_demon/laughter))
-		var/datum/spellbook_entry/item/hugbottle/demon_entry = locate() in entries
-		if(!istype(demon_entry))
-			to_chat(user, span_warning("[src] doesn't seem to want to refund [O]."))
-			return
-		if(!demon_entry.can_refund(user, src))
-			to_chat(user, span_warning("You can't refund [O]."))
-			return
-
-		to_chat(user, span_notice("On second thought, maybe summoning a demon isn't a funny idea. You refund your points."))
-		uses += demon_entry.cost
-		demon_entry.times--
-		qdel(O)
-
 	else if(istype(O, /obj/item/antag_spawner/slaughter_demon))
 		var/datum/spellbook_entry/item/bloodbottle/demon_entry = locate() in entries
 		if(!istype(demon_entry))

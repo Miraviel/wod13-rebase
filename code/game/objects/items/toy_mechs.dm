@@ -562,19 +562,6 @@
 	special_attack_type = SPECIAL_ATTACK_UTILITY
 	special_attack_cry = "NO-CLIP"
 
-/obj/item/toy/mecha/honk
-	name = "toy H.O.N.K."
-	icon_state = "honktoy"
-	max_combat_health = 4 //140 integrity
-	special_attack_type = SPECIAL_ATTACK_OTHER
-	special_attack_type_message = "puts the opposing mech's special move on cooldown and heals this mech."
-	special_attack_cry = "MEGA HORN"
-
-/obj/item/toy/mecha/honk/super_special_attack(obj/item/toy/mecha/victim)
-	playsound(src, 'sound/mobs/non-humanoids/honkbot/honkbot_evil_laugh.ogg', 20, TRUE)
-	victim.special_attack_cooldown += 3 //Adds cooldown to the other mech and gives a minor self heal
-	combat_health++
-
 /obj/item/toy/mecha/darkgygax
 	name = "toy Dark Gygax"
 	icon_state = "darkgygaxtoy"
@@ -588,13 +575,6 @@
 	max_combat_health = 7 //500 integrity
 	special_attack_type = SPECIAL_ATTACK_DAMAGE
 	special_attack_cry = "BULLET STORM"
-
-/obj/item/toy/mecha/darkhonk
-	name = "toy Dark H.O.N.K."
-	icon_state = "darkhonktoy"
-	max_combat_health = 5 //300 integrity
-	special_attack_type = SPECIAL_ATTACK_DAMAGE
-	special_attack_cry = "BOMBANANA SPREE"
 
 /obj/item/toy/mecha/deathripley
 	name = "toy Death-Ripley"

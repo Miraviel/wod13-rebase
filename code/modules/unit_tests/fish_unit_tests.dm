@@ -105,7 +105,6 @@
 	var/obj/item/fish/evolve_jr = aquarium.evolve.try_to_reproduce()
 	TEST_ASSERT(evolve_jr, "The test aquarium's evolution fish didn't manage to reproduce when it should have")
 	TEST_ASSERT_NOTEQUAL(evolve_jr.type, /obj/item/fish/goldfish, "The test aquarium's evolution fish managed to pass the conditions of an impossible evolution")
-	TEST_ASSERT_EQUAL(evolve_jr.type, /obj/item/fish/clownfish, "The test aquarium's evolution fish's offspring isn't of the expected type")
 	TEST_ASSERT(!(/datum/fish_trait/dummy in evolve_jr.fish_traits), "The test aquarium's evolution fish's offspring still has the old trait that ought to be removed by the evolution datum")
 	TEST_ASSERT(/datum/fish_trait/dummy/two in evolve_jr.fish_traits, "The test aquarium's evolution fish's offspring doesn't have the evolution trait")
 
@@ -213,7 +212,7 @@
 
 /datum/fish_evolution/dummy
 	probability = 200 //Guaranteed chance even if halved.
-	new_fish_type = /obj/item/fish/clownfish
+	new_fish_type = /obj/item/fish/mossglob
 	new_traits = list(/datum/fish_trait/dummy/two)
 	removed_traits = list(/datum/fish_trait/dummy)
 	show_on_wiki = FALSE

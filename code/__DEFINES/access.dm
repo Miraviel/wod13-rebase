@@ -536,7 +536,6 @@
  */
 #define PDA_PAINTING_REGIONS list( \
 	/obj/item/modular_computer/pda = list(REGION_GENERAL), \
-	/obj/item/modular_computer/pda/clown = list(REGION_GENERAL), \
 	/obj/item/modular_computer/pda/mime = list(REGION_GENERAL), \
 	/obj/item/modular_computer/pda/medical = list(REGION_MEDBAY), \
 	/obj/item/modular_computer/pda/coroner = list(REGION_MEDBAY), \

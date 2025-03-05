@@ -556,32 +556,6 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 		victim.adjust_health(victim.health - damage)
 		return
 
-/datum/fish_trait/lubed
-	name = "Lubed"
-	inheritability = 90
-	diff_traits_inheritability = 45
-	spontaneous_manifest_types = list(/obj/item/fish/clownfish/lube = 100)
-	catalog_description = "This fish exudes a viscous, slippery lubrificant. It's recommended not to step on it."
-	added_difficulty = 5
-	reagents_to_add = list(/datum/reagent/lube = 1.2)
-
-/datum/fish_trait/lubed/catch_weight_mod(obj/item/fishing_rod/rod, mob/fisherman, atom/location, obj/item/fish/fish_type)
-	. = ..()
-	if(istype(rod.get_master_material(), /datum/material/bananium)) //x5 chance of catching lubefish & co with a bananium rod.
-		.[MULTIPLICATIVE_FISHING_MOD] *= 5
-
-/datum/fish_trait/lubed/apply_to_fish(obj/item/fish/fish)
-	. = ..()
-	fish.AddComponent(/datum/component/slippery, 8 SECONDS, SLIDE|GALOSHES_DONT_HELP)
-
-/datum/fish_trait/lubed/apply_to_mob(mob/living/basic/mob)
-	. = ..()
-	mob.AddElement(/datum/element/lube_walking)
-
-/datum/fish_trait/lubed/minigame_mod(obj/item/fishing_rod/rod, mob/fisherman, datum/fishing_challenge/minigame)
-	minigame.reeling_velocity *= 1.4
-	minigame.gravity_velocity *= 1.4
-
 /datum/fish_trait/amphibious
 	name = "Amphibious"
 	inheritability = 80

@@ -132,8 +132,6 @@ DEFINE_BITFIELD(bot_cover_flags, list(
 #define CLEAN_BOT "Cleanbot"
 /// Medibots
 #define MED_BOT "Medibot"
-/// Honkbots & ED-Honks
-#define HONK_BOT "Honkbot"
 /// Firebots
 #define FIRE_BOT "Firebot"
 /// Hygienebots
@@ -287,9 +285,6 @@ DEFINE_BITFIELD(janitor_mode_flags, list(
 // Defines for lines that bots can speak which also have corresponding voice lines
 
 #define ED209_VOICED_DOWN_WEAPONS "Please put down your weapon. You have 20 seconds to comply."
-
-#define HONKBOT_VOICED_HONK_HAPPY "Honk!"
-#define HONKBOT_VOICED_HONK_SAD "Honk..."
 
 #define BEEPSKY_VOICED_CRIMINAL_DETECTED "Criminal detected!"
 #define BEEPSKY_VOICED_FREEZE "Freeze, scumbag!"

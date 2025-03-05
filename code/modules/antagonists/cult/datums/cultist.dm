@@ -60,7 +60,6 @@
 /datum/antagonist/cult/apply_innate_effects(mob/living/mob_override)
 	. = ..()
 	var/mob/living/current = owner.current || mob_override
-	handle_clown_mutation(current, mob_override ? null : "Your training has allowed you to overcome your clownish nature, allowing you to wield weapons without harming yourself.")
 	current.faction |= FACTION_CULT
 	current.grant_language(/datum/language/narsie, source = LANGUAGE_CULTIST)
 
@@ -79,7 +78,6 @@
 /datum/antagonist/cult/remove_innate_effects(mob/living/mob_override)
 	. = ..()
 	var/mob/living/current = owner.current || mob_override
-	handle_clown_mutation(current, removing = FALSE)
 	current.faction -= FACTION_CULT
 	current.remove_language(/datum/language/narsie, source = LANGUAGE_CULTIST)
 

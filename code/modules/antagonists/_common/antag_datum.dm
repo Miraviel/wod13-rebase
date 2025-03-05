@@ -223,19 +223,6 @@ GLOBAL_LIST_EMPTY(antagonists)
 	SIGNAL_HANDLER
 	return
 
-/// Handles adding and removing the clumsy mutation from clown antags. Gets called in apply/remove_innate_effects
-/datum/antagonist/proc/handle_clown_mutation(mob/living/mob_override, message, removing = TRUE)
-	if(!ishuman(mob_override) || !is_clown_job(owner.assigned_role))
-		return
-	var/mob/living/carbon/human/human_override = mob_override
-	if(removing) // They're a clown becoming an antag, remove clumsy
-		human_override.dna.remove_mutation(/datum/mutation/human/clumsy)
-		if(!silent && message)
-			to_chat(human_override, span_boldnotice("[message]"))
-	else
-		human_override.dna.add_mutation(/datum/mutation/human/clumsy) // We're removing their antag status, add back clumsy
-
-
 //Assign default team and creates one for one of a kind team antagonists
 /datum/antagonist/proc/create_team(datum/team/team)
 	return

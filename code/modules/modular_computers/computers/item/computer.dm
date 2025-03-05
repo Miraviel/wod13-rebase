@@ -100,8 +100,6 @@
 	///Amount of steel sheets refunded when disassembling an empty frame of this computer.
 	var/steel_sheet_cost = 5
 
-	///If hit by a Clown virus, remaining honks left until it stops.
-	var/honkvirus_amount = 0
 	///Whether the PDA can still use NTNet while out of NTNet's reach.
 	var/long_ranged = FALSE
 	/// Allow people with chunky fingers to use?

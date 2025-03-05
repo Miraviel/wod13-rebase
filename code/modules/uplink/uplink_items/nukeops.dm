@@ -675,16 +675,6 @@
 
 // Devices
 
-/datum/uplink_item/device_tools/assault_pod
-	name = "Assault Pod Targeting Device"
-	desc = "Use this to select the landing zone of your assault pod."
-	item = /obj/item/assault_pod
-	cost = 30
-	surplus = 0
-	purchasable_from = UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS
-	restricted = TRUE
-	purchasable_from = UPLINK_FIREBASE_OPS
-
 /datum/uplink_item/device_tools/syndie_jaws_of_life
 	name = "Syndicate Jaws of Life"
 	desc = "Based on a Nanotrasen model, this powerful tool can be used as both a crowbar and a pair of wirecutters. \
@@ -819,7 +809,7 @@
 		micro-organism symbiosis to slime-core weaponization, this special Authorization Key can let you push past the boundaries \
 		of bio-terrorism at breakneck speeds. As a bonus, these labs even come equipped with natural life support! *Plants not included."
 	item = /obj/item/keycard/syndicate_bio
-	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/base_keys/chem_key
 	name = "Syndicate Chemical Plant Access Card"
@@ -828,7 +818,7 @@
 		can be instantly delivered to your location. Create groundbreaking chemical agents, cook up, sell the best of drugs, \
 		and listen to the best classic music today!"
 	item = /obj/item/keycard/syndicate_chem
-	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_NUKE_OPS
 
 /datum/uplink_item/base_keys/fridge_key
 	name = "Lopez's Access Card"
@@ -838,7 +828,7 @@
 		you need before he gets back. And remember: DON'T TELL ANYONE! -M.T"
 	item = /obj/item/keycard/syndicate_fridge
 	cost = 5
-	purchasable_from = UPLINK_CLOWN_OPS | UPLINK_NUKE_OPS
+	purchasable_from = UPLINK_NUKE_OPS
 
 // Hats
 // It is fundamental for the game's health for there to be a hat crate for nuclear operatives.

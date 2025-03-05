@@ -174,16 +174,3 @@
 		movable_parent.balloon_alert(movable_parent, "moved out of range!")
 
 	SEND_SIGNAL(parent, COMSIG_LEASH_FORCE_TELEPORT)
-
-/// A debug spawner that will create a corgi leashed to a bike horn, plus a beam
-/obj/effect/spawner/debug_leash
-
-/obj/effect/spawner/debug_leash/Initialize(mapload)
-	. = ..()
-
-	var/obj/item/bikehorn/bike_horn = new(loc)
-	var/mob/living/basic/pet/dog/corgi/corgi = new(loc)
-
-	corgi.AddComponent(/datum/component/leash, bike_horn)
-
-	corgi.Beam(bike_horn)

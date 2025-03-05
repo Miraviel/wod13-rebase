@@ -116,54 +116,6 @@
 	wound_bonus += wound_bonus_per_hit
 	bare_wound_bonus += wound_bonus_per_hit
 
-/// The laughter demon! It's everyone's best friend! It just wants to hug them so much, it wants to hug everyone at once!
-/mob/living/basic/demon/slaughter/laughter
-	name = "laughter demon"
-	real_name = "laughter demon"
-	desc = "A large, adorable creature covered in armor with pink bows."
-	speak_emote = list("giggles", "titters", "chuckles", "guffaws", "laughs")
-	response_help_continuous = "hugs"
-	attack_verb_continuous = "wildly tickles"
-	attack_verb_simple = "wildly tickle"
-
-	attack_sound = 'sound/items/bikehorn.ogg'
-	attack_vis_effect = null
-	death_sound = 'sound/misc/sadtrombone.ogg'
-
-	icon_state = "bow_demon"
-	icon_living = "bow_demon"
-	death_message = "fades out, as all of its friends are released from its prison of hugs."
-
-	antag_type = /datum/antagonist/slaughter/laughter
-	crawl_type = /datum/action/cooldown/spell/jaunt/bloodcrawl/slaughter_demon/funny
-
-/mob/living/basic/demon/slaughter/laughter/Initialize(mapload)
-	. = ..()
-	RegisterSignal(src, COMSIG_LIVING_DEATH, PROC_REF(on_death))
-	if(check_holidays(APRIL_FOOLS))
-		icon_state = "honk_demon"
-
-/mob/living/basic/demon/slaughter/laughter/grant_loot()
-	return list() // we do our thing... with the kittens...
-
-/// We do our own special thing on death, which is to spawn a kitten.
-/mob/living/basic/demon/slaughter/laughter/proc/on_death()
-	SIGNAL_HANDLER
-	var/mob/living/basic/pet/cat/kitten/kitty = new(drop_location())
-	kitty.name = "Laughter"
-
-/mob/living/basic/demon/slaughter/laughter/ex_act(severity)
-	switch(severity)
-		if(EXPLODE_DEVASTATE)
-			investigate_log("has died from a devastating explosion.", INVESTIGATE_DEATHS)
-			death()
-		if(EXPLODE_HEAVY)
-			adjustBruteLoss(60)
-		if(EXPLODE_LIGHT)
-			adjustBruteLoss(30)
-
-	return TRUE
-
 /mob/living/basic/demon/slaughter/engine_demon
 	name = "engine demon"
 	faction = list(FACTION_HELL, FACTION_NEUTRAL)

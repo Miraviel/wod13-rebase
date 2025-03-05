@@ -189,15 +189,6 @@
 	result = /obj/item/food/bbqribs
 	category = CAT_MEAT
 
-/datum/crafting_recipe/food/meatclown
-	name = "Meat Clown"
-	reqs = list(
-		/obj/item/food/meat/steak = 1,
-		/obj/item/food/grown/banana = 1
-	)
-	result = /obj/item/food/meatclown
-	category = CAT_MEAT
-
 /datum/crafting_recipe/food/lasagna
 	name = "Lasagna"
 	reqs = list(

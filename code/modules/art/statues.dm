@@ -176,19 +176,6 @@
 	name = "statue of the AI core."
 	icon_state = "ai2"
 
-////////////////////////bananium///////////////////////////////////////
-
-/obj/structure/statue/bananium
-	max_integrity = 300
-	impressiveness = 50
-	desc = "A bananium statue with a small engraving:'HOOOOOOONK'."
-	custom_materials = list(/datum/material/bananium=SHEET_MATERIAL_AMOUNT*5)
-	abstract_type = /obj/structure/statue/bananium
-
-/obj/structure/statue/bananium/clown
-	name = "statue of a clown"
-	icon_state = "clown"
-
 /////////////////////sandstone/////////////////////////////////////////
 
 /obj/structure/statue/sandstone

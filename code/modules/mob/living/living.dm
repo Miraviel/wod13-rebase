@@ -1534,7 +1534,6 @@
 
 	var/static/list/possible_results = list(
 		WABBAJACK_MONKEY,
-		WABBAJACK_CLOWN,
 		WABBAJACK_ROBOT,
 		WABBAJACK_SLIME,
 		WABBAJACK_XENO,
@@ -1549,10 +1548,6 @@
 		if(WABBAJACK_MONKEY)
 			new_mob = new /mob/living/carbon/human/species/monkey(loc)
 
-		if(WABBAJACK_CLOWN)
-			var/picked_clown = pick(typesof(/mob/living/basic/clown))
-			new_mob = new picked_clown(loc)
-
 		if(WABBAJACK_ROBOT)
 			var/static/list/robot_options = list(
 				/mob/living/silicon/robot = 200,
@@ -1560,7 +1555,6 @@
 				/mob/living/basic/bot/dedbot = 25,
 				/mob/living/basic/bot/cleanbot = 25,
 				/mob/living/basic/bot/firebot = 25,
-				/mob/living/basic/bot/honkbot = 25,
 				/mob/living/basic/bot/hygienebot = 25,
 				/mob/living/basic/bot/medbot/mysterious = 12,
 				/mob/living/basic/bot/medbot = 13,

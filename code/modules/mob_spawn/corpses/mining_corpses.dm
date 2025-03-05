@@ -51,8 +51,6 @@
 			return /datum/outfit/consumed_ashwalker
 		if("Golem")
 			return /datum/outfit/consumed_golem
-		if("Clown")
-			return /datum/outfit/consumed_clown
 		if("Cultist")
 			return /datum/outfit/consumed_cultist
 		if("Dame")
@@ -93,8 +91,6 @@
 			return /datum/outfit/consumed_ice_settler
 		if("Heremoth")
 			return /datum/outfit/consumed_heremoth
-		if("Clown")
-			return /datum/outfit/consumed_clown
 		if("Cultist")
 			return /datum/outfit/consumed_cultist
 		if("Golem")
@@ -215,54 +211,6 @@
 		l_pocket = /obj/item/knife/combat/bone
 	if(prob(30))
 		r_pocket = /obj/item/knife/combat/bone
-
-//takes a lot from the clown job, notably NO PDA and different backpack loot + pocket goodies
-/datum/outfit/consumed_clown
-	name = "Legion-Consumed Clown"
-	id_trim = /datum/id_trim/job/clown
-	uniform = /obj/item/clothing/under/rank/civilian/clown
-	back = /obj/item/storage/backpack/clown
-	backpack_contents = list()
-	shoes = /obj/item/clothing/shoes/clown_shoes
-	mask = /obj/item/clothing/mask/gas/clown_hat
-	l_pocket = /obj/item/bikehorn
-
-	box = /obj/item/storage/box/survival/hug
-	chameleon_extras = /obj/item/stamp/clown
-	implants = list(/obj/item/implant/sad_trombone)
-	///drops a pie cannon on post_equip. i'm so done with this stupid outfit trying to put shit that doesn't fit in the backpack!
-	var/drop_a_pie_cannon = FALSE
-
-/datum/outfit/consumed_clown/pre_equip(mob/living/carbon/human/clown, visuals_only = FALSE)
-	if(!visuals_only)
-		clown.fully_replace_character_name(clown.name, pick(GLOB.clown_names))
-	if(prob(70))
-		var/backpack_loot = pick(list(
-			/obj/item/food/grown/banana = 1,
-			/obj/item/megaphone/clown = 1,
-			/obj/item/pneumatic_cannon/pie,
-			/obj/item/reagent_containers/cup/soda_cans/canned_laughter = 1,
-			/obj/item/reagent_containers/spray/waterflower = 1,
-			/obj/item/stamp/clown = 1,
-		))
-		if(backpack_loot == /obj/item/pneumatic_cannon/pie)
-			drop_a_pie_cannon = TRUE
-		else
-			backpack_contents += backpack_loot
-	if(prob(30))
-		backpack_contents += list(/obj/item/stack/sheet/mineral/bananium = pick_weight(list( 1 = 3, 2 = 2, 3 = 1)))
-	if(prob(10))
-		l_pocket = pick_weight(list(
-			/obj/item/bikehorn/golden = 3,
-			/obj/item/bikehorn/airhorn = 1,
-		))
-	if(prob(10))
-		r_pocket = /obj/item/implanter/sad_trombone
-
-/datum/outfit/consumed_clown/post_equip(mob/living/carbon/human/clown, visuals_only)
-	. = ..()
-	if(drop_a_pie_cannon)
-		new /obj/item/pneumatic_cannon/pie(get_turf(clown))
 
 /datum/outfit/consumed_golem
 	name = "Legion-Consumed Golem"

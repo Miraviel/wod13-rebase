@@ -307,19 +307,6 @@
 	canSmoothWith = SMOOTH_GROUP_DIAMOND_WALLS
 	custom_materials = list(/datum/material/diamond = SHEET_MATERIAL_AMOUNT * 2)
 
-/obj/structure/tram/alt/bananium
-	name = "bananium tram"
-	desc = "A composite structure with bananium plating. Honk!"
-	icon = 'icons/turf/walls/bananium_wall.dmi'
-	icon_state = "bananium_wall-0"
-	base_icon_state = "bananium_wall"
-	mineral = /obj/item/stack/sheet/mineral/bananium
-	tram_wall_type = /obj/structure/tram/alt/bananium
-	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = SMOOTH_GROUP_BANANIUM_WALLS + SMOOTH_GROUP_WALLS + SMOOTH_GROUP_CLOSED_TURFS
-	canSmoothWith = SMOOTH_GROUP_BANANIUM_WALLS
-	custom_materials = list(/datum/material/bananium = SHEET_MATERIAL_AMOUNT*2)
-
 /obj/structure/tram/alt/sandstone
 	name = "sandstone tram"
 	desc = "A composite structure with sandstone plating. Rough."

@@ -630,7 +630,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 // These traits are applied to /obj/item/organ/liver
 #define TRAIT_LAW_ENFORCEMENT_METABOLISM "law_enforcement_metabolism"
 #define TRAIT_CULINARY_METABOLISM "culinary_metabolism"
-#define TRAIT_COMEDY_METABOLISM "comedy_metabolism"
 #define TRAIT_MEDICAL_METABOLISM "medical_metabolism"
 #define TRAIT_ENGINEER_METABOLISM "engineer_metabolism"
 #define TRAIT_ROYAL_METABOLISM "royal_metabolism"
@@ -884,7 +883,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_NIGHT_VISION "night_vision"
 #define TRAIT_LIGHT_STEP "light_step"
 #define TRAIT_SPIRITUAL "spiritual"
-#define TRAIT_CLOWN_ENJOYER "clown_enjoyer"
 #define TRAIT_MIME_FAN "mime_fan"
 #define TRAIT_VORACIOUS "voracious"
 #define TRAIT_SELF_AWARE "self_aware"
@@ -1124,7 +1122,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 ///Traits given by station traits
 #define STATION_TRAIT_ASSISTANT_GIMMICKS "station_trait_assistant_gimmicks"
-#define STATION_TRAIT_BANANIUM_SHIPMENTS "station_trait_bananium_shipments"
 #define STATION_TRAIT_BIGGER_PODS "station_trait_bigger_pods"
 #define STATION_TRAIT_BIRTHDAY "station_trait_birthday"
 #define STATION_TRAIT_BOTS_GLITCHED "station_trait_bot_glitch"

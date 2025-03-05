@@ -70,16 +70,6 @@
 	cost = 6
 	surplus = 8
 
-/datum/uplink_item/explosives/syndicate_minibomb
-	name = "Syndicate Minibomb"
-	desc = "The minibomb is a grenade with a five-second fuse. Upon detonation, it will create a small hull breach \
-			in addition to dealing high amounts of damage to nearby personnel."
-	progression_minimum = 30 MINUTES
-	item = /obj/item/grenade/syndieminibomb
-	cost = 6
-	purchasable_from = ~UPLINK_CLOWN_OPS
-
-
 /datum/uplink_item/explosives/syndicate_bomb/emp
 	name = "Syndicate EMP Bomb"
 	desc = "A variation of the syndicate bomb designed to produce a large EMP effect."

@@ -14,8 +14,6 @@
 		/obj/item/organ/heart/cursed/wizard,
 		/obj/item/clothing/suit/hooded/cloak/drake,
 		/obj/item/ship_in_a_bottle,
-		/obj/item/clothing/shoes/clown_shoes/banana_shoes,
-		/obj/item/gun/magic/staff/honk,
 		/obj/item/knife/envy,
 		/obj/item/gun/ballistic/revolver/russian/soul,
 		/obj/item/veilrender/vealrender,

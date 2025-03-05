@@ -116,15 +116,6 @@
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT|HIDEBELT
 
-/obj/item/clothing/suit/chaplainsuit/clownpriest
-	name = "Robes of the Honkmother"
-	desc = "Meant for a clown of the cloth."
-	icon_state = "clownpriest"
-	inhand_icon_state = "clownpriest"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	flags_inv = HIDEJUMPSUIT|HIDEBELT
-	allowed = list(/obj/item/megaphone/clown, /obj/item/soap, /obj/item/food/pie/cream, /obj/item/bikehorn, /obj/item/bikehorn/golden, /obj/item/bikehorn/airhorn, /obj/item/instrument/bikehorn, /obj/item/reagent_containers/cup/soda_cans/canned_laughter, /obj/item/toy/crayon, /obj/item/toy/crayon/spraycan, /obj/item/toy/crayon/spraycan/lubecan, /obj/item/grown/bananapeel, /obj/item/food/grown/banana)
-
 /obj/item/clothing/head/helmet/chaplain/clock
 	name = "forgotten helmet"
 	desc = "It has the unyielding gaze of a god eternally forgotten."

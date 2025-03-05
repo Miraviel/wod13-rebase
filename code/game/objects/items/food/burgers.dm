@@ -166,20 +166,6 @@
 	venue_value = FOOD_PRICE_EXOTIC
 	crafting_complexity = FOOD_COMPLEXITY_3
 
-/obj/item/food/burger/clown
-	name = "clown burger"
-	desc = "This tastes funny..."
-	icon_state = "clownburger"
-	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 4,
-		/datum/reagent/consumable/nutriment/protein = 6,
-		/datum/reagent/consumable/nutriment/vitamin = 6,
-	)
-	tastes = list("bun" = 2, "a bad joke" = 4)
-	foodtypes = GRAIN | FRUIT
-	venue_value = FOOD_PRICE_NORMAL
-	crafting_complexity = FOOD_COMPLEXITY_2
-
 /obj/item/food/burger/mime
 	name = "mime burger"
 	desc = "Its taste defies language."

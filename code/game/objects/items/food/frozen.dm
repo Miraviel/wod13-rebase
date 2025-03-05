@@ -70,26 +70,6 @@
 	. = ..()
 	AddComponent(/datum/component/ice_cream_holder, y_offset = -2, sweetener = /datum/reagent/consumable/caramel)
 
-/obj/item/food/honkdae
-	name = "honkdae"
-	desc = "The clown's favorite dessert."
-	icon = 'icons/obj/food/frozen_treats.dmi'
-	icon_state = "honkdae"
-	w_class = WEIGHT_CLASS_SMALL
-	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 6,
-		/datum/reagent/consumable/banana = 10,
-		/datum/reagent/consumable/nutriment/vitamin = 4,
-	)
-	tastes = list("ice cream" = 1, "banana" = 1, "a bad joke" = 1)
-	foodtypes = FRUIT | DAIRY | SUGAR
-	crafting_complexity = FOOD_COMPLEXITY_4
-	crafted_food_buff = /datum/status_effect/food/chilling
-
-/obj/item/food/honkdae/make_edible()
-	. = ..()
-	AddComponent(/datum/component/ice_cream_holder, y_offset = -2) //The sugar will react with the banana forming laughter. Honk!
-
 /////////////
 //SNOWCONES//
 /////////////

@@ -6,17 +6,6 @@
 /datum/uplink_item/dangerous
 	category = /datum/uplink_category/dangerous
 
-/datum/uplink_item/dangerous/foampistol
-	name = "Donksoft Riot Pistol Case"
-	desc = "A case containing an innocent-looking toy pistol designed to fire foam darts at higher than normal velocity. \
-		Comes loaded with riot-grade darts effective at incapacitating a target, two spare magazines and a box of loose \
-		riot darts. Perfect for nonlethal takedowns at range, as well as deniability. While not included in the kit, the \
-		pistol is compatible with suppressors, which can be purchased separately."
-	item = /obj/item/storage/toolbox/guncase/traitor/donksoft
-	cost = 6
-	surplus = 10
-	purchasable_from = ~UPLINK_SERIOUS_OPS
-
 /datum/uplink_item/dangerous/pistol
 	name = "Makarov Pistol Case"
 	desc = "A weapon case containing an unknown variant of the Makarov pistol, along with two spare magazines and a box of loose 9mm ammunition. \
@@ -33,14 +22,6 @@
 	item = /obj/item/storage/box/syndie_kit/throwing_weapons
 	cost = 3
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
-
-/datum/uplink_item/dangerous/sword
-	name = "Energy Sword"
-	desc = "The energy sword is an edged weapon with a blade of pure energy. The sword is small enough to be \
-			pocketed when inactive. Activating it produces a loud, distinctive noise."
-	item = /obj/item/melee/energy/sword/saber
-	cost = 6
-	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/dangerous/powerfist
 	name = "Power Fist"

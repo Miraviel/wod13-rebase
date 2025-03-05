@@ -243,13 +243,6 @@
 	icon_state = "gas_alt"
 	material = /datum/material/plasma
 
-/datum/dimension_theme/clown
-	name = "Clown"
-	icon = 'icons/obj/clothing/masks.dmi'
-	icon_state = "clown"
-	material = /datum/material/bananium
-	sound = 'sound/items/bikehorn.ogg'
-
 /datum/dimension_theme/radioactive
 	name = "Radioactive"
 	icon = 'icons/obj/ore.dmi'

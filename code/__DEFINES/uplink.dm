@@ -6,19 +6,16 @@
 /// This item is purchasable to nuke ops
 #define UPLINK_NUKE_OPS (1 << 1)
 
-/// This item is purchasable to clown ops
-#define UPLINK_CLOWN_OPS (1 << 2)
-
 /// Can be randomly given to spies for their bounties
 #define UPLINK_SPY (1 << 3)
 
 #define UPLINK_LONE_OP (1 << 4)
 
 /// A blanket define for an item being purchasable by all types of nukie
-#define UPLINK_ALL_SYNDIE_OPS (UPLINK_NUKE_OPS | UPLINK_LONE_OP | UPLINK_CLOWN_OPS)
+#define UPLINK_ALL_SYNDIE_OPS (UPLINK_NUKE_OPS | UPLINK_LONE_OP)
 
 /// A blanket define for an item being purchasable by all operatives that spawn at the nukie firebase
-#define UPLINK_FIREBASE_OPS (UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+#define UPLINK_FIREBASE_OPS (UPLINK_NUKE_OPS)
 
 /// A define that excludes clown ops from the regular nukeop gear lineup
 #define UPLINK_SERIOUS_OPS (UPLINK_NUKE_OPS | UPLINK_LONE_OP)

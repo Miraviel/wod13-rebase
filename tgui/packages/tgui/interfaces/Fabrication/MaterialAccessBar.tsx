@@ -20,7 +20,6 @@ const MATERIAL_RARITY: Record<string, number> = {
   uranium: 7,
   diamond: 8,
   'bluespace crystal': 9,
-  bananium: 10,
 };
 
 export type MaterialAccessBarProps = {

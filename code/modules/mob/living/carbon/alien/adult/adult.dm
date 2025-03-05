@@ -137,7 +137,7 @@ GLOBAL_LIST_INIT(strippable_alien_humanoid_items, create_strippable_list(list(
 
 	var/obj/item/organ/stomach/alien/melting_pot = get_organ_slot(ORGAN_SLOT_STOMACH)
 	if(!istype(melting_pot))
-		visible_message(span_clown("[src] can't seem to consume [lucky_winner]!"), \
+		visible_message(span_alien("[src] can't seem to consume [lucky_winner]!"), \
 			span_alien("You feel a pain in your... chest? You can't get [lucky_winner] down."))
 		return TRUE
 

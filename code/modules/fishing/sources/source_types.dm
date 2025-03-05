@@ -5,7 +5,6 @@
 		FISHING_DUD = 10,
 		/obj/effect/spawner/message_in_a_bottle = 4,
 		/obj/item/coin/gold = 6,
-		/obj/item/fish/clownfish = 11,
 		/obj/item/fish/pufferfish = 11,
 		/obj/item/fish/cardinal = 11,
 		/obj/item/fish/greenchromis = 11,
@@ -15,17 +14,14 @@
 		/obj/item/fish/monkfish = 5,
 		/obj/item/fish/lanternfish = 7,
 		/obj/item/fish/zipzap = 7,
-		/obj/item/fish/clownfish/lube = 5,
 		/obj/item/fish/swordfish = 5,
 		/obj/structure/mystery_box/fishing = 2,
 	)
 	fish_counts = list(
-		/obj/item/fish/clownfish/lube = 2,
 		/obj/item/fish/swordfish = 2,
 		/obj/structure/mystery_box/fishing = 1,
 	)
 	fish_count_regen = list(
-		/obj/item/fish/clownfish/lube = 3 MINUTES,
 		/obj/item/fish/swordfish = 5 MINUTES,
 		/obj/structure/mystery_box/fishing = 32 MINUTES,
 	)
@@ -125,7 +121,6 @@
 	fish_table = list(
 		FISHING_DUD = 7,
 		/obj/effect/spawner/message_in_a_bottle = 3,
-		/obj/item/fish/clownfish = 10,
 		/obj/item/fish/pufferfish = 10,
 		/obj/item/fish/cardinal = 10,
 		/obj/item/fish/greenchromis = 10,
@@ -435,7 +430,6 @@
 		/obj/item/fish/holo/crab = 10,
 		/obj/item/fish/holo/puffer = 10,
 		/obj/item/fish/holo/angel = 10,
-		/obj/item/fish/holo/clown = 10,
 		/obj/item/fish/holo/checkered = 5,
 		/obj/item/fish/holo/halffish = 5,
 	)

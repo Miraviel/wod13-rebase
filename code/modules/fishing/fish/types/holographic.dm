@@ -84,20 +84,6 @@
 	sprite_width = /obj/item/fish/angelfish::sprite_width
 	beauty = /obj/item/fish/angelfish::beauty
 
-/obj/item/fish/holo/clown
-	name = "holographic clownfish"
-	fish_id = "holoclownfish"
-	icon_state = "holo_clownfish"
-	desc = "A holographic representation of a clownfish, or at least how they used to look like five centuries ago."
-	dedicated_in_aquarium_icon_state = null
-	aquarium_vc_color = /obj/item/fish/clownfish::aquarium_vc_color
-	average_size = /obj/item/fish/clownfish::average_size
-	average_weight = /obj/item/fish/clownfish::average_weight
-	sprite_height = /obj/item/fish/clownfish::sprite_height
-	sprite_width = /obj/item/fish/clownfish::sprite_width
-	required_fluid_type = /obj/item/fish/clownfish::required_fluid_type
-	beauty = /obj/item/fish/clownfish::beauty
-
 /obj/item/fish/holo/checkered
 	name = "unrendered holographic fish"
 	fish_id = "checkered"
@@ -118,7 +104,7 @@
 
 	for(var/obj/item/bodypart/limb in user.bodyparts)
 		limb.add_bodypart_overlay(new /datum/bodypart_overlay/texture/checkered)
-	
+
 	var/obj/item/bodypart/head/head = user.get_bodypart(BODY_ZONE_HEAD)
 	if(!isnull(head))
 		head.head_flags &= ~HEAD_EYESPRITES

@@ -27,8 +27,6 @@
 	premium = list(
 		/obj/item/dualsaber/toy = 4,
 		/obj/item/storage/box/fakesyndiesuit = 4,
-		/obj/item/gun/ballistic/automatic/c20r/toy/unrestricted = 4,
-		/obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted = 4,
 	)
 	refill_canister = /obj/item/vending_refill/donksoft
 	default_price = PAYCHECK_CREW

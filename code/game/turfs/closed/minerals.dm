@@ -283,7 +283,6 @@
 /// Will only run once, and will then be cached.
 /turf/closed/mineral/random/proc/mineral_chances()
 	return list(
-		/obj/item/stack/ore/bananium = check_holidays(APRIL_FOOLS) ? 3 : 0,
 		/obj/item/stack/ore/bluespace_crystal = 1,
 		/obj/item/stack/ore/diamond = 1,
 		/obj/item/stack/ore/gold = 10,
@@ -468,7 +467,6 @@
 
 /turf/closed/mineral/random/snow/underground/mineral_chances()
 	return list(
-		/obj/item/stack/ore/bananium = 1,
 		/obj/item/stack/ore/bluespace_crystal = 2,
 		/obj/item/stack/ore/diamond = 4,
 		/obj/item/stack/ore/gold = 20,
@@ -646,17 +644,6 @@
 	turf_type = /turf/open/misc/asteroid/snow/ice
 	baseturfs = /turf/open/misc/asteroid/snow/ice
 	initial_gas_mix = FROZEN_ATMOS
-	defer_change = TRUE
-
-/turf/closed/mineral/bananium
-	mineralType = /obj/item/stack/ore/bananium
-	mineralAmt = 3
-	scan_state = "rock_Bananium"
-
-/turf/closed/mineral/bananium/volcanic
-	turf_type = /turf/open/misc/asteroid/basalt/lava_land_surface
-	baseturfs = /turf/open/misc/asteroid/basalt/lava_land_surface
-	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 	defer_change = TRUE
 
 /turf/closed/mineral/bscrystal

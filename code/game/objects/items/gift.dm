@@ -58,7 +58,6 @@
 	if(isnull(gift_type_list))
 		gift_type_list = list(
 			/obj/item/banhammer,
-			/obj/item/bikehorn,
 			/obj/item/book/manual/chef_recipes,
 			/obj/item/book/manual/wiki/barman_recipes,
 			/obj/item/clothing/head/costume/snowman,

@@ -72,14 +72,6 @@
 	play_cinematic_sound(sound('sound/items/bikehorn.ogg'))
 	flick("summary_selfdes", screen) //???
 
-/// The clown operative nuclear bomb was activated and clowned the station!
-/datum/cinematic/nuke/clown
-	cleanup_time = 10 SECONDS
-
-/datum/cinematic/nuke/clown/play_nuke_effect()
-	play_cinematic_sound(sound('sound/items/airhorn/airhorn.ogg'))
-	flick("summary_selfdes", screen) //???
-
 /// A fake version of the nuclear detonation, where it winds up, but doesn't explode as the nuke core within was missing.
 /datum/cinematic/nuke/no_core
 	cleanup_time = 10 SECONDS

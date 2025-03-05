@@ -726,18 +726,6 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_MEDICAL
 
-/datum/design/implant_sadtrombone
-	name = "Sad Trombone Implant Case"
-	desc = "Makes death amusing."
-	id = "implant_trombone"
-	build_type = PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/glass =SMALL_MATERIAL_AMOUNT*5, /datum/material/bananium =SMALL_MATERIAL_AMOUNT*5)
-	build_path = /obj/item/implantcase/sad_trombone
-	category = list(
-		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_HEALTH
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
-
 /datum/design/implant_chem
 	name = "Chemical Implant Case"
 	desc = "A glass case containing a chemical implant."

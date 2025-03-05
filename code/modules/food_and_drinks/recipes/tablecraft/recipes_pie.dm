@@ -3,16 +3,6 @@
 
 ////////////////////////////////////////////////PIES////////////////////////////////////////////////
 
-/datum/crafting_recipe/food/bananacreampie
-	name = "Banana cream pie"
-	reqs = list(
-		/datum/reagent/consumable/milk = 5,
-		/obj/item/food/pie/plain = 1,
-		/obj/item/food/grown/banana = 1
-	)
-	result = /obj/item/food/pie/cream
-	category = CAT_PIE
-
 /datum/crafting_recipe/food/meatpie
 	name = "Meat pie"
 	reqs = list(

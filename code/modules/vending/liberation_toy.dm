@@ -26,8 +26,6 @@
 	premium = list(
 		/obj/item/toy/cards/deck/syndicate = 12,
 		/obj/item/storage/box/fakesyndiesuit = 4,
-		/obj/item/gun/ballistic/automatic/c20r/toy/unrestricted/riot = 4,
-		/obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted/riot = 4,
 		/obj/item/ammo_box/foambox/riot = 20,
 	)
 	armor_type = /datum/armor/vending_toyliberationstation

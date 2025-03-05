@@ -309,9 +309,6 @@
 		. = image(mannequin)
 		unset_busy_human_dummy("HOLODISK_PRESET")
 
-/datum/preset_holoimage/clown
-	outfit_type = /datum/outfit/job/clown
-
 /datum/preset_holoimage/engineer
 	outfit_type = /datum/outfit/job/engineer
 
@@ -350,27 +347,6 @@
 
 /datum/preset_holoimage/assistant
 	outfit_type = /datum/outfit/job/assistant
-
-/obj/item/disk/holodisk/example
-	preset_image_type = /datum/preset_holoimage/clown
-	preset_record_text = {"
-	NAME Clown
-	DELAY 10
-	SAY Why did the chaplain cross the maint ?
-	DELAY 20
-	SAY He wanted to get to the other side!
-	SOUND clownstep
-	DELAY 30
-	LANGUAGE /datum/language/narsie
-	SAY Helped him get there!
-	DELAY 10
-	SAY ALSO IM SECRETLY A GORILLA
-	DELAY 10
-	PRESET /datum/preset_holoimage/gorilla
-	NAME Gorilla
-	LANGUAGE /datum/language/common
-	SAY OOGA
-	DELAY 20"}
 
 /obj/item/disk/holodisk/ruin/ghost_restaurant
 	name = "Blackbox Print-out #NG234"

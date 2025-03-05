@@ -32,9 +32,6 @@
 	magazine = new /obj/item/ammo_box/magazine/toy/pistol/riot(src)
 	return ..()
 
-/obj/item/gun/ballistic/automatic/pistol/toy/riot/clandestine
-	projectile_damage_multiplier = 1.4
-
 /obj/item/gun/ballistic/shotgun/toy
 	name = "foam force shotgun"
 	desc = "A toy shotgun with wood furniture and a four-shell capacity underneath. Ages 8 and up."
@@ -78,40 +75,3 @@
 
 /obj/item/gun/ballistic/shotgun/toy/crossbow/riot
 	spawn_magazine_type =  /obj/item/ammo_box/magazine/internal/shot/toy/crossbow/riot
-
-/obj/item/gun/ballistic/automatic/c20r/toy //This is the syndicate variant with syndicate firing pin and riot darts.
-	name = "donksoft SMG"
-	desc = "A bullpup three-round burst toy SMG, designated 'C-20r'. Ages 8 and up."
-	can_suppress = TRUE
-	item_flags = NONE
-	accepted_magazine_type = /obj/item/ammo_box/magazine/toy/smgm45
-	spawn_magazine_type = /obj/item/ammo_box/magazine/toy/smgm45/riot
-	casing_ejector = FALSE
-	clumsy_check = FALSE
-	gun_flags = TOY_FIREARM_OVERLAY | NOT_A_REAL_GUN
-
-/obj/item/gun/ballistic/automatic/c20r/toy/unrestricted //Use this for actual toys
-	pin = /obj/item/firing_pin
-	spawn_magazine_type = /obj/item/ammo_box/magazine/toy/smgm45
-
-/obj/item/gun/ballistic/automatic/c20r/toy/unrestricted/riot
-	spawn_magazine_type = /obj/item/ammo_box/magazine/toy/smgm45/riot
-
-/obj/item/gun/ballistic/automatic/l6_saw/toy //This is the syndicate variant with syndicate firing pin and riot darts.
-	name = "donksoft LMG"
-	desc = "A heavily modified toy light machine gun, designated 'L6 SAW'. Ages 8 and up."
-	fire_sound = 'sound/items/syringeproj.ogg'
-	can_suppress = FALSE
-	item_flags = NONE
-	accepted_magazine_type = /obj/item/ammo_box/magazine/toy/m762
-	spawn_magazine_type = /obj/item/ammo_box/magazine/toy/m762/riot
-	casing_ejector = FALSE
-	clumsy_check = FALSE
-	gun_flags = TOY_FIREARM_OVERLAY | NOT_A_REAL_GUN
-
-/obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted //Use this for actual toys
-	pin = /obj/item/firing_pin
-	spawn_magazine_type = /obj/item/ammo_box/magazine/toy/m762
-
-/obj/item/gun/ballistic/automatic/l6_saw/toy/unrestricted/riot
-	spawn_magazine_type = /obj/item/ammo_box/magazine/toy/m762/riot

@@ -105,7 +105,8 @@
 	if(!target_machine.panel_open && !istype(target, /obj/machinery/computer))
 		return ..()
 
-	if(!istype(inserted_disk, /obj/item/computer_disk/virus/clown))
+	//WOD13TODO: Remove PDA stuff?
+	/*if(!istype(inserted_disk, /obj/item/computer_disk/virus/clown))
 		return ..()
 	var/obj/item/computer_disk/virus/clown/installed_cartridge = inserted_disk
 	if(!installed_cartridge.charges)
@@ -122,7 +123,7 @@
 		/datum/component/sound_player, \
 		uses = rand(15,20), \
 		signal_list = sig_list, \
-	)
+	)*/
 	return TRUE
 
 /obj/item/modular_computer/pda/add_context(atom/source, list/context, obj/item/held_item, mob/user)

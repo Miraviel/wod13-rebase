@@ -188,16 +188,6 @@
 	if(length(GLOB.nukeop_overwatch_start)) //Otherwise, it will default to the datum's spawn point anyways
 		spawn_location = pick(GLOB.nukeop_overwatch_start)
 
-//////CLOWN OP
-/obj/item/antag_spawner/nuke_ops/clown
-	name = "clown operative beacon"
-	desc = "A single-use beacon designed to quickly launch reinforcement clown operatives into the field."
-	special_role_name = ROLE_CLOWN_OPERATIVE
-	outfit = /datum/outfit/syndicate/clownop/no_crystals
-	antag_datum = /datum/antagonist/nukeop/reinforcement/clownop
-	pod_style = /datum/pod_style/clown
-	use_subtypes = FALSE
-
 //////SYNDICATE BORG
 /obj/item/antag_spawner/nuke_ops/borg_tele
 	name = "syndicate cyborg beacon"
@@ -291,16 +281,6 @@
 	new /obj/effect/dummy/phased_mob(T, spawned)
 
 	spawned.PossessByPlayer(C.key)
-
-/obj/item/antag_spawner/slaughter_demon/laughter
-	name = "vial of tickles"
-	desc = "A magically infused bottle of clown love, distilled from countless hugging attacks. Used in funny rituals to attract adorable creatures."
-	icon = 'icons/obj/mining_zones/artefacts.dmi'
-	icon_state = "vial"
-	color = "#FF69B4" // HOT PINK
-
-	veil_msg = span_warning("You sense an adorable presence lurking just beyond the veil...")
-	demon_type = /mob/living/basic/demon/slaughter/laughter
 
 /**
  * A subtype meant for 'normal' antag spawner items so as to reduce the amount of required hardcoding.
@@ -415,55 +395,3 @@
 /obj/item/antag_spawner/loadout/contractor/do_special_things(mob/living/carbon/human/contractor_support, mob/user)
 	to_chat(contractor_support, "\n[span_alertwarning("[user.real_name] is your superior. Follow any, and all orders given by them. You're here to support their mission only.")]")
 	to_chat(contractor_support, "[span_alertwarning("Should they perish, or be otherwise unavailable, you're to assist other active agents in this mission area to the best of your ability.")]")
-
-/obj/item/antag_spawner/loadout/monkey_man
-	name = "monkey agent beacon"
-	desc = "Call up some backup from ARC for monkey mayhem."
-	icon = 'icons/obj/devices/voice.dmi'
-	icon_state = "walkietalkie"
-	spawn_type = /mob/living/carbon/human/species/monkey
-	species_type = /datum/species/monkey
-	outfit = /datum/outfit/syndicate_monkey
-	antag_datum = /datum/antagonist/syndicate_monkey
-	use_subtypes = FALSE
-	poll_role_check = ROLE_TRAITOR
-	role_to_play = ROLE_SYNDICATE_MONKEY
-	poll_ignore_category = POLL_IGNORE_SYNDICATE
-	fail_text = "Unable to connect to the Animal Rights Consortium's Banana Ops. Please wait and try again later or use the beacon on your uplink to get your points refunded."
-
-/obj/item/antag_spawner/loadout/monkey_man/do_special_things(mob/living/carbon/human/monkey_man, mob/user)
-
-	monkey_man.fully_replace_character_name(monkey_man.real_name, pick(GLOB.syndicate_monkey_names))
-
-	monkey_man.crewlike_monkify()
-
-	// fuck you i am no longer playing around. this goes against the entire soul of the item
-	RegisterSignal(monkey_man, COMSIG_SPECIES_GAIN, PROC_REF(allergy))
-
-
-	monkey_man.mind.enslave_mind_to_creator(user)
-
-	var/obj/item/implant/explosive/imp = new(src)
-	imp.implant(monkey_man, user)
-
-/obj/item/antag_spawner/loadout/monkey_man/proc/allergy(mob/living/second_lifer, datum/species/folly_species)
-	SIGNAL_HANDLER
-	if(is_simian(second_lifer))
-		return
-	// timer is long to let them panic and consider their folly, and because allergies take a while
-	second_lifer.visible_message(span_bolddanger("[second_lifer] starts swelling unhealthily in size. It looks like they had an allergic reaction to becoming a [folly_species]!"), span_userdanger("As your monkey features morph, you feel your allergies coming in. Oh no."))
-	// no brain or items. organs are funny though
-	second_lifer.inflate_gib(drop_bitflags = DROP_ORGANS|DROP_BODYPARTS, gib_time = 25 SECONDS, anim_time = 40 SECONDS)
-
-/datum/outfit/syndicate_monkey
-	name = "Syndicate Monkey Agent Kit"
-
-	head = /obj/item/clothing/head/fedora
-	mask = /obj/item/cigarette/syndicate
-	uniform = /obj/item/clothing/under/syndicate
-	l_pocket = /obj/item/reagent_containers/cup/soda_cans/monkey_energy
-	r_pocket = /obj/item/storage/fancy/cigarettes/cigpack_syndicate
-	internals_slot = NONE
-	belt = /obj/item/lighter/skull
-	r_hand = /obj/item/food/grown/banana
-

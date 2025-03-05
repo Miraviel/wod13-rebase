@@ -40,7 +40,7 @@
 ///Clowns will always like bananas.
 /obj/item/food/grown/banana/proc/check_liked(mob/living/carbon/human/consumer)
 	var/obj/item/organ/liver/liver = consumer.get_organ_slot(ORGAN_SLOT_LIVER)
-	if (!HAS_TRAIT(consumer, TRAIT_AGEUSIA) && liver && HAS_TRAIT(liver, TRAIT_COMEDY_METABOLISM))
+	if (!HAS_TRAIT(consumer, TRAIT_AGEUSIA) && liver)
 		return FOOD_LIKED
 
 /obj/item/food/grown/banana/generate_trash(atom/location)
@@ -150,15 +150,6 @@
 	icon_state = "bluenana_peel"
 	inhand_icon_state = "bluespace_peel"
 
-// Other
-/obj/item/grown/bananapeel/specialpeel //used by /obj/item/clothing/shoes/clown_shoes/banana_shoes
-	name = "synthesized banana peel"
-	desc = "A synthetic banana peel."
-
-/obj/item/grown/bananapeel/specialpeel/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/slippery, 40)
-
 /obj/item/food/grown/banana/bunch
 	name = "banana bunch"
 	desc = "An exquisite bunch of bananas. The almost otherwordly plumpness steers the mind any discerning entertainer towards the divine."
@@ -190,18 +181,3 @@
 	var/obj/effect/decal/cleanable/food/plant_smudge/banana_smudge = new(loc)
 	banana_smudge.color = "#ffe02f"
 	qdel(src)
-
-/obj/item/food/grown/banana/bunch/monkeybomb
-	desc = "Am exquisite bunch of bananas. Their otherwordly plumpness seems to be hiding something."
-
-/obj/item/food/grown/banana/bunch/monkeybomb/examine(mob/user)
-	. = ..()
-	if(!is_simian(user))
-		. += span_notice("There's a banana label on one of the 'nanas you can't quite make out the details of.")
-		return
-	. += span_notice("The banana label on this bunch indicates that monkeys can use this as a sonic grenade with a 3 second timer!")
-
-/obj/item/food/grown/banana/bunch/monkeybomb/attack_self(mob/user, modifiers)
-	if(!is_simian(user))
-		return to_chat(user, span_notice("You don't really know what to do with this."))
-	else start_ripening()

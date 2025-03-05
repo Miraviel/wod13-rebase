@@ -11,7 +11,6 @@
 #define GUARDIAN_DEXTROUS "dextrous"
 #define GUARDIAN_EXPLOSIVE "explosive"
 #define GUARDIAN_GASEOUS "gaseous"
-#define GUARDIAN_GRAVITOKINETIC "gravitokinetic"
 #define GUARDIAN_LIGHTNING "lightning"
 #define GUARDIAN_PROTECTOR "protector"
 #define GUARDIAN_RANGED "ranged"

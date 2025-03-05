@@ -160,11 +160,6 @@
 /// Dangerous themes can potentially impede the user as much as people pursuing them
 /datum/armour_dimensional_theme/dangerous
 
-/datum/armour_dimensional_theme/dangerous/clown
-	material = /datum/material/bananium
-	barricade = /obj/item/restraints/legcuffs/beartrap/prearmed
-	barricade_anchored = FALSE
-
 /datum/armour_dimensional_theme/dangerous/radioactive
 	material = /datum/material/uranium
 	barricade = /obj/structure/statue/uranium/nuke

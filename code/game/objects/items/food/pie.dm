@@ -60,35 +60,6 @@
 	. = ..()
 	AddComponent(/datum/component/customizable_reagent_holder, null, CUSTOM_INGREDIENT_ICON_FILL, max_ingredients = 8)
 
-/obj/item/food/pie/cream
-	name = "banana cream pie"
-	desc = "Just like back home, on clown planet! HONK!"
-	icon_state = "pie"
-	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 8,
-		/datum/reagent/consumable/banana = 5,
-		/datum/reagent/consumable/nutriment/vitamin = 4,
-	)
-	tastes = list("pie" = 1)
-	foodtypes = GRAIN | DAIRY | SUGAR
-	var/stunning = TRUE
-	crafting_complexity = FOOD_COMPLEXITY_3
-
-/obj/item/food/pie/cream/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/splat, hit_callback = CALLBACK(src, PROC_REF(stun_and_blur)))
-
-/obj/item/food/pie/cream/proc/stun_and_blur(mob/living/victim, can_splat_on)
-	if(stunning)
-		victim.Paralyze(2 SECONDS) //splat!
-	if(can_splat_on)
-		victim.adjust_eye_blur(2 SECONDS)
-	victim.visible_message(span_warning("[victim] is creamed by [src]!"), span_userdanger("You've been creamed by [src]!"))
-	playsound(victim, SFX_DESECRATION, 50, TRUE)
-
-/obj/item/food/pie/cream/nostun
-	stunning = FALSE
-
 /obj/item/food/pie/berryclafoutis
 	name = "berry clafoutis"
 	desc = "No black birds, this is a good sign."

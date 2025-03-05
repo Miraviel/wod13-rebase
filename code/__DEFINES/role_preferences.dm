@@ -68,7 +68,6 @@
 #define ROLE_SOULTRAPPED_HERETIC "Soultrapped Heretic"
 #define ROLE_SYNDICATE "Syndicate"
 
-#define ROLE_CLOWN_OPERATIVE "Clown Operative"
 #define ROLE_FREE_GOLEM "Free Golem"
 #define ROLE_MORPH "Morph"
 #define ROLE_NUCLEAR_OPERATIVE "Nuclear Operative"
@@ -122,7 +121,6 @@ GLOBAL_LIST_INIT(special_roles, list(
 	// Roundstart
 	ROLE_BROTHER = 0,
 	ROLE_CHANGELING = 0,
-	ROLE_CLOWN_OPERATIVE = 14,
 	ROLE_CULTIST = 14,
 	ROLE_HERETIC = 0,
 	ROLE_MALF = 0,

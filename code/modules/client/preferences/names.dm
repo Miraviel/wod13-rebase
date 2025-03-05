@@ -79,16 +79,6 @@
 /datum/preference/name/backup_human/create_informed_default_value(datum/preferences/preferences)
 	return generate_random_name(preferences.read_preference(/datum/preference/choiced/gender))
 
-/datum/preference/name/clown
-	savefile_key = "clown_name"
-
-	explanation = "Clown name"
-	group = "fun"
-	relevant_job = /datum/job/clown
-
-/datum/preference/name/clown/create_default_value()
-	return pick(GLOB.clown_names)
-
 /datum/preference/name/mime
 	savefile_key = "mime_name"
 
@@ -163,7 +153,7 @@
 		return FALSE
 
 	// If one of the roles is ticked in the antag prefs menu, this option will show.
-	var/static/list/ops_roles = list(ROLE_OPERATIVE, ROLE_LONE_OPERATIVE, ROLE_OPERATIVE_MIDROUND, ROLE_CLOWN_OPERATIVE)
+	var/static/list/ops_roles = list(ROLE_OPERATIVE, ROLE_LONE_OPERATIVE, ROLE_OPERATIVE_MIDROUND)
 	if(length(ops_roles & preferences.be_special))
 		return TRUE
 

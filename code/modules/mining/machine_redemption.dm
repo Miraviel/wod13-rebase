@@ -34,7 +34,6 @@
 		/datum/material/uranium = 30,
 		/datum/material/diamond = 50,
 		/datum/material/bluespace = 50,
-		/datum/material/bananium = 60,
 	)
 	/// Variable that holds a timer which is used for callbacks to `send_console_message()`. Used for preventing multiple calls to this proc while the ORM is eating a stack of ores.
 	var/console_notify_timer

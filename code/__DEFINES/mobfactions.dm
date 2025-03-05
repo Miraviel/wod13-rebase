@@ -17,8 +17,6 @@
 #define FACTION_CARP "carp"
 /// Creatures summoned by chemical reactions
 #define FACTION_CHEMICAL_SUMMON "chemical_summon"
-/// Clown creatures and the Clown themselves
-#define FACTION_CLOWN "clowns"
 /// Headslugs
 #define FACTION_CREATURE "creature"
 /// Cats

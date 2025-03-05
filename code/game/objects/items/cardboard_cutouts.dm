@@ -229,15 +229,6 @@
 /datum/cardboard_cutout/assistant/get_name()
 	return "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
 
-/datum/cardboard_cutout/clown
-	name = "Clown"
-	applied_name = "HONK"
-	applied_desc = "A cardboard cutout of a clown. You get the feeling that it should be in a corner."
-	outfit = /datum/outfit/job/clown
-
-/datum/cardboard_cutout/clown/get_name()
-	return pick(GLOB.clown_names)
-
 /datum/cardboard_cutout/mime
 	name = "Mime"
 	applied_name = "..."

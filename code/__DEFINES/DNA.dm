@@ -203,7 +203,6 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 #define GOLEM_FOOD_DIAMOND "golem_food_diamond"
 #define GOLEM_FOOD_TITANIUM "golem_food_titanium"
 #define GOLEM_FOOD_PLASTEEL "golem_food_plasteel"
-#define GOLEM_FOOD_BANANIUM "golem_food_bananium"
 #define GOLEM_FOOD_BLUESPACE "golem_food_bluespace"
 #define GOLEM_FOOD_GIBTONITE "golem_food_gibtonite"
 #define GOLEM_FOOD_LIGHTBULB "golem_food_lightbulb"
@@ -219,7 +218,6 @@ GLOBAL_LIST_INIT(golem_stack_food_types, list(
 	GOLEM_FOOD_DIAMOND = new /datum/golem_food_buff/diamond(),
 	GOLEM_FOOD_TITANIUM = new /datum/golem_food_buff/titanium(),
 	GOLEM_FOOD_PLASTEEL = new /datum/golem_food_buff/plasteel(),
-	GOLEM_FOOD_BANANIUM = new /datum/golem_food_buff/bananium(),
 	GOLEM_FOOD_BLUESPACE = new /datum/golem_food_buff/bluespace(),
 	GOLEM_FOOD_GIBTONITE = new /datum/golem_food_buff/gibtonite(),
 	GOLEM_FOOD_LIGHTBULB = new /datum/golem_food_buff/lightbulb(),
@@ -245,8 +243,6 @@ GLOBAL_LIST_INIT(golem_stack_food_directory, list(
 	/obj/item/stack/sheet/mineral/titanium = GLOB.golem_stack_food_types[GOLEM_FOOD_TITANIUM],
 	/obj/item/stack/ore/titanium = GLOB.golem_stack_food_types[GOLEM_FOOD_TITANIUM],
 	/obj/item/stack/sheet/plasteel = GLOB.golem_stack_food_types[GOLEM_FOOD_PLASTEEL],
-	/obj/item/stack/ore/bananium = GLOB.golem_stack_food_types[GOLEM_FOOD_BANANIUM],
-	/obj/item/stack/sheet/mineral/bananium = GLOB.golem_stack_food_types[GOLEM_FOOD_BANANIUM],
 	/obj/item/stack/ore/bluespace_crystal = GLOB.golem_stack_food_types[GOLEM_FOOD_BLUESPACE],
 	/obj/item/stack/ore/bluespace_crystal/refined = GLOB.golem_stack_food_types[GOLEM_FOOD_BLUESPACE],
 	/obj/item/stack/ore/bluespace_crystal/artificial = GLOB.golem_stack_food_types[GOLEM_FOOD_BLUESPACE],

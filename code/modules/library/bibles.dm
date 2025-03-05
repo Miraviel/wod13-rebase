@@ -26,8 +26,6 @@ GLOBAL_LIST_INIT(biblestates, list(
 	"koran",
 	"scrapbook",
 	"burning",
-	"honk1",
-	"honk2",
 	"creeper",
 	"white",
 	"holylight",
@@ -47,8 +45,6 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	"koran",
 	"scrapbook",
 	"burning",
-	"honk1",
-	"honk2",
 	"creeper",
 	"white",
 	"holylight",
@@ -159,12 +155,6 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	inhand_icon_state = GLOB.bibleitemstates[bible_index]
 
 	switch(icon_state)
-		if("honk1")
-			user.dna.add_mutation(/datum/mutation/human/clumsy)
-			user.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/clown_hat(user), ITEM_SLOT_MASK)
-		if("honk2")
-			user.dna.add_mutation(/datum/mutation/human/clumsy)
-			user.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/clown_hat(user), ITEM_SLOT_MASK)
 		if("insuls")
 			var/obj/item/clothing/gloves/color/fyellow/insuls = new
 			insuls.name = "insuls"

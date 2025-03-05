@@ -413,18 +413,6 @@
 	inhand_icon_state = null
 	visor_icon = "mime_envisor"
 
-/obj/item/clothing/head/helmet/space/plasmaman/clown
-	name = "clown envirosuit helmet"
-	desc = "The make-up is painted on, it's a miracle it doesn't chip. <i>'HONK!'</i>"
-	icon_state = "clown_envirohelm"
-	inhand_icon_state = null
-	visor_icon = "clown_envisor"
-	smile_state = "clown_smile"
-
-/obj/item/clothing/head/helmet/space/plasmaman/clown/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CLOWN, CELL_VIRUS_TABLE_GENERIC, rand(2,3), 0)
-
 /obj/item/clothing/head/helmet/space/plasmaman/head_of_personnel
 	name = "head of personnel's envirosuit helmet"
 	desc = "A special containment helmet designed for the Head of Personnel. Embarrassingly enough, it looks way too much like the captain's design save for the red stripes."

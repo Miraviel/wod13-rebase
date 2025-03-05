@@ -76,10 +76,6 @@
 	status_effect = /datum/status_effect/golem/titanium
 	added_info = "If consumed this mineral will make you tougher and punch harder."
 
-/datum/golem_food_buff/bananium
-	status_effect = /datum/status_effect/golem/bananium
-	added_info = "If consumed this mineral will make you funnier."
-
 /datum/golem_food_buff/lightbulb
 	nutrition = 0
 	exclusive = FALSE

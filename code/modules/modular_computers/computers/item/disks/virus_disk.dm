@@ -19,24 +19,6 @@
 	return TRUE
 
 /**
- * Clown virus
- * Makes people's PDA honk
- * Can also be used on open panel airlocks to make them honk on opening.
- */
-/obj/item/computer_disk/virus/clown
-	name = "\improper H.O.N.K. disk"
-
-/obj/item/computer_disk/virus/clown/send_virus(obj/item/modular_computer/pda/source, obj/item/modular_computer/pda/target, mob/living/user, message)
-	. = ..()
-	if(!.)
-		return FALSE
-
-	user.show_message(span_notice("Success!"))
-	charges--
-	target.honkvirus_amount = rand(15, 25)
-	return TRUE
-
-/**
  * Mime virus
  * Makes PDA's silent, removing their ringtone.
  */

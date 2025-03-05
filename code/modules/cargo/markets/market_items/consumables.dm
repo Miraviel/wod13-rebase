@@ -2,16 +2,6 @@
 	category = "Consumables"
 	abstract_path = /datum/market_item/consumable
 
-/datum/market_item/consumable/clown_tears
-	name = "Bottle of Clown's Tears"
-	desc = "Guaranteed fresh from Weepy Boggins Tragic Kitchen"
-	item = /obj/item/reagent_containers/cup/bottle/clownstears
-	stock = 1
-
-	price_min = CARGO_CRATE_VALUE * 2.6
-	price_max = CARGO_CRATE_VALUE * 3
-	availability_prob = 10
-
 /datum/market_item/consumable/donk_pocket_box
 	name = "Box of Donk Pockets"
 	desc = "A well packaged box containing the favourite snack of every spacefarer."

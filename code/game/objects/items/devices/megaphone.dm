@@ -73,10 +73,3 @@
 	name = "supply megaphone"
 	icon_state = "megaphone-cargo"
 	inhand_icon_state = "megaphone-cargo"
-
-/obj/item/megaphone/clown
-	name = "clown's megaphone"
-	desc = "Something that should not exist."
-	icon_state = "megaphone-clown"
-	inhand_icon_state = "megaphone-clown"
-	voicespan = list(SPAN_CLOWN)

@@ -547,33 +547,6 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 
 //////////////////////////////////////////////
 //                                          //
-//               CLOWN OPS                  //
-//                                          //
-//////////////////////////////////////////////
-
-/datum/dynamic_ruleset/roundstart/nuclear/clown_ops
-	name = "Clown Operatives"
-	antag_datum = /datum/antagonist/nukeop/clownop
-	antag_flag = ROLE_CLOWN_OPERATIVE
-	antag_flag_override = ROLE_OPERATIVE
-	ruleset_category = parent_type::ruleset_category |  RULESET_CATEGORY_NO_WITTING_CREW_ANTAGONISTS
-	antag_leader_datum = /datum/antagonist/nukeop/leader/clownop
-	requirements = list(101,101,101,101,101,101,101,101,101,101)
-	required_role = ROLE_CLOWN_OPERATIVE
-	job_type = /datum/job/clown_operative
-
-/datum/dynamic_ruleset/roundstart/nuclear/clown_ops/pre_execute()
-	. = ..()
-	if(!.)
-		return
-
-	var/list/nukes = SSmachines.get_machines_by_type(/obj/machinery/nuclearbomb/syndicate)
-	for(var/obj/machinery/nuclearbomb/syndicate/nuke as anything in nukes)
-		new /obj/machinery/nuclearbomb/syndicate/bananium(nuke.loc)
-		qdel(nuke)
-
-//////////////////////////////////////////////
-//                                          //
 //               METEOR                     //
 //                                          //
 //////////////////////////////////////////////

@@ -142,15 +142,6 @@ Charged extracts:
 	user.visible_message(span_notice("[src] distills into a potion!"))
 	..()
 
-/obj/item/slimecross/charged/pyrite
-	colour = SLIME_TYPE_PYRITE
-	effect_desc = "Creates bananium. Oh no."
-
-/obj/item/slimecross/charged/pyrite/do_effect(mob/user)
-	new /obj/item/stack/sheet/mineral/bananium(get_turf(user), 10)
-	user.visible_message(span_warning("[src] solidifies with a horrifying banana stench!"))
-	..()
-
 /obj/item/slimecross/charged/red
 	colour = SLIME_TYPE_RED
 	effect_desc = "Produces a lavaproofing potion"

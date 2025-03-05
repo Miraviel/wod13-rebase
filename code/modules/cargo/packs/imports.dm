@@ -65,14 +65,6 @@
 	contains = list(/obj/item/stack/sheet/mineral/bamboo/fifty)
 	crate_name = "bamboo cuttings crate"
 
-/datum/supply_pack/imports/bananium
-	name = "A Single Sheet of Bananium"
-	desc = "Don't let the clown know that he can order this. It costs a fortune even for this much."
-	cost = CARGO_CRATE_VALUE * 100
-	contains = list(/obj/item/stack/sheet/mineral/bananium)
-	crate_name = "bananium sheet crate"
-	discountable = SUPPLY_PACK_RARE_DISCOUNTABLE
-
 /datum/supply_pack/imports/dumpstercorpse
 	name = "A....Dumpster?"
 	desc = "Why does it smell so bad...."

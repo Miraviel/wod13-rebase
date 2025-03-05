@@ -14,7 +14,6 @@
 		/obj/item/clothing/under/rank/civilian/mime,
 		/obj/item/reagent_containers/cup/glass/bottle/bottleofnothing,
 		/obj/item/stamp/mime,
-		/obj/item/storage/box/survival/hug/black,
 		/obj/item/bedsheet/mime,
 		/obj/item/clothing/shoes/sneakers/mime,
 		/obj/item/toy/figure/mime,

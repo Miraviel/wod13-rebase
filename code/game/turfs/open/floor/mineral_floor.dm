@@ -3,7 +3,6 @@
  * Plasma floor
  * Gold floor
  * Silver floor
- * Bananium floor
  * Diamond floor
  * Uranium floor
  * Shuttle floor (Titanium)
@@ -179,53 +178,6 @@
 //Used in SnowCabin.dm
 /turf/open/floor/mineral/plastitanium/red/snow_cabin
 	temperature = 180
-
-//BANANIUM
-
-/turf/open/floor/mineral/bananium
-	name = "bananium floor"
-	icon_state = "bananium"
-	floor_tile = /obj/item/stack/tile/mineral/bananium
-	icons = list("bananium","bananium_dam")
-	custom_materials = list(/datum/material/bananium = SMALL_MATERIAL_AMOUNT*5)
-	rust_resistance = RUST_RESISTANCE_BASIC
-	material_flags = NONE //The slippery comp makes it unpractical for good clown decor. The custom mat one should still slip.
-	var/sound_cooldown = 0
-
-/turf/open/floor/mineral/bananium/Entered(atom/movable/arrived, atom/old_loc, list/atom/old_locs)
-	. = ..()
-	if(.)
-		return
-	if(isliving(arrived))
-		squeak()
-
-/turf/open/floor/mineral/bananium/attackby(obj/item/W, mob/user, params)
-	.=..()
-	if(!.)
-		honk()
-
-/turf/open/floor/mineral/bananium/attack_hand(mob/user, list/modifiers)
-	.=..()
-	if(!.)
-		honk()
-
-/turf/open/floor/mineral/bananium/attack_paw(mob/user, list/modifiers)
-	.=..()
-	if(!.)
-		honk()
-
-/turf/open/floor/mineral/bananium/proc/honk()
-	if(sound_cooldown < world.time)
-		playsound(src, 'sound/items/bikehorn.ogg', 50, TRUE)
-		sound_cooldown = world.time + 20
-
-/turf/open/floor/mineral/bananium/proc/squeak()
-	if(sound_cooldown < world.time)
-		playsound(src, SFX_CLOWN_STEP, 50, TRUE)
-		sound_cooldown = world.time + 10
-
-/turf/open/floor/mineral/bananium/airless
-	initial_gas_mix = AIRLESS_ATMOS
 
 //DIAMOND
 

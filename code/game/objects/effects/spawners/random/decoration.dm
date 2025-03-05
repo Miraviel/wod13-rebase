@@ -71,7 +71,6 @@
 		/obj/structure/statue/gold/ce = 5,
 		/obj/structure/statue/gold/rd = 5,
 		/obj/structure/statue/gold/qm = 5,
-		/obj/structure/statue/bananium/clown = 1,
 		/obj/structure/statue/elder_atmosian = 1,
 		/obj/structure/statue/uranium/nuke = 1,
 		/obj/structure/statue/uranium/eng = 1,

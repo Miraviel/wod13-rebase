@@ -79,18 +79,6 @@
 	bot.damage_type_healer = initial(medkit.damagetype_healed) ? initial(medkit.damagetype_healed) : BRUTE
 	bot.update_appearance()
 
-/datum/crafting_recipe/honkbot
-	name = "Honkbot"
-	result = /mob/living/basic/bot/honkbot
-	reqs = list(
-		/obj/item/storage/box/clown = 1,
-		/obj/item/bodypart/arm/right/robot = 1,
-		/obj/item/assembly/prox_sensor = 1,
-		/obj/item/bikehorn = 1,
-	)
-	time = 4 SECONDS
-	category = CAT_ROBOT
-
 /datum/crafting_recipe/firebot
 	name = "Firebot"
 	result = /mob/living/basic/bot/firebot

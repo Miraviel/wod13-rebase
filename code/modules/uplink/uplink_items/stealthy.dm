@@ -50,7 +50,6 @@
 	item = /obj/item/suppressor
 	cost = 3
 	surplus = 10
-	purchasable_from = ~UPLINK_CLOWN_OPS
 
 /datum/uplink_item/stealthy_weapons/holster
 	name = "Syndicate Holster"
@@ -66,7 +65,7 @@
 			falls asleep, they will be able to move and act."
 	item = /obj/item/pen/sleepy
 	cost = 4
-	purchasable_from = ~(UPLINK_NUKE_OPS | UPLINK_CLOWN_OPS)
+	purchasable_from = ~(UPLINK_NUKE_OPS)
 
 
 /datum/uplink_item/stealthy_weapons/origami_kit

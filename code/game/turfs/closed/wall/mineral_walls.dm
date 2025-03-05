@@ -54,20 +54,6 @@
 /turf/closed/wall/mineral/diamond/hulk_recoil(obj/item/bodypart/arm, mob/living/carbon/human/hulkman, damage = 41)
 	return ..()
 
-/turf/closed/wall/mineral/bananium
-	name = "bananium wall"
-	desc = "A wall with bananium plating. Honk!"
-	icon = 'icons/turf/walls/bananium_wall.dmi'
-	icon_state = "bananium_wall-0"
-	base_icon_state = "bananium_wall"
-	sheet_type = /obj/item/stack/sheet/mineral/bananium
-	hardness = 70 //it's banana
-	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = SMOOTH_GROUP_BANANIUM_WALLS + SMOOTH_GROUP_WALLS + SMOOTH_GROUP_CLOSED_TURFS
-	canSmoothWith = SMOOTH_GROUP_BANANIUM_WALLS
-	custom_materials = list(/datum/material/bananium = SHEET_MATERIAL_AMOUNT*2)
-	rust_resistance = RUST_RESISTANCE_BASIC
-
 /turf/closed/wall/mineral/sandstone
 	name = "sandstone wall"
 	desc = "A wall with sandstone plating. Rough."

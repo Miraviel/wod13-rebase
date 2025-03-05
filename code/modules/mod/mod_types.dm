@@ -172,15 +172,6 @@
 		/obj/item/mod/module/jetpack,
 	)
 
-/obj/item/mod/control/pre_equipped/cosmohonk
-	theme = /datum/mod_theme/cosmohonk
-	applied_modules = list(
-		/obj/item/mod/module/storage,
-		/obj/item/mod/module/waddle,
-		/obj/item/mod/module/bikehorn,
-		/obj/item/mod/module/balloon/advanced,
-	)
-
 /obj/item/mod/control/pre_equipped/traitor
 	theme = /datum/mod_theme/syndicate
 	starting_frequency = MODLINK_FREQ_SYNDICATE
@@ -450,10 +441,6 @@
 	insignia_type = /obj/item/mod/module/insignia/janitor
 	additional_modules = list(/obj/item/mod/module/noslip, /obj/item/mod/module/mister/cleaner)
 
-/obj/item/mod/control/pre_equipped/responsory/clown
-	insignia_type = /obj/item/mod/module/insignia/clown
-	additional_modules = /obj/item/mod/module/bikehorn
-
 /obj/item/mod/control/pre_equipped/responsory/chaplain
 	insignia_type = /obj/item/mod/module/insignia/chaplain
 	additional_modules = /obj/item/mod/module/injector
@@ -574,7 +561,6 @@
 		/obj/item/mod/module/storage/bluespace,
 		/obj/item/mod/module/welding,
 		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/bikehorn,
 		/obj/item/mod/module/rad_protection,
 		/obj/item/mod/module/tether,
 		/obj/item/mod/module/injector,

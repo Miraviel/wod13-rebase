@@ -116,7 +116,7 @@
 		arm_grenade(user, 5, FALSE)
 		return TRUE
 	else if(!clumsy && (clumsy_check == GRENADE_NONCLUMSY_FUMBLE))
-		to_chat(user, span_warning("You pull the pin on [src]. Attached to it is a pink ribbon that says, \"[span_clown("HONK")]\""))
+		to_chat(user, span_warning("You pull the pin on [src]. Attached to it is a pink ribbon that says, \"HONK\"!"))
 		arm_grenade(user, 5, FALSE)
 		return TRUE
 

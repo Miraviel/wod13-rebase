@@ -166,10 +166,6 @@
 	mood_change = 3
 	timeout = 5 MINUTES
 
-/datum/mood_event/clownshoes
-	description = "The shoes are a clown's legacy, I never want to take them off!"
-	mood_change = 5
-
 /datum/mood_event/sacrifice_good
 	description = "The gods are pleased with this offering!"
 	mood_change = 5

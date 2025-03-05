@@ -296,25 +296,6 @@
 	honorifics = list(", PhD.", ", MD.")
 	honorific_positions = HONORIFIC_POSITION_LAST_FULL | HONORIFIC_POSITION_NONE
 
-/datum/id_trim/job/clown
-	assignment = JOB_CLOWN
-	trim_state = "trim_clown"
-	department_color = COLOR_MAGENTA
-	subdepartment_color = COLOR_MAGENTA
-	sechud_icon_state = SECHUD_CLOWN
-	minimal_access = list(
-		ACCESS_MINERAL_STOREROOM,
-		ACCESS_SERVICE,
-		ACCESS_THEATRE,
-		)
-	extra_access = list()
-	template_access = list(
-		ACCESS_PRINCE,
-		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
-		)
-	job = /datum/job/clown
-
 /datum/id_trim/job/cook
 	assignment = JOB_COOK
 	trim_state = "trim_cook"

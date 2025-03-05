@@ -63,16 +63,6 @@
 	crate_name = "formalwear crate"
 	crate_type = /obj/structure/closet/crate/wooden
 
-/datum/supply_pack/costumes_toys/clownpin
-	name = "Hilarious Firing Pin Crate"
-	desc = "I uh... I'm not really sure what this does. Wanna buy it?"
-	cost = CARGO_CRATE_VALUE * 10
-	contraband = TRUE
-	contains = list(/obj/item/firing_pin/clown)
-	crate_name = "toy crate" // It's /technically/ a toy. For the clown, at least.
-	crate_type = /obj/structure/closet/crate/wooden
-	discountable = SUPPLY_PACK_RARE_DISCOUNTABLE
-
 /datum/supply_pack/costumes_toys/lasertag
 	name = "Laser Tag Crate"
 	desc = "Foam Force is for boys. Laser Tag is for men. Contains three sets of red suits, blue suits, \
@@ -135,36 +125,6 @@
 				)
 	crate_name = "original costume crate"
 	crate_type = /obj/structure/closet/crate/wooden
-
-/datum/supply_pack/costumes_toys/costume
-	name = "Standard Costume Crate"
-	desc = "Supply the station's entertainers with the equipment of their trade with these \
-		Nanotrasen-approved costumes! Contains a full clown and mime outfit, along with a \
-		bike horn and a bottle of nothing."
-	cost = CARGO_CRATE_VALUE * 2
-	access = ACCESS_THEATRE
-	contains = list(/obj/item/storage/backpack/clown,
-					/obj/item/clothing/shoes/clown_shoes,
-					/obj/item/clothing/mask/gas/clown_hat,
-					/obj/item/clothing/under/rank/civilian/clown,
-					/obj/item/bikehorn,
-					/obj/item/clothing/under/rank/civilian/mime,
-					/obj/item/clothing/shoes/sneakers/black,
-					/obj/item/clothing/gloves/color/white,
-					/obj/item/clothing/mask/gas/mime,
-					/obj/item/clothing/head/frenchberet,
-					/obj/item/clothing/suit/toggle/suspenders,
-					/obj/item/reagent_containers/cup/glass/bottle/bottleofnothing,
-					/obj/item/storage/backpack/mime,
-				)
-	crate_name = "standard costume crate"
-	crate_type = /obj/structure/closet/crate/wooden
-
-/datum/supply_pack/costumes_toys/costume/fill(obj/structure/closet/crate/C)
-	..()
-	var/funny_gas_internals
-	funny_gas_internals = pick(subtypesof(/obj/item/tank/internals/emergency_oxygen/engi/clown) - /obj/item/tank/internals/emergency_oxygen/engi/clown)
-	new funny_gas_internals(C)
 
 /datum/supply_pack/costumes_toys/randomised/toys
 	name = "Toy Crate"
@@ -274,8 +234,7 @@
 	desc = "This crate contains a box of long balloons, plus a skillchip for non-clowns to join the fun! Extra layer of safety so clowns at CentCom won't get to them."
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(
-		/obj/item/storage/box/balloons,
-		/obj/item/skillchip/job/clown,
+		/obj/item/storage/box/balloons
 	)
 	crate_name = "long balloons kit"
 	crate_type = /obj/structure/closet/crate/wooden

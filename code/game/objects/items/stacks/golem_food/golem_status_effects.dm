@@ -390,38 +390,6 @@
 	SIGNAL_HANDLER
 	modified_arms -= arm
 
-/// Makes you slippery
-/datum/status_effect/golem/bananium
-	overlay_state_prefix = "banana"
-	mineral_name = "bananium"
-	applied_fluff = "Bananium veins ooze from your crags. You feel a little funny!"
-	alert_icon_state = "sheet-bananium"
-	alert_desc = "You feel kind of funny."
-	/// The slipperiness component which we have applied
-	var/datum/component/slippery/slipperiness
-
-/datum/status_effect/golem/bananium/on_apply()
-	. = ..()
-	if (!.)
-		return
-	owner.AddElementTrait(TRAIT_WADDLING, TRAIT_STATUS_EFFECT(id), /datum/element/waddling)
-	ADD_TRAIT(owner, TRAIT_NO_SLIP_WATER, TRAIT_STATUS_EFFECT(id))
-	slipperiness = owner.AddComponent(\
-		/datum/component/slippery,\
-		knockdown = 12 SECONDS,\
-		lube_flags = NO_SLIP_WHEN_WALKING,\
-		can_slip_callback = CALLBACK(src, PROC_REF(try_slip)),\
-	)
-
-/// Only slip people when we're down on the ground
-/datum/status_effect/golem/bananium/proc/try_slip(mob/living/slipper, mob/living/slippee)
-	return owner.body_position == LYING_DOWN
-
-/datum/status_effect/golem/bananium/on_remove()
-	owner.remove_traits(list(TRAIT_WADDLING, TRAIT_NO_SLIP_WATER), TRAIT_STATUS_EFFECT(id))
-	QDEL_NULL(slipperiness)
-	return ..()
-
 #define LIGHTBULB_FILTER "filter_lightbulb_glow"
 
 /// Lights up the golem, NOT using the golem subtype because it is not exclusive with other status effects

@@ -697,12 +697,6 @@
 	if(. && new_model)
 		borg.model.transform_to(new_model)
 
-/obj/item/borg/upgrade/transform/clown
-	name = "borg model picker (Clown)"
-	desc = "Allows you to turn a cyborg into a clown, honk."
-	icon_state = "module_honk"
-	new_model = /obj/item/robot_model/clown
-
 /obj/item/borg/upgrade/circuit_app
 	name = "circuit manipulation apparatus"
 	desc = "An engineering cyborg upgrade allowing for manipulation of circuit boards."

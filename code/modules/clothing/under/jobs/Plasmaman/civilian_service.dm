@@ -131,16 +131,6 @@
 	icon_state = "mime_envirosuit"
 	inhand_icon_state = null
 
-/obj/item/clothing/under/plasmaman/clown
-	name = "clown envirosuit"
-	desc = "<i>'HONK!'</i>"
-	icon_state = "clown_envirosuit"
-	inhand_icon_state = null
-
-/obj/item/clothing/under/plasmaman/clown/Initialize(mapload)
-	. = ..()
-	AddElement(/datum/element/swabable, CELL_LINE_TABLE_CLOWN, CELL_VIRUS_TABLE_GENERIC, rand(2,3), 0)
-
 /obj/item/clothing/under/plasmaman/prisoner
 	name = "prisoner envirosuit"
 	desc = "An orange envirosuit identifying and protecting a criminal plasmaman. Its suit sensors are stuck in the \"Fully On\" position."
@@ -149,28 +139,3 @@
 	has_sensor = LOCKED_SENSORS
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
-
-/obj/item/clothing/under/plasmaman/clown/check_fire_state(datum/source, datum/status_effect/fire_handler/status_effect)
-	if (!ishuman(loc))
-		return
-
-	// This is weird but basically we're calling this proc once the cooldown ends in case our wearer gets set on fire again during said cooldown
-	// This is why we're ignoring source and instead checking by loc
-	var/mob/living/carbon/human/owner = loc
-	if (!owner.on_fire || !owner.is_atmos_sealed(additional_flags = PLASMAMAN_PREVENT_IGNITION, check_hands = TRUE, alt_flags = TRUE))
-		return
-
-	if (!extinguishes_left || !COOLDOWN_FINISHED(src, extinguish_timer))
-		return
-
-	extinguishes_left -= 1
-	COOLDOWN_START(src, extinguish_timer, extinguish_cooldown)
-	// Check if our (possibly other) wearer is on fire once the cooldown ends
-	addtimer(CALLBACK(src, PROC_REF(check_fire_state)), extinguish_cooldown)
-	owner.visible_message(span_warning("[owner]'s suit spews space lube everywhere!"), span_warning("Your suit spews space lube everywhere!"))
-	owner.extinguish_mob()
-	var/datum/effect_system/fluid_spread/foam/foam = new
-	var/datum/reagents/foamreagent = new /datum/reagents(15)
-	foamreagent.add_reagent(/datum/reagent/lube, 15)
-	foam.set_up(4, holder = src, location = get_turf(owner), carry = foamreagent)
-	foam.start() //Truly terrifying.

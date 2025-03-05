@@ -1229,11 +1229,6 @@
 /obj/item/card/id/advanced/get_trim_sechud_icon_state()
 	return sechud_icon_state_override || ..()
 
-/obj/item/card/id/advanced/rainbow
-	name = "rainbow identification card"
-	desc = "A rainbow card, promoting fun in a 'business proper' sense!"
-	icon_state = "card_rainbow"
-
 /obj/item/card/id/advanced/silver
 	name = "silver identification card"
 	desc = "A silver card which shows honour and dedication."

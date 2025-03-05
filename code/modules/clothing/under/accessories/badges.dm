@@ -42,8 +42,6 @@
 	return TRUE
 
 /obj/item/clothing/accessory/clown_enjoyer_pin/accessory_equipped(obj/item/clothing/under/clothes, mob/living/user)
-	if(HAS_TRAIT(user, TRAIT_CLOWN_ENJOYER))
-		user.add_mood_event("clown_enjoyer_pin", /datum/mood_event/clown_enjoyer_pin)
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_equipper = user
 		human_equipper.fan_hud_set_fandom()

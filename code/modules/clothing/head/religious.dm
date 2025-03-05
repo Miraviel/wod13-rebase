@@ -2,11 +2,6 @@
 	icon = 'icons/obj/clothing/head/chaplain.dmi'
 	worn_icon = 'icons/mob/clothing/head/chaplain.dmi'
 
-/obj/item/clothing/head/chaplain/clownmitre
-	name = "Hat of the Honkmother"
-	desc = "It's hard for parishioners to see a banana peel on the floor when they're looking up at your glorious chapeau."
-	icon_state = "clownmitre"
-
 /obj/item/clothing/head/chaplain/kippah
 	name = "kippah"
 	desc = "Signals that you follow the Jewish Halakha. Keeps the head covered and the soul extra-Orthodox."

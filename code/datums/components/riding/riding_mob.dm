@@ -403,13 +403,6 @@
 	if (. == COMPONENT_DRIVER_BLOCK_MOVE || !COOLDOWN_FINISHED(src, pony_trot_cooldown))
 		return
 
-	var/mob/living/carbon/human/human_user = user
-
-	if(human_user && is_clown_job(human_user.mind?.assigned_role))
-		// there's a new sheriff in town
-		playsound(movable_parent, 'sound/mobs/non-humanoids/pony/clown_gallup.ogg', 50)
-		COOLDOWN_START(src, pony_trot_cooldown, 500 MILLISECONDS)
-
 /datum/component/riding/creature/bear
 
 /datum/component/riding/creature/bear/get_rider_offsets_and_layers(pass_index, mob/offsetter)

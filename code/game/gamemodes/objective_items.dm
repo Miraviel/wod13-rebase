@@ -53,9 +53,9 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 //Contains the target item datums for Steal objectives.
 /datum/objective_item
 	/// How the item is described in the objective
-	var/name = "a silly bike horn! Honk!"
+	var/name = "a default item"
 	/// Typepath of item
-	var/targetitem = /obj/item/bikehorn
+	var/targetitem = /obj/item
 	/// Valid containers that the target item can be in.
 	var/list/valid_containers = list()
 	/// Who CARES if this item goes missing (no stealing unguarded items), often similar but not identical to the next list
@@ -83,7 +83,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	 */
 	var/difficulty = 0
 	/// A hint explaining how one may find the target item.
-	var/steal_hint = "The clown might have one."
+	var/steal_hint = "Someone might have one."
 
 	///If the item takes special steps to destroy for an objective (e.g. blackbox)
 	var/destruction_method = null
@@ -179,17 +179,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 /obj/item/nullrod/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/nullrod)
-
-/datum/objective_item/steal/traitor/clown_shoes
-	name = "the clown's shoes"
-	targetitem = /obj/item/clothing/shoes/clown_shoes
-	item_owner = list(JOB_CLOWN)
-	exists_on_map = TRUE
-	difficulty = 1
-	steal_hint = "The clown's huge, bright shoes. They should always be on the clown's feet."
-
-/obj/item/clothing/shoes/clown_shoes/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/clothing/shoes/clown_shoes)
 
 /datum/objective_item/steal/traitor/mime_mask
 	name = "the mime's mask"

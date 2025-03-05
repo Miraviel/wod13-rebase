@@ -198,7 +198,6 @@
 	allowed_projectile_types |= list(
 		/obj/projectile/beam/mindflayer,
 		/obj/projectile/bullet/gyro,
-		/obj/projectile/bullet/honker,
 		/obj/projectile/bullet/mime,
 		/obj/projectile/curse_hand,
 		/obj/projectile/energy/electrode,
@@ -224,17 +223,6 @@
 	recharge_rate = 2
 	no_den_usage = 1
 	school = SCHOOL_TRANSMUTATION
-
-/obj/item/gun/magic/staff/honk
-	name = "staff of the honkmother"
-	desc = "Honk."
-	fire_sound = 'sound/items/airhorn/airhorn.ogg'
-	ammo_type = /obj/item/ammo_casing/magic/honk
-	icon_state = "honker"
-	inhand_icon_state = "honker"
-	max_charges = 4
-	recharge_rate = 8
-	school = SCHOOL_EVOCATION
 
 /obj/item/gun/magic/staff/spellblade
 	name = "spellblade"

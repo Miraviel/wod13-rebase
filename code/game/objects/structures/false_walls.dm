@@ -278,19 +278,6 @@
 	smoothing_groups = SMOOTH_GROUP_PLASMA_WALLS + SMOOTH_GROUP_WALLS
 	canSmoothWith = SMOOTH_GROUP_PLASMA_WALLS
 
-/obj/structure/falsewall/bananium
-	name = "bananium wall"
-	desc = "A wall with bananium plating. Honk!"
-	fake_icon = 'icons/turf/walls/bananium_wall.dmi'
-	icon_state = "bananium_wall-open"
-	base_icon_state = "bananium_wall"
-	mineral = /obj/item/stack/sheet/mineral/bananium
-	walltype = /turf/closed/wall/mineral/bananium
-	smoothing_flags = SMOOTH_BITMASK
-	smoothing_groups = SMOOTH_GROUP_BANANIUM_WALLS + SMOOTH_GROUP_WALLS
-	canSmoothWith = SMOOTH_GROUP_BANANIUM_WALLS
-
-
 /obj/structure/falsewall/sandstone
 	name = "sandstone wall"
 	desc = "A wall with sandstone plating. Rough."

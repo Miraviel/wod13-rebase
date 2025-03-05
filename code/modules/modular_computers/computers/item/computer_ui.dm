@@ -54,10 +54,6 @@
 		ui?.close()
 		return
 
-	if(honkvirus_amount > 0) // EXTRA annoying, huh!
-		honkvirus_amount--
-		playsound(src, 'sound/items/bikehorn.ogg', 30, TRUE)
-
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		update_tablet_open_uis(user)
