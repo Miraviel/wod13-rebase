@@ -183,33 +183,6 @@
 
 	return ..()
 
-/datum/id_trim/job/cargo_technician
-	assignment = JOB_CARGO_TECHNICIAN
-	trim_state = "trim_cargotechnician"
-	department_color = COLOR_CARGO_BROWN
-	subdepartment_color = COLOR_CARGO_BROWN
-	sechud_icon_state = SECHUD_CARGO_TECHNICIAN
-	minimal_access = list(
-		ACCESS_CARGO,
-		ACCESS_MAINT_TUNNELS,
-		ACCESS_MECH_MINING,
-		ACCESS_MINERAL_STOREROOM,
-		ACCESS_SHIPPING,
-		)
-	extra_access = list(
-		ACCESS_MINING,
-		ACCESS_MINING_STATION,
-		)
-	template_access = list(
-		ACCESS_PRINCE,
-		ACCESS_CHANGE_IDS,
-		ACCESS_QM,
-		)
-	job = /datum/job/cargo_technician
-	honorifics = list("Courier")
-	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
-
-
 /datum/id_trim/job/chaplain
 	assignment = JOB_CHAPLAIN
 	trim_state = "trim_chaplain"

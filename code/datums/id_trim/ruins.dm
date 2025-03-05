@@ -134,26 +134,6 @@
 	access = list(ACCESS_AWAY_SCIENCE, ACCESS_AWAY_COMMAND)
 	big_pointer = TRUE
 
-//Trims for waystation.dmm space ruin
-/datum/id_trim/away/waystation/cargo_technician
-	assignment = "Waystation Cargo Hauler"
-	trim_state = "trim_cargotechnician"
-	department_color = COLOR_CARGO_BROWN
-	access = list(ACCESS_AWAY_SUPPLY)
-
-/datum/id_trim/away/waystation/quartermaster
-	assignment = "Waystation Quartermaster"
-	trim_state = "trim_quartermaster"
-	department_color = COLOR_CARGO_BROWN
-	access = list(ACCESS_AWAY_SUPPLY, ACCESS_AWAY_COMMAND)
-	big_pointer = TRUE
-
-/datum/id_trim/away/waystation/security
-	assignment = "Waystation Security Officer"
-	trim_state = "trim_securityofficer"
-	department_color = COLOR_CARGO_BROWN
-	access = list(ACCESS_AWAY_SUPPLY, ACCESS_AWAY_SEC)
-
 //Trims for the outlet ruin
 /datum/id_trim/away/the_outlet
 	assignment = "Krazy Cashier"

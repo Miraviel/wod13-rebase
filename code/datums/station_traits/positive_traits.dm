@@ -258,7 +258,6 @@
 	/// List of all job types with the cybernetics they should receive.
 	var/static/list/job_to_cybernetic = list(
 		/datum/job/assistant = /obj/item/organ/heart/cybernetic, //real cardiac
-		/datum/job/cargo_technician = /obj/item/organ/stomach/cybernetic/tier2,
 		/datum/job/chaplain = /obj/item/organ/cyberimp/brain/anti_drop,
 		/datum/job/chemist = /obj/item/organ/liver/cybernetic/tier2,
 		/datum/job/chief_engineer = /obj/item/organ/cyberimp/chest/thrusters,

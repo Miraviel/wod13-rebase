@@ -166,30 +166,6 @@
 				/obj/item/clothing/under/rank/rnd/scientist = 1)
 	category = CAT_MISC
 
-/obj/item/banner/cargo
-	name = "cargonia banner"
-	desc = "The banner of the eternal Cargonia, with the mystical power of conjuring any object into existence."
-	icon_state = "banner_cargo"
-	inhand_icon_state = "banner_cargo"
-	lefthand_file = 'icons/mob/inhands/equipment/banners_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/banners_righthand.dmi'
-	warcry = "Hail Cargonia!"
-
-/obj/item/banner/cargo/Initialize(mapload)
-	. = ..()
-	job_loyalties = DEPARTMENT_BITFLAG_CARGO
-
-/obj/item/banner/cargo/mundane
-	inspiration_available = FALSE
-
-/datum/crafting_recipe/cargo_banner
-	name = "Cargonia Banner"
-	result = /obj/item/banner/cargo/mundane
-	time = 40
-	reqs = list(/obj/item/stack/rods = 2,
-				/obj/item/clothing/under/rank/cargo/tech = 1)
-	category = CAT_MISC
-
 /obj/item/banner/engineering
 	name = "engitopia banner"
 	desc = "The banner of Engitopia, wielders of limitless power."

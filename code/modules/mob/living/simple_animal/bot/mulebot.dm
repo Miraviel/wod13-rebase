@@ -72,10 +72,10 @@
 		return INITIALIZE_HINT_QDEL
 	set_wires(new /datum/wires/mulebot(src))
 
-	// Doing this hurts my soul, but simplebot access reworks are for another day.
+	/* Doing this hurts my soul, but simplebot access reworks are for another day.
 	var/datum/id_trim/job/cargo_trim = SSid_access.trim_singletons_by_path[/datum/id_trim/job/cargo_technician]
 	access_card.add_access(cargo_trim.access + cargo_trim.wildcard_access)
-	prev_access = access_card.access.Copy()
+	prev_access = access_card.access.Copy() WOD13TODO: Mules have no access now */
 
 	cell = new /obj/item/stock_parts/power_store/cell/upgraded(src, 2000)
 

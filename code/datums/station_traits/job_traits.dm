@@ -80,23 +80,6 @@
 	var/datum/job/our_job = SSjob.get_job_type(job_to_add)
 	return our_job.player_old_enough(player) && ..()
 
-/// Adds a gorilla to the cargo department, replacing the sloth and the mech
-/datum/station_trait/job/cargorilla
-	name = "Cargo Gorilla"
-	button_desc = "Sign up to become the Cargo Gorilla, a peaceful shepherd of boxes."
-	weight = 0
-	show_in_report = FALSE // Selective attention test. Did you spot the gorilla?
-	can_roll_antag = CAN_ROLL_NEVER
-	job_to_add = /datum/job/cargo_gorilla
-
-/datum/station_trait/job/cargorilla/New()
-	. = ..()
-	RegisterSignal(SSatoms, COMSIG_SUBSYSTEM_POST_INITIALIZE, PROC_REF(replace_cargo))
-
-/datum/station_trait/job/cargorilla/on_lobby_button_update_overlays(atom/movable/screen/lobby/button/sign_up/lobby_button, list/overlays)
-	. = ..()
-	overlays += LAZYFIND(lobby_candidates, lobby_button.get_mob()) ? "gorilla_on" : "gorilla_off"
-
 /// Remove the cargo equipment and personnel that are being replaced by a gorilla.
 /datum/station_trait/job/cargorilla/proc/replace_cargo(datum/source)
 	SIGNAL_HANDLER

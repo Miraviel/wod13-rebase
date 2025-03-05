@@ -105,23 +105,6 @@
 		ACCESS_SCIENCE,
 		)
 
-/datum/corpse_assignment/cargo
-	job_lore = "I was employed as a technician"
-	job_stuffs = list(/obj/item/clothing/under/rank/cargo/tech)
-	trim = /datum/id_trim/job/visiting_technician
-	job_datum = /datum/job/recovered_crew/cargo
-
-/datum/id_trim/job/visiting_technician
-	assignment = JOB_LOSTCREW_CARGO
-	trim_state = "trim_cargotechnician"
-	department_color = COLOR_CARGO_BROWN
-	subdepartment_color = COLOR_CARGO_BROWN
-	sechud_icon_state = SECHUD_CARGO_TECHNICIAN
-	minimal_access = list(
-		ACCESS_CARGO,
-		ACCESS_MAINT_TUNNELS,
-		)
-
 /datum/corpse_assignment/civillian
 	job_lore = "I was employed as a civllian"
 	job_stuffs = list(/obj/item/clothing/under/color/grey)

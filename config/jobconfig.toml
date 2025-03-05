@@ -54,20 +54,12 @@
 "# Spawn Positions" = 2
 "# Total Positions" = 3
 
-[CAPTAIN]
-"# Human Authority Whitelist Setting" = "HUMANS_ONLY"
+[PRINCE]
 "# Playtime Requirements" = 180
 "# Required Account Age" = 14
 "# Required Character Age" = 0
 "# Spawn Positions" = 1
 "# Total Positions" = 1
-
-[CARGO_TECHNICIAN]
-"# Playtime Requirements" = 0
-"# Required Account Age" = 0
-"# Required Character Age" = 0
-"# Spawn Positions" = 3
-"# Total Positions" = 5
 
 [CHAPLAIN]
 "# Playtime Requirements" = 0

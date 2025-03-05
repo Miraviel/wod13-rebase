@@ -183,7 +183,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/traitor/clown_shoes
 	name = "the clown's shoes"
 	targetitem = /obj/item/clothing/shoes/clown_shoes
-	excludefromjob = list(JOB_CLOWN, JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
 	item_owner = list(JOB_CLOWN)
 	exists_on_map = TRUE
 	difficulty = 1
@@ -195,7 +194,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/traitor/mime_mask
 	name = "the mime's mask"
 	targetitem = /obj/item/clothing/mask/gas/mime
-	excludefromjob = list(JOB_MIME, JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
 	item_owner = list(JOB_MIME)
 	exists_on_map = TRUE
 	difficulty = 1
@@ -207,7 +205,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/traitor/pka
 	name = "a protokinetic accelerator"
 	targetitem = /obj/item/gun/energy/recharge/kinetic_accelerator
-	excludefromjob = list(JOB_SHAFT_MINER, JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
 	item_owner = list(JOB_SHAFT_MINER)
 	exists_on_map = TRUE
 	difficulty = 1
@@ -220,7 +217,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/traitor/chef_moustache
 	name = "a fancy fake moustache"
 	targetitem = /obj/item/clothing/mask/fakemoustache/italian
-	excludefromjob = list(JOB_COOK, JOB_HEAD_OF_PERSONNEL, JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER)
 	item_owner = list(JOB_COOK)
 	exists_on_map = TRUE
 	difficulty = 1
@@ -290,7 +286,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/traitor/cargo_budget
 	name = "cargo's departmental budget"
 	targetitem = /obj/item/card/id/departmental_budget/car
-	excludefromjob = list(JOB_QUARTERMASTER, JOB_CARGO_TECHNICIAN)
 	item_owner = list(JOB_QUARTERMASTER)
 	exists_on_map = TRUE
 	difficulty = 2
@@ -543,7 +538,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/traitor/insuls
 	name = "some insulated gloves"
 	targetitem = /obj/item/clothing/gloves/color/yellow
-	excludefromjob = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
 	item_owner = list(JOB_STATION_ENGINEER, JOB_CHIEF_ENGINEER)
 	exists_on_map = TRUE
 	difficulty = 1
@@ -576,7 +570,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/traitor/denied_stamp
 	name = "cargo's denied stamp"
 	targetitem = /obj/item/stamp/denied
-	excludefromjob = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_SHAFT_MINER)
 	exists_on_map = TRUE
 	difficulty = 1
 	steal_hint = "Cargo often has multiple of these red stamps lying around to process paperwork."
@@ -587,7 +580,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/traitor/granted_stamp
 	name = "cargo's granted stamp"
 	targetitem = /obj/item/stamp/granted
-	excludefromjob = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_SHAFT_MINER)
 	exists_on_map = TRUE
 	difficulty = 1
 	steal_hint = "Cargo often has multiple of these green stamps lying around to process paperwork."

@@ -225,25 +225,6 @@
 
 // Cargo
 
-/obj/item/clothing/suit/toggle/cargo_tech
-	name = "cargo gorka"
-	desc = "A brown and black puffy jacket; made from synthetic fabric. Inspired by old Eastern European designs."
-	icon_state = "cargo_jacket"
-	icon = 'icons/obj/clothing/suits/jacket.dmi'
-	worn_icon = 'icons/mob/clothing/suits/jacket.dmi'
-	inhand_icon_state = null
-	blood_overlay_type = "coat"
-	body_parts_covered = CHEST|ARMS
-	allowed = list(
-		/obj/item/tank/internals/emergency_oxygen,
-		/obj/item/tank/internals/plasmaman,
-		/obj/item/boxcutter,
-		/obj/item/dest_tagger,
-		/obj/item/stamp,
-		/obj/item/storage/bag/mail,
-		/obj/item/universal_scanner,
-	)
-
 // Quartermaster
 
 /obj/item/clothing/suit/jacket/quartermaster

@@ -1,11 +1,6 @@
 
 //jobs from ss13 but DEAD.
 
-/obj/effect/mob_spawn/corpse/human/cargo_tech
-	name = JOB_CARGO_TECHNICIAN
-	outfit = /datum/outfit/job/cargo_tech
-	icon_state = "corpsecargotech"
-
 /obj/effect/mob_spawn/corpse/human/cook
 	name = JOB_COOK
 	outfit = /datum/outfit/job/cook

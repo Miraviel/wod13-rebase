@@ -155,14 +155,6 @@
 	state_open = TRUE
 	density = FALSE
 
-/obj/machinery/suit_storage_unit/industrial
-	name = "industrial suit storage unit"
-	icon_state = "industrial"
-	base_icon_state = "industrial"
-
-/obj/machinery/suit_storage_unit/industrial/loader
-	mod_type = /obj/item/mod/control/pre_equipped/loader
-
 /obj/machinery/suit_storage_unit/Initialize(mapload)
 	. = ..()
 

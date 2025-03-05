@@ -2197,11 +2197,6 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supply)
-"jN" = (
-/obj/structure/closet/wardrobe/cargotech,
-/obj/effect/turf_decal/bot,
-/turf/open/floor/iron,
-/area/centcom/central_command_areas/supply)
 "jO" = (
 /obj/machinery/vending/cola,
 /turf/open/floor/iron,
@@ -2220,7 +2215,6 @@
 "jQ" = (
 /obj/machinery/airalarm/directional/east,
 /obj/effect/turf_decal/bot,
-/obj/structure/closet/wardrobe/cargotech,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supply)
 "jR" = (
@@ -6380,7 +6374,6 @@
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/evacuation)
 "CF" = (
-/obj/machinery/suit_storage_unit/industrial,
 /obj/structure/window/reinforced/survival_pod/spawner/directional/east,
 /turf/open/floor/iron/smooth_large,
 /area/centcom/central_command_areas/evacuation/ship)
@@ -52935,9 +52928,9 @@ jq
 ju
 eq
 vY
-jN
+jp
 jQ
-jN
+jp
 Gl
 Gl
 lq

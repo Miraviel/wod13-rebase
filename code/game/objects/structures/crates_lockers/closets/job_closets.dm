@@ -132,20 +132,6 @@
 	generate_items_inside(items_inside,src)
 	return
 
-/obj/structure/closet/wardrobe/cargotech
-	name = "cargo wardrobe"
-	icon_door = "cargo_wardrobe"
-
-/obj/structure/closet/wardrobe/cargotech/PopulateContents()
-	var/static/items_inside = list(
-		/obj/item/clothing/suit/hooded/wintercoat/cargo = 1,
-		/obj/item/clothing/under/rank/cargo/tech = 3,
-		/obj/item/clothing/shoes/sneakers/black = 3,
-		/obj/item/clothing/gloves/fingerless = 3,
-		/obj/item/clothing/head/soft = 3,
-		/obj/item/radio/headset/headset_cargo = 1)
-	generate_items_inside(items_inside,src)
-
 /obj/structure/closet/wardrobe/white/medical
 	name = "medical doctor's wardrobe"
 	icon_door = "med_wardrobe"

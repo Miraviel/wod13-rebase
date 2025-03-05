@@ -8,7 +8,6 @@
 		/datum/corpse_assignment/medical = 1,
 		/datum/corpse_assignment/security = 1,
 		/datum/corpse_assignment/science = 1,
-		/datum/corpse_assignment/cargo = 1,
 		/datum/corpse_assignment/civillian = 1,
 		)
 	possible_flavor_types = list(

@@ -119,48 +119,6 @@ GLOBAL_VAR_INIT(roaches_deployed, FALSE)
 /obj/item/vending_refill/wardrobe/medi_wardrobe
 	machine_name = "MediDrobe"
 
-/obj/machinery/vending/wardrobe/cargo_wardrobe
-	name = "CargoDrobe"
-	desc = "A highly advanced vending machine for buying cargo related clothing for free."
-	icon_state = "cargodrobe"
-	product_ads = "Upgraded Assistant Style! Pick yours today!;These shorts are comfy and easy to wear, get yours now!"
-	vend_reply = "Thank you for using the CargoDrobe!"
-	products = list(
-		/obj/item/clothing/head/beret/cargo = 3,
-		/obj/item/clothing/mask/bandana/striped/cargo = 3,
-		/obj/item/clothing/head/soft = 3,
-		/obj/item/clothing/head/utility/hardhat/orange = 3,
-		/obj/item/clothing/under/rank/cargo/tech = 3,
-		/obj/item/clothing/under/rank/cargo/tech/skirt = 3,
-		/obj/item/clothing/under/rank/cargo/tech/alt = 3,
-		/obj/item/clothing/under/rank/cargo/tech/skirt/alt = 3,
-		/obj/item/clothing/suit/toggle/cargo_tech = 3,
-		/obj/item/clothing/suit/hooded/wintercoat/cargo = 3,
-		/obj/item/clothing/suit/hazardvest = 3,
-		/obj/item/clothing/gloves/fingerless = 3,
-		/obj/item/clothing/shoes/sneakers/black = 3,
-		/obj/item/storage/backpack = 3,
-		/obj/item/storage/backpack/satchel = 3,
-		/obj/item/storage/backpack/satchel/leather = 3,
-		/obj/item/storage/backpack/duffelbag = 3,
-		/obj/item/storage/backpack/messenger = 3,
-		/obj/item/radio/headset/headset_cargo = 3,
-		/obj/item/clothing/accessory/pocketprotector = 3,
-	)
-	premium = list(
-		/obj/item/storage/bag/mail = 3,
-		/obj/item/clothing/head/costume/mailman = 1,
-		/obj/item/clothing/under/misc/mailman = 1,
-		/obj/item/flatpack/mailsorter = 1,
-		/obj/item/clothing/under/rank/cargo/miner = 3,
-		/obj/item/clothing/under/rank/cargo/miner/lavaland = 3
-	)
-	refill_canister = /obj/item/vending_refill/wardrobe/cargo_wardrobe
-	payment_department = ACCOUNT_CAR
-
-/obj/item/vending_refill/wardrobe/cargo_wardrobe
-	machine_name = "CargoDrobe"
-
 /obj/machinery/vending/wardrobe/robo_wardrobe
 	name = "RoboDrobe"
 	desc = "A vending machine designed to dispense clothing known only to roboticists."

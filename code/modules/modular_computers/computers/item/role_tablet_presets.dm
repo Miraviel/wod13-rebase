@@ -212,17 +212,6 @@
  * Supply
  */
 
-/obj/item/modular_computer/pda/cargo
-	name = "cargo technician PDA"
-	greyscale_colors = "#8b4c31#2c2e32"
-	stored_paper = 20
-	starting_programs = list(
-		/datum/computer_file/program/shipping,
-		/datum/computer_file/program/budgetorders,
-		/datum/computer_file/program/robocontrol,
-		/datum/computer_file/program/restock_tracker,
-	)
-
 /obj/item/modular_computer/pda/shaftminer
 	name = "shaft miner PDA"
 	greyscale_config = /datum/greyscale_config/tablet/stripe_thick

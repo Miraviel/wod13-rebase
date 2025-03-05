@@ -464,14 +464,6 @@
 	for(var/i in 1 to 5)
 		new /obj/item/grenade/smokebomb(src)
 
-/obj/item/storage/box/syndie_kit/mail_counterfeit
-	name = "mail counterfeit kit"
-	desc = "A GLA Postal Service branded box. It's emblazoned with the motto: *Nothing stops the mail*."
-
-/obj/item/storage/box/syndie_kit/mail_counterfeit/PopulateContents()
-	for(var/i in 1 to 6)
-		new /obj/item/storage/mail_counterfeit_device(src)
-
 /obj/item/storage/box/syndie_kit/chemical
 	name = "chemical kit"
 

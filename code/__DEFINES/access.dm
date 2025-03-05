@@ -553,7 +553,6 @@
 	/obj/item/modular_computer/pda/heads/ce = list(REGION_COMMAND), \
 	/obj/item/modular_computer/pda/heads/rd = list(REGION_COMMAND), \
 	/obj/item/modular_computer/pda/heads/captain = list(REGION_COMMAND), \
-	/obj/item/modular_computer/pda/cargo = list(REGION_SUPPLY), \
 	/obj/item/modular_computer/pda/shaftminer = list(REGION_SUPPLY), \
 	/obj/item/modular_computer/pda/chaplain = list(REGION_GENERAL), \
 	/obj/item/modular_computer/pda/lawyer = list(REGION_GENERAL), \

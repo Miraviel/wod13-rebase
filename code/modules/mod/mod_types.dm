@@ -90,20 +90,6 @@
 		/obj/item/mod/module/tether,
 	)
 
-/obj/item/mod/control/pre_equipped/loader
-	theme = /datum/mod_theme/loader
-	applied_modules = list(
-		/obj/item/mod/module/storage/large_capacity,
-		/obj/item/mod/module/flashlight,
-		/obj/item/mod/module/paper_dispenser,
-		/obj/item/mod/module/stamp,
-	)
-	default_pins = list(
-		/obj/item/mod/module/clamp/loader,
-		/obj/item/mod/module/magnet,
-		/obj/item/mod/module/hydraulic,
-	)
-
 /obj/item/mod/control/pre_equipped/mining
 	theme = /datum/mod_theme/mining
 	applied_core = /obj/item/mod/core/plasma
