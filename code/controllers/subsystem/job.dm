@@ -44,7 +44,7 @@ SUBSYSTEM_DEF(job)
 	 * See [/datum/controller/subsystem/ticker/proc/equip_characters]
 	 */
 	var/list/chain_of_command = list(
-		JOB_CAPTAIN = 1,
+		JOB_PRINCE = 1,
 		JOB_HEAD_OF_PERSONNEL = 2,
 		JOB_RESEARCH_DIRECTOR = 3,
 		JOB_CHIEF_ENGINEER = 4,
@@ -770,11 +770,11 @@ SUBSYSTEM_DEF(job)
 	default_raw_text = "Captain's Spare ID safe code combination: [safe_code ? safe_code : "\[REDACTED\]"]<br><br>The spare ID can be found in its dedicated safe on the bridge."
 	return ..()
 
-/datum/controller/subsystem/job/proc/promote_to_captain(mob/living/carbon/human/new_captain, acting_captain = FALSE)
+/datum/controller/subsystem/job/proc/promote_to_captain(mob/living/carbon/human/new_prince, acting_captain = FALSE)
 	var/id_safe_code = SSid_access.spare_id_safe_code
 
 	if(!id_safe_code)
-		CRASH("Cannot promote [new_captain.real_name] to Captain, there is no id_safe_code.")
+		CRASH("Cannot promote [new_prince.real_name] to Captain, there is no id_safe_code.")
 
 	var/paper = new /obj/item/folder/biscuit/confidential/spare_id_safe_code()
 	var/list/slots = list(
@@ -783,16 +783,16 @@ SUBSYSTEM_DEF(job)
 		LOCATION_BACKPACK = ITEM_SLOT_BACKPACK,
 		LOCATION_HANDS = ITEM_SLOT_HANDS
 	)
-	var/where = new_captain.equip_in_one_of_slots(paper, slots, FALSE, indirect_action = TRUE) || "at your feet"
+	var/where = new_prince.equip_in_one_of_slots(paper, slots, FALSE, indirect_action = TRUE) || "at your feet"
 
 	if(acting_captain)
-		to_chat(new_captain, span_notice("Due to your position in the chain of command, you have been promoted to Acting Captain. You can find in important note about this [where]."))
+		to_chat(new_prince, span_notice("Due to your position in the chain of command, you have been promoted to Acting Captain. You can find in important note about this [where]."))
 	else
-		to_chat(new_captain, span_notice("You can find the code to obtain your spare ID from the secure safe on the Bridge [where]."))
-		new_captain.add_mob_memory(/datum/memory/key/captains_spare_code, safe_code = SSid_access.spare_id_safe_code)
+		to_chat(new_prince, span_notice("You can find the code to obtain your spare ID from the secure safe on the Bridge [where]."))
+		new_prince.add_mob_memory(/datum/memory/key/captains_spare_code, safe_code = SSid_access.spare_id_safe_code)
 
 	// Force-give their ID card bridge access.
-	var/obj/item/id_slot = new_captain.get_item_by_slot(ITEM_SLOT_ID)
+	var/obj/item/id_slot = new_prince.get_item_by_slot(ITEM_SLOT_ID)
 	if(id_slot)
 		var/obj/item/card/id/id_card = id_slot.GetID()
 		if(!(ACCESS_COMMAND in id_card.access))

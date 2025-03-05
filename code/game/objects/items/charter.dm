@@ -96,26 +96,3 @@
 /obj/item/station_charter/admin
 	unlimited_uses = TRUE
 	ignores_timeout = TRUE
-
-
-/obj/item/station_charter/banner
-	name = "\improper Nanotrasen banner"
-	icon = 'icons/obj/banner.dmi'
-	name_type = "planet"
-	icon_state = "banner"
-	inhand_icon_state = "banner"
-	lefthand_file = 'icons/mob/inhands/equipment/banners_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/banners_righthand.dmi'
-	desc = "A cunning device used to claim ownership of celestial bodies."
-	w_class = WEIGHT_CLASS_HUGE
-	force = 15
-
-/obj/item/station_charter/banner/rename_station(designation, uname, ureal_name, ukey)
-	set_station_name(designation)
-	minor_announce("[ureal_name] has designated the [name_type] as [html_decode(station_name())]", "Captain's Banner") //decode station_name to avoid minor_announce double encode
-	log_game("[ukey] has renamed the [name_type] as [station_name()].")
-	name = "banner of [station_name()]"
-	desc = "The banner bears the official coat of arms of Nanotrasen, signifying that [station_name()] has been claimed by Captain [uname] in the name of the company."
-	SSblackbox.record_feedback("text", "station_renames", 1, "[station_name()]")
-	if(!unlimited_uses)
-		used = TRUE

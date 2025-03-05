@@ -162,31 +162,6 @@
 
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 
-/obj/effect/mob_spawn/ghost_role/human/syndicate/battlecruiser/captain
-	name = "Syndicate Battlecruiser Captain"
-	you_are_text = "You are the captain aboard the syndicate flagship: the SBC Starfury."
-	flavour_text = "Your job is to oversee your crew, defend the ship, and destroy Space Station 13. The ship has an armory, multiple ships, beam cannons, and multiple crewmembers to accomplish this goal."
-	important_text = "As the captain, this whole operation falls on your shoulders. Help your assault operatives detonate a nuke on the station."
-	prompt_name = "a battlecruiser captain"
-	outfit = /datum/outfit/syndicate_empty/battlecruiser/assault/captain
-	spawner_job_path = /datum/job/battlecruiser_captain
-	antag_datum_to_give = /datum/antagonist/battlecruiser/captain
-	uses = 1
-
-/datum/outfit/syndicate_empty/battlecruiser/assault/captain
-	name = "Syndicate Battlecruiser Captain"
-	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
-	id_trim = /datum/id_trim/battlecruiser/captain
-	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
-	suit_store = /obj/item/gun/ballistic/revolver/mateba
-	back = /obj/item/storage/backpack/satchel/leather
-	ears = /obj/item/radio/headset/syndicate/alt/leader
-	glasses = /obj/item/clothing/glasses/thermal/eyepatch
-	head = /obj/item/clothing/head/hats/hos/cap/syndicate
-	mask = /obj/item/cigarette/cigar/havana
-	l_pocket = /obj/item/melee/energy/sword/saber/red
-	r_pocket = /obj/item/melee/baton/telescopic
-
 //film studio space ruins, actors and such.
 /obj/effect/mob_spawn/ghost_role/human/actor
 	name = "cryogenics pod"

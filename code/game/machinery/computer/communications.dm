@@ -96,13 +96,13 @@
 /obj/machinery/computer/communications/proc/authenticated_as_non_silicon_captain(mob/user)
 	if (HAS_SILICON_ACCESS(user))
 		return FALSE
-	return ACCESS_CAPTAIN in authorize_access
+	return ACCESS_PRINCE in authorize_access
 
 /// Are we a silicon, OR we're logged in as the captain?
 /obj/machinery/computer/communications/proc/authenticated_as_silicon_or_captain(mob/user)
 	if (HAS_SILICON_ACCESS(user))
 		return TRUE
-	return ACCESS_CAPTAIN in authorize_access
+	return ACCESS_PRINCE in authorize_access
 
 /// Are we a silicon, OR logged in?
 /obj/machinery/computer/communications/proc/authenticated(mob/user)
@@ -195,7 +195,7 @@
 					to_chat(user, span_warning("You need to swipe your ID!"))
 					playsound(src, 'sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
 					return
-				if (!(ACCESS_CAPTAIN in id_card.access))
+				if (!(ACCESS_PRINCE in id_card.access))
 					to_chat(user, span_warning("You are not authorized to do this!"))
 					playsound(src, 'sound/machines/terminal/terminal_prompt_deny.ogg', 50, FALSE)
 					return

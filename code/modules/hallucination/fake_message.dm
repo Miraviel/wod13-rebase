@@ -27,7 +27,6 @@
 			var/static/list/stash_item_paths = list(
 				/obj/item/blueprints,
 				/obj/item/assembly/flash,
-				/obj/item/card/id/advanced/gold/captains_spare,
 				/obj/item/card/emag,
 				/obj/item/circular_saw,
 				/obj/item/codex_cicatrix,

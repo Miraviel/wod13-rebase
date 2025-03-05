@@ -186,22 +186,6 @@
 		/obj/item/mod/module/jetpack,
 	)
 
-/obj/item/mod/control/pre_equipped/magnate
-	theme = /datum/mod_theme/magnate
-	applied_cell = /obj/item/stock_parts/power_store/cell/hyper
-	applied_modules = list(
-		/obj/item/mod/module/storage/large_capacity,
-		/obj/item/mod/module/hat_stabilizer,
-		/obj/item/mod/module/magnetic_harness,
-		/obj/item/mod/module/jetpack/advanced,
-		/obj/item/mod/module/pathfinder,
-		/obj/item/mod/module/quick_cuff,
-		/obj/item/mod/module/headprotector,
-	)
-	default_pins = list(
-		/obj/item/mod/module/jetpack/advanced,
-	)
-
 /obj/item/mod/control/pre_equipped/cosmohonk
 	theme = /datum/mod_theme/cosmohonk
 	applied_modules = list(

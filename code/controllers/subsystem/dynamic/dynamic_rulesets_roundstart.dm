@@ -12,7 +12,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	antag_datum = /datum/antagonist/traitor
 	minimum_required_age = 0
 	protected_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_PRISONER,
@@ -50,7 +50,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	antag_flag = ROLE_BROTHER
 	antag_datum = /datum/antagonist/brother
 	protected_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_PRISONER,
@@ -96,7 +96,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	antag_flag = ROLE_CHANGELING
 	antag_datum = /datum/antagonist/changeling
 	protected_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_PRISONER,
@@ -140,7 +140,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	antag_flag = ROLE_HERETIC
 	antag_datum = /datum/antagonist/heretic
 	protected_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_PRISONER,
@@ -196,7 +196,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	flags = HIGH_IMPACT_RULESET
 	minimum_required_age = 14
 	restricted_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_HEAD_OF_SECURITY,
 	) // Just to be sure that a wizard getting picked won't ever imply a Captain or HoS not getting drafted
 	required_candidates = 1
@@ -257,7 +257,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	antag_datum = /datum/antagonist/cult
 	minimum_required_age = 14
 	restricted_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_CHAPLAIN,
 		JOB_CYBORG,
 		JOB_DETECTIVE,
@@ -338,7 +338,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	var/datum/antagonist/antag_leader_datum = /datum/antagonist/nukeop/leader
 	minimum_required_age = 14
 	restricted_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_HEAD_OF_SECURITY,
 	) // Just to be sure that a nukie getting picked won't ever imply a Captain or HoS not getting drafted
 	required_candidates = 5
@@ -431,7 +431,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	antag_datum = /datum/antagonist/rev/head
 	minimum_required_age = 14
 	restricted_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_CHIEF_ENGINEER,
 		JOB_CHIEF_MEDICAL_OFFICER,
 		JOB_CYBORG,

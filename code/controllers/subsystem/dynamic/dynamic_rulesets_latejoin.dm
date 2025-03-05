@@ -56,7 +56,7 @@
 	antag_flag = ROLE_SYNDICATE_INFILTRATOR
 	antag_flag_override = ROLE_TRAITOR
 	protected_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,
@@ -82,7 +82,7 @@
 	antag_flag = ROLE_PROVOCATEUR
 	antag_flag_override = ROLE_REV_HEAD
 	restricted_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_CHIEF_ENGINEER,
 		JOB_CHIEF_MEDICAL_OFFICER,
 		JOB_CYBORG,
@@ -97,7 +97,7 @@
 	)
 	enemy_roles = list(
 		JOB_CYBORG,
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_SECURITY_OFFICER,
@@ -180,7 +180,7 @@
 	antag_flag = ROLE_HERETIC_SMUGGLER
 	antag_flag_override = ROLE_HERETIC
 	protected_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,
@@ -218,7 +218,7 @@
 	antag_flag = ROLE_STOWAWAY_CHANGELING
 	antag_flag_override = ROLE_CHANGELING
 	protected_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,

@@ -4,7 +4,7 @@
 /datum/unit_test/silicon_interacting/Run()
 	var/mob/living/carbon/human/consistent/attacker = EASY_ALLOCATE()
 	var/mob/living/silicon/robot/borgo = EASY_ALLOCATE()
-	var/obj/item/card/id/advanced/gold/captains_spare/id = EASY_ALLOCATE()
+	var/obj/item/card/id/advanced/id = EASY_ALLOCATE()	// WOD13TODO: Need an all access ID here
 	var/obj/item/crowbar/crowbar = EASY_ALLOCATE()
 	// unlock
 	attacker.put_in_active_hand(id, forced = TRUE)

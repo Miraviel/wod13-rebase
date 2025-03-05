@@ -253,19 +253,6 @@
 	if(policy)
 		to_chat(new_spawn, span_bold("[policy]"))
 
-/obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain
-	name = "Syndicate Ship Captain"
-	prompt_name = "a cybersun captain"
-	you_are_text = "You are the captain of an old ship, stuck in hostile space."
-	flavour_text = "Your ship docks after a long time somewhere in hostile space, reporting a malfunction. You are stuck here, with Nanotrasen station nearby. Command your crew and turn your ship into the most protected fortress."
-	important_text = "Protect the ship and secret documents in your backpack with your own life."
-	outfit = /datum/outfit/syndicatespace/syndicaptain
-	spawner_job_path = /datum/job/syndicate_cybersun_captain
-
-/obj/effect/mob_spawn/ghost_role/human/syndicatespace/captain/Destroy()
-	new /obj/structure/fluff/empty_sleeper/syndicate/captain(get_turf(src))
-	return ..()
-
 /datum/outfit/syndicatespace
 	name = "Syndicate Ship Base"
 	id = /obj/item/card/id/advanced/black/syndicate_command/crew_id
@@ -287,17 +274,3 @@
 	mask = /obj/item/clothing/mask/gas/syndicate
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol
 	r_pocket = /obj/item/knife/combat/survival
-
-/datum/outfit/syndicatespace/syndicaptain
-	name = "Syndicate Ship Captain"
-	id = /obj/item/card/id/advanced/black/syndicate_command/captain_id
-	uniform = /obj/item/clothing/under/syndicate/combat
-	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
-	ears = /obj/item/radio/headset/syndicate/alt/leader
-	head = /obj/item/clothing/head/hats/hos/beret/syndicate
-	r_pocket = /obj/item/knife/combat/survival
-	backpack_contents = list(
-		/obj/item/documents/syndicate/red,
-		/obj/item/gun/ballistic/automatic/pistol/aps,
-		/obj/item/paper/fluff/ruins/forgottenship/password,
-	)

@@ -134,7 +134,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	name = "a fire axe"
 	targetitem = /obj/item/fireaxe
 	excludefromjob = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_CHIEF_ENGINEER,
 		JOB_CHIEF_MEDICAL_OFFICER,
 		JOB_HEAD_OF_PERSONNEL,
@@ -269,7 +269,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	targetitem = /obj/item/melee/baton/telescopic
 	excludefromjob = list(
 		JOB_RESEARCH_DIRECTOR,
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_CHIEF_ENGINEER,
@@ -300,46 +300,13 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /obj/item/card/id/departmental_budget/car/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/card/id/departmental_budget/car)
 
-/datum/objective_item/steal/traitor/captain_modsuit
-	name = "the captain's magnate MOD control unit"
-	targetitem = /obj/item/mod/control/pre_equipped/magnate
-	excludefromjob = list(JOB_CAPTAIN)
-	exists_on_map = TRUE
-	difficulty = 3
-	steal_hint = "An expensive, hand-crafted MOD unit made for the station's Captain. \
-		If not being worn by the Captain, you would find it in the Suit Storage Unit in their quarters."
-
-/obj/item/mod/control/pre_equipped/magnate/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/mod/control/pre_equipped/magnate)
-
-/datum/objective_item/steal/traitor/captain_spare
-	name = "the captain's spare ID"
-	targetitem = /obj/item/card/id/advanced/gold/captains_spare
-	excludefromjob = list(
-		JOB_RESEARCH_DIRECTOR,
-		JOB_CAPTAIN,
-		JOB_HEAD_OF_SECURITY,
-		JOB_HEAD_OF_PERSONNEL,
-		JOB_CHIEF_ENGINEER,
-		JOB_CHIEF_MEDICAL_OFFICER,
-		JOB_QUARTERMASTER,
-	)
-	exists_on_map = TRUE
-	difficulty = 4
-	steal_hint = "The spare ID of the High Lord himself. \
-		If there's no official Captain around, you may find it pinned to the chest of the Acting Captain - one of the Heads of Staff. \
-		Otherwise, you'll have to bust open the golden safe on the bridge with acid or explosives to get to it."
-
-/obj/item/card/id/advanced/gold/captains_spare/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/card/id/advanced/gold/captains_spare)
-
 // High risk steal objectives
 
 // Will always generate even with no Captain due to its security and temptation to use it
 /datum/objective_item/steal/caplaser
 	name = "the captain's antique laser gun"
 	targetitem = /obj/item/gun/energy/laser/captain
-	excludefromjob = list(JOB_CAPTAIN)
+	excludefromjob = list(JOB_PRINCE)
 	exists_on_map = TRUE
 	difficulty = 4
 	steal_hint = "A self-charging laser gun found in a display case in the Captain's Quarters. \
@@ -376,8 +343,8 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/handtele
 	name = "a hand teleporter"
 	targetitem = /obj/item/hand_tele
-	excludefromjob = list(JOB_CAPTAIN, JOB_RESEARCH_DIRECTOR, JOB_HEAD_OF_PERSONNEL)
-	item_owner = list(JOB_CAPTAIN, JOB_RESEARCH_DIRECTOR)
+	excludefromjob = list(JOB_PRINCE, JOB_RESEARCH_DIRECTOR, JOB_HEAD_OF_PERSONNEL)
+	item_owner = list(JOB_PRINCE, JOB_RESEARCH_DIRECTOR)
 	exists_on_map = TRUE
 	difficulty = 3
 	steal_hint = "Only two of these devices exist on the station, with one sitting in the Teleporter Room \
@@ -389,8 +356,8 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/jetpack
 	name = "the Captain's jetpack"
 	targetitem = /obj/item/tank/jetpack/oxygen/captain
-	excludefromjob = list(JOB_CAPTAIN)
-	item_owner = list(JOB_CAPTAIN)
+	excludefromjob = list(JOB_PRINCE)
+	item_owner = list(JOB_PRINCE)
 	exists_on_map = TRUE
 	difficulty = 3
 	steal_hint = "A special yellow jetpack found in the Suit Storage Unit in the Captain's Quarters."
@@ -414,8 +381,8 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/capmedal
 	name = "the medal of captaincy"
 	targetitem = /obj/item/clothing/accessory/medal/gold/captain
-	excludefromjob = list(JOB_CAPTAIN)
-	item_owner = list(JOB_CAPTAIN)
+	excludefromjob = list(JOB_PRINCE)
+	item_owner = list(JOB_PRINCE)
 	exists_on_map = TRUE
 	difficulty = 3
 	steal_hint = "A gold medal found in the medal box in the Captain's Quarters. \
@@ -440,7 +407,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/nukedisc
 	name = "the nuclear authentication disk"
 	targetitem = /obj/item/disk/nuclear
-	excludefromjob = list(JOB_CAPTAIN)
+	excludefromjob = list(JOB_PRINCE)
 	difficulty = 5
 	steal_hint = "THAT disk - you know the one. Carried by the Captain at all times (hopefully). \
 		Difficult to miss, but if you can't find it, the Head of Security and Captain both have devices to track its precise location."
@@ -663,7 +630,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	name = "a box of prized donuts"
 	targetitem = /obj/item/storage/fancy/donut_box
 	excludefromjob = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_CHIEF_ENGINEER,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,
@@ -700,7 +667,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	name = "a disabler"
 	targetitem = /obj/item/gun/energy/disabler
 	excludefromjob = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,
@@ -714,7 +681,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	name = "an energy gun"
 	targetitem = /obj/item/gun/energy/e_gun
 	excludefromjob = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_CHIEF_ENGINEER,
 		JOB_CHIEF_MEDICAL_OFFICER,
 		JOB_DETECTIVE,
@@ -740,7 +707,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	name = "a laser gun"
 	targetitem = /obj/item/gun/energy/laser
 	excludefromjob = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_CHIEF_ENGINEER,
 		JOB_CHIEF_MEDICAL_OFFICER,
 		JOB_DETECTIVE,
@@ -800,7 +767,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	name = "a head of staff's stamp"
 	targetitem = /obj/item/stamp/head
 	excludefromjob = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_CHIEF_ENGINEER,
 		JOB_CHIEF_MEDICAL_OFFICER,
 		JOB_HEAD_OF_PERSONNEL,
@@ -819,7 +786,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	name = "some sunglasses"
 	targetitem = /obj/item/clothing/glasses/sunglasses
 	excludefromjob = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_CHIEF_ENGINEER,
 		JOB_CHIEF_MEDICAL_OFFICER,
 		JOB_HEAD_OF_PERSONNEL,
@@ -882,7 +849,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	name = "a stun baton"
 	targetitem = /obj/item/melee/baton/security
 	excludefromjob = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,
@@ -899,7 +866,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	name = "the detective's baton"
 	targetitem = /obj/item/melee/baton
 	excludefromjob = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,
@@ -920,7 +887,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /datum/objective_item/steal/spy/captain_sabre_sheathe
 	name = "the captain's sabre sheathe"
 	targetitem = /obj/item/storage/belt/sabre
-	excludefromjob = list(JOB_CAPTAIN)
+	excludefromjob = list(JOB_PRINCE)
 	exists_on_map = TRUE
 	difficulty = 3
 	steal_hint = "The sheathe for the captain's sabre, found in their closet or strapped to their waist at all times."

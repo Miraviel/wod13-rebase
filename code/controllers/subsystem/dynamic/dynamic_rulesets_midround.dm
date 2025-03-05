@@ -234,7 +234,7 @@
 	antag_flag = ROLE_SLEEPER_AGENT
 	antag_flag_override = ROLE_TRAITOR
 	protected_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,
@@ -309,7 +309,7 @@
 	ruleset_category = parent_type::ruleset_category |  RULESET_CATEGORY_NO_WITTING_CREW_ANTAGONISTS
 	enemy_roles = list(
 		JOB_CYBORG,
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_SECURITY_OFFICER,
@@ -384,7 +384,7 @@
 	antag_flag_override = ROLE_BLOB
 	ruleset_category = parent_type::ruleset_category |  RULESET_CATEGORY_NO_WITTING_CREW_ANTAGONISTS
 	protected_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_PRISONER,
@@ -818,7 +818,7 @@
 	antag_flag = ROLE_PARADOX_CLONE
 	ruleset_category = parent_type::ruleset_category |  RULESET_CATEGORY_NO_WITTING_CREW_ANTAGONISTS
 	enemy_roles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_SECURITY_OFFICER,

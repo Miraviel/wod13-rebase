@@ -144,31 +144,6 @@
 	head = /obj/item/clothing/head/helmet/taghelm/blue
 	shoes = /obj/item/clothing/shoes/sneakers/blue
 
-/datum/outfit/tunnel_clown
-	name = "Tunnel Clown"
-
-	id = /obj/item/card/id/advanced/gold
-	id_trim = /datum/id_trim/tunnel_clown
-	uniform = /obj/item/clothing/under/rank/civilian/clown
-	suit = /obj/item/clothing/suit/hooded/chaplain_hoodie
-	ears = /obj/item/radio/headset
-	glasses = /obj/item/clothing/glasses/thermal/monocle
-	gloves = /obj/item/clothing/gloves/color/black
-	mask = /obj/item/clothing/mask/gas/clown_hat
-	shoes = /obj/item/clothing/shoes/clown_shoes
-	l_pocket = /obj/item/food/grown/banana
-	r_pocket = /obj/item/bikehorn
-	l_hand = /obj/item/fireaxe
-
-/datum/outfit/tunnel_clown/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
-	if(visuals_only)
-		return
-
-	var/obj/item/card/id/W = H.wear_id
-	W.registered_name = H.real_name
-	W.update_label()
-	W.update_icon()
-
 /datum/outfit/psycho
 	name = "Masked Killer"
 

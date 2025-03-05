@@ -21,7 +21,7 @@
 	/// How much does this shuttle cost the cargo budget to purchase? Put in terms of CARGO_CRATE_VALUE to properly scale the cost with the current balance of cargo's income.
 	var/credit_cost = INFINITY
 	/// What job accesses can buy this shuttle? If null, this shuttle cannot be bought.
-	var/list/who_can_purchase = list(ACCESS_CAPTAIN)
+	var/list/who_can_purchase = list(ACCESS_PRINCE)
 	/// Whether or not this shuttle is locked to emags only.
 	var/emag_only = FALSE
 	/// If set, overrides default movement_force on shuttle

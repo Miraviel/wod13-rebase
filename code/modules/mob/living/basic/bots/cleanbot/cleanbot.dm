@@ -34,14 +34,14 @@
 	var/obj/item/mop/our_mop
 	///list of our officer titles
 	var/static/list/officers_titles = list(
-		JOB_CAPTAIN,
+		JOB_PRINCE,
 		JOB_HEAD_OF_PERSONNEL,
 		JOB_HEAD_OF_SECURITY,
 		JOB_RESEARCH_DIRECTOR,
 	)
 	///job titles we can get
 	var/static/list/job_titles = list(
-		JOB_CAPTAIN = "Cpt.",
+		JOB_PRINCE = "Cpt.",
 
 		JOB_HEAD_OF_PERSONNEL = "Lt.",
 		JOB_LAWYER = "Esq.",

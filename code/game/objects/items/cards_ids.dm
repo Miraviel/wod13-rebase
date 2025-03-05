@@ -150,8 +150,6 @@
 
 	RegisterSignal(src, COMSIG_ATOM_UPDATED_ICON, PROC_REF(update_in_wallet))
 	RegisterSignal(src, COMSIG_ID_GET_HONORIFIC, PROC_REF(return_message_name_part))
-	if(prob(1))
-		ADD_TRAIT(src, TRAIT_TASTEFULLY_THICK_ID_CARD, ROUNDSTART_TRAIT)
 
 /obj/item/card/id/Destroy()
 	if (registered_account)
@@ -815,16 +813,7 @@
 		. += span_notice("Alt-Right-Click the ID to set the linked bank account.")
 
 	if(HAS_TRAIT(user, TRAIT_ID_APPRAISER))
-		. += HAS_TRAIT(src, TRAIT_JOB_FIRST_ID_CARD) ? span_boldnotice("Hmm... yes, this ID was issued from Central Command!") : span_boldnotice("This ID was created in this sector, not by Central Command.")
-		if(HAS_TRAIT(src, TRAIT_TASTEFULLY_THICK_ID_CARD) && (user.is_holding(src) || (user.CanReach(src) && user.put_in_hands(src, ignore_animation = FALSE))))
-			ADD_TRAIT(src, TRAIT_NODROP, "psycho")
-			. += span_hypnophrase("Look at that subtle coloring... The tasteful thickness of it. Oh my God, it even has a watermark...")
-			var/sound/slowbeat = sound('sound/effects/health/slowbeat.ogg', repeat = TRUE)
-			user.playsound_local(get_turf(src), slowbeat, 40, 0, channel = CHANNEL_HEARTBEAT, use_reverb = FALSE)
-			if(isliving(user))
-				var/mob/living/living_user = user
-				living_user.adjust_jitter(10 SECONDS)
-			addtimer(CALLBACK(src, PROC_REF(drop_card), user), 10 SECONDS)
+		. += HAS_TRAIT(src, TRAIT_JOB_FIRST_ID_CARD) ? span_boldnotice("Hmm... yes, this ID was issued from Central Command!") : span_boldnotice("This ID was created in this sector, not by Central Command.") //WOD13TODO: Centcom oh no
 	. += span_notice("<i>There's more information below, you can look again to take a closer look...</i>")
 
 /obj/item/card/id/proc/drop_card(mob/user)
@@ -1202,7 +1191,7 @@
 /obj/item/card/id/advanced/update_overlays()
 	. = ..()
 
-	if(registered_name && registered_name != "Captain")
+	if(registered_name && registered_name != "Prince")
 		. += mutable_appearance(icon, assigned_icon_state)
 
 	var/trim_icon_file = trim_icon_override ? trim_icon_override : trim?.trim_icon
@@ -1270,32 +1259,6 @@
 	name = "Thirteen's ID Card (Reaper)"
 	trim = /datum/id_trim/maint_reaper
 	registered_name = "Thirteen"
-
-/obj/item/card/id/advanced/gold
-	name = "gold identification card"
-	desc = "A golden card which shows power and might."
-	icon_state = "card_gold"
-	inhand_icon_state = "gold_id"
-	assigned_icon_state = "assigned_gold"
-	wildcard_slots = WILDCARD_LIMIT_GOLD
-
-/obj/item/card/id/advanced/gold/Initialize(mapload)
-	. = ..()
-	ADD_TRAIT(src, TRAIT_TASTEFULLY_THICK_ID_CARD, ROUNDSTART_TRAIT)
-
-/obj/item/card/id/advanced/gold/captains_spare
-	name = "captain's spare ID"
-	desc = "The spare ID of the High Lord himself."
-	registered_name = "Captain"
-	trim = /datum/id_trim/job/captain
-	registered_age = null
-
-/obj/item/card/id/advanced/gold/captains_spare/update_label() //so it doesn't change to Captain's ID card (Captain) on a sneeze
-	if(registered_name == "Captain")
-		name = "[initial(name)][(!assignment || assignment == "Captain") ? "" : " ([assignment])"]"
-		update_appearance(UPDATE_ICON)
-	else
-		..()
 
 /obj/item/card/id/advanced/centcom
 	name = "\improper CentCom ID"
@@ -1377,27 +1340,6 @@
 	desc = "An ID straight from the Syndicate."
 	registered_name = "Syndicate"
 	trim = /datum/id_trim/syndicom/crew
-
-/obj/item/card/id/advanced/black/syndicate_command/captain_id
-	name = "syndicate captain ID card"
-	desc = "An ID straight from the Syndicate."
-	registered_name = "Syndicate"
-	trim = /datum/id_trim/syndicom/captain
-
-
-/obj/item/card/id/advanced/black/syndicate_command/captain_id/syndie_spare
-	name = "syndicate captain's spare ID"
-	desc = "The spare ID of the Dark Lord himself."
-	registered_name = "Captain"
-	registered_age = null
-
-/obj/item/card/id/advanced/black/syndicate_command/captain_id/syndie_spare/update_label()
-	if(registered_name == "Captain")
-		name = "[initial(name)][(!assignment || assignment == "Captain") ? "" : " ([assignment])"]"
-		update_appearance(UPDATE_ICON)
-		return
-
-	return ..()
 
 /obj/item/card/id/advanced/debug
 	name = "\improper Debug ID"

@@ -89,7 +89,7 @@
 		ACCESS_MAINT_TUNNELS,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOP,
 		)
@@ -123,7 +123,7 @@
 		ACCESS_BAR,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOP,
 		)
@@ -148,37 +148,38 @@
 	)
 	extra_access = list()
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 	)
 	job = /datum/job/bridge_assistant
 	honorifics = list("Underling", "Assistant", "Mate")
 	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
 
-/datum/id_trim/job/captain
-	assignment = JOB_CAPTAIN
-	intern_alt_name = "Captain-in-Training"
-	trim_state = "trim_captain"
+//WOD13TODO: Change these
+/datum/id_trim/job/prince
+	assignment = JOB_PRINCE
+	intern_alt_name = "Prince"
+	trim_state = "trim_captain"	// WOD13TODO: wee woo rename this
 	department_color = COLOR_COMMAND_BLUE
 	subdepartment_color = COLOR_COMMAND_BLUE
 	department_state = "departmenthead"
 	sechud_icon_state = SECHUD_CAPTAIN
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		)
-	job = /datum/job/captain
+	job = /datum/job/prince
 	big_pointer = TRUE
 	pointer_color = COLOR_COMMAND_BLUE
-	honorifics = list("Captain", "Cpt.")
+	honorifics = list("Prince")
 	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
 
 /// Captain gets all station accesses hardcoded in because it's the Captain.
-/datum/id_trim/job/captain/New()
+/datum/id_trim/job/prince/New()
 	extra_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_COMMON) + SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND))
-	extra_wildcard_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN))
+	extra_wildcard_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + SSid_access.get_flag_access_list(ACCESS_FLAG_PRINCE))
 	minimal_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_COMMON) + SSid_access.get_flag_access_list(ACCESS_FLAG_COMMAND))
-	minimal_wildcard_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN))
+	minimal_wildcard_access |= (SSid_access.get_flag_access_list(ACCESS_FLAG_PRV_COMMAND) + SSid_access.get_flag_access_list(ACCESS_FLAG_PRINCE))
 
 	return ..()
 
@@ -200,7 +201,7 @@
 		ACCESS_MINING_STATION,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_QM,
 		)
@@ -225,7 +226,7 @@
 		)
 	extra_access = list()
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOP,
 		)
@@ -252,7 +253,7 @@
 		ACCESS_VIROLOGY,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_CMO,
 		)
@@ -294,7 +295,7 @@
 		ACCESS_TELEPORTER,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		)
 	job = /datum/job/chief_engineer
@@ -337,7 +338,7 @@
 		ACCESS_TELEPORTER,
 	)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 	)
 	job = /datum/job/chief_medical_officer
@@ -359,7 +360,7 @@
 		)
 	extra_access = list()
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOP,
 		)
@@ -382,7 +383,7 @@
 		ACCESS_HYDROPONICS,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOP,
 		)
@@ -416,7 +417,7 @@
 		ACCESS_VIROLOGY,
 	)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_CMO,
 		ACCESS_HOP,
@@ -438,7 +439,7 @@
 		)
 	extra_access = list()
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOP,
 		)
@@ -466,7 +467,7 @@
 		ACCESS_BRIG,
 	)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOS,
 	)
@@ -506,7 +507,7 @@
 		ACCESS_ORDNANCE_STORAGE,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_RD,
 		)
@@ -560,7 +561,7 @@
 	extra_access = list()
 	extra_wildcard_access = list()
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 	)
 	job = /datum/job/head_of_personnel
@@ -610,7 +611,7 @@
 		ACCESS_HOS,
 	)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 	)
 	job = /datum/job/head_of_security
@@ -643,7 +644,7 @@
 		)
 	extra_access = list()
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_HOP,
 		ACCESS_CHANGE_IDS,
 		)
@@ -666,7 +667,7 @@
 		)
 	extra_access = list()
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOP,
 		)
@@ -693,7 +694,7 @@
 		ACCESS_VIROLOGY,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_CMO,
 		)
@@ -714,7 +715,7 @@
 		)
 	extra_access = list()
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOP,
 		)
@@ -745,7 +746,7 @@
 		ACCESS_VIROLOGY,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_CMO,
 		)
@@ -760,7 +761,7 @@
 	subdepartment_color = COLOR_PRISONER_BLACK
 	sechud_icon_state = SECHUD_PRISONER
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOP,
 		ACCESS_HOS,
@@ -815,7 +816,7 @@
 		ACCESS_MORGUE_SECURE,
 	)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_CMO,
 		ACCESS_HOP,
@@ -856,7 +857,7 @@
 		ACCESS_QM,
 	)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 	)
 	job = /datum/job/quartermaster
@@ -908,7 +909,7 @@
 	extra_access = list()
 	extra_wildcard_access = list()
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		)
 	job = /datum/job/research_director
@@ -941,7 +942,7 @@
 		ACCESS_MORGUE_SECURE,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_RD,
 		)
@@ -968,7 +969,7 @@
 		ACCESS_ROBOTICS,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_RD,
 		)
@@ -998,7 +999,7 @@
 		ACCESS_MORGUE,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOS,
 		)
@@ -1118,7 +1119,7 @@
 		ACCESS_MAINT_TUNNELS
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_QM,
 		)
@@ -1159,7 +1160,7 @@
 		ACCESS_ATMOSPHERICS,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_CE,
 		)
@@ -1222,7 +1223,7 @@
 		ACCESS_MORGUE,
 		)
 	template_access = list(
-		ACCESS_CAPTAIN,
+		ACCESS_PRINCE,
 		ACCESS_CHANGE_IDS,
 		ACCESS_HOS,
 		)

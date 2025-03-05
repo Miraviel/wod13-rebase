@@ -182,7 +182,6 @@ GLOBAL_LIST_INIT(phobia_objs, list(
 	)),
 	"authority" = typecacheof(list(
 		/obj/item/card/id/advanced/centcom,
-		/obj/item/card/id/advanced/gold,
 		/obj/item/card/id/advanced/silver,
 		/obj/item/clothing/under/rank/captain,
 		/obj/item/clothing/under/rank/centcom/commander,

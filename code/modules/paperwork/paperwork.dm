@@ -196,19 +196,6 @@
 	detailed_desc += span_info(" If your math is correct, this explosion didn't happen at the station's ordnance site, it occured in the station's engine room.")
 	detailed_desc += span_info(" Regardless, they're still perfectly usable test results. You should probably stamp this.")
 
-/obj/item/paperwork/captain
-	stamp_requested = /obj/item/stamp/head/captain
-	stamp_job = /datum/job/captain
-	stamp_icon = "paper_stamp-cap"
-
-/obj/item/paperwork/captain/Initialize(mapload)
-	. = ..()
-
-	detailed_desc += span_info(" The documents are an unsigned correspondence from the captain's desk of a nearby station.")
-	detailed_desc += span_info(" It seems to be a standard check-in message, reporting that the station is functioning at optimal efficiency.")
-	detailed_desc += span_info(" The message repeatedly asserts that the engine is functioning 'perfectly fine' and is generating 'buttloads' of power.")
-	detailed_desc += span_info(" Everything checks out. You should probably stamp this.")
-
 //Photocopied paperwork. These are created when paperwork, whether stamped or otherwise, is printed. If it is stamped, it can be sold to cargo at the risk of the paperwork not being accepted (which takes a small fee from cargo).
 //If it is unstamped it will lose you money like normal, unless it has been marked with a VOID stamp
 /obj/item/paperwork/photocopy

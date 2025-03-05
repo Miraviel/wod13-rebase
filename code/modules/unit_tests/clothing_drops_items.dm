@@ -47,7 +47,7 @@
 		"[ITEM_SLOT_FEET]" = allocate(/obj/item/clothing/shoes/jackboots),
 		"[ITEM_SLOT_BELT]" = allocate(/obj/item/storage/belt/utility),
 		"[ITEM_SLOT_BACK]" = allocate(/obj/item/storage/backpack),
-		"[ITEM_SLOT_ID]" = allocate(/obj/item/card/id/advanced/gold/captains_spare),
+		"[ITEM_SLOT_ID]" = allocate(/obj/item/card/id/advanced),	// WOD13TODO: Need an all access ID here
 		"[ITEM_SLOT_RPOCKET]" = allocate(/obj/item/assembly/flash/handheld),
 		"[ITEM_SLOT_LPOCKET]" = allocate(/obj/item/toy/plush/lizard_plushie),
 	)

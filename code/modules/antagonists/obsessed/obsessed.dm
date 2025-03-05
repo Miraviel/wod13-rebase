@@ -108,7 +108,7 @@
 		objectives_left += OBSESSED_OBJECTIVE_HEIRLOOM
 
 	// If they have no coworkers, jealousy will pick someone else on the station. This will never be a free objective.
-	if(!is_captain_job(obsessionmind.assigned_role))
+	if(!is_prince_job(obsessionmind.assigned_role))
 		objectives_left += OBSESSED_OBJECTIVE_JEALOUS
 
 	for(var/i in 1 to objectives_to_generate)

@@ -95,11 +95,6 @@
 	icon_state = "album_blue"
 	persistence_id = "HoP"
 
-/obj/item/storage/photo_album/captain
-	name = "photo album (Captain)"
-	icon_state = "album_blue"
-	persistence_id = "Captain"
-
 /obj/item/storage/photo_album/cmo
 	name = "photo album (Chief Medical Officer)"
 	icon_state = "album_blue"

@@ -3,13 +3,13 @@
 	description = "Coordinate cargo technicians and shaft miners, assist with \
 		economical purchasing."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
-	department_head = list(JOB_CAPTAIN)
+	department_head = list(JOB_PRINCE)
 	head_announce = list(RADIO_CHANNEL_SUPPLY)
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
 	minimal_player_age = 7
-	supervisors = SUPERVISOR_CAPTAIN
+	supervisors = SUPERVISOR_PRINCE
 	exp_required_type_department = EXP_TYPE_SUPPLY
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "QUARTERMASTER"

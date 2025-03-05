@@ -42,7 +42,7 @@
 /obj/item/stamp/head/captain
 	name = "captain's rubber stamp"
 	icon_state = "stamp-cap"
-	dye_color = DYE_CAPTAIN
+	dye_color = DYE_PRINCE
 
 /obj/item/stamp/head/hop
 	name = "head of personnel's rubber stamp"

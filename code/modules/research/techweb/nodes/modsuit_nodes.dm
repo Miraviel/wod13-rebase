@@ -115,16 +115,3 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SCIENCE, RADIO_CHANNEL_MEDICAL)
-
-/datum/techweb_node/mod_anomaly
-	id = TECHWEB_NODE_MOD_ANOMALY
-	display_name = "Anomalock Modular Suit"
-	description = "Modules for MODsuits that require anomaly cores to function."
-	prereq_ids = list(TECHWEB_NODE_MOD_ENGI_ADV, TECHWEB_NODE_ANOMALY_RESEARCH)
-	design_ids = list(
-		"mod_antigrav",
-		"mod_teleporter",
-		"mod_kinesis",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
-	announce_channels = list(RADIO_CHANNEL_SCIENCE)

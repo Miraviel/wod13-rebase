@@ -49,7 +49,7 @@
 #define JOB_ASSISTANT "Assistant"
 #define JOB_PRISONER "Prisoner"
 //Command
-#define JOB_CAPTAIN "Captain"
+#define JOB_PRINCE "Prince"
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
 #define JOB_HEAD_OF_SECURITY "Head of Security"
 #define JOB_RESEARCH_DIRECTOR "Research Director"
@@ -131,7 +131,7 @@
 
 //WOD13TODO: Replace this with our JOB_DISPLAY_ORDER_CIVILIAN	1	and stuff
 #define JOB_DISPLAY_ORDER_ASSISTANT 1
-#define JOB_DISPLAY_ORDER_CAPTAIN 2
+#define JOB_DISPLAY_ORDER_PRINCE 2
 #define JOB_DISPLAY_ORDER_HEAD_OF_PERSONNEL 3
 #define JOB_DISPLAY_ORDER_BRIDGE_ASSISTANT 4
 #define JOB_DISPLAY_ORDER_COOK 7
@@ -188,8 +188,8 @@
 #define DEPARTMENT_SILICON "Silicon"
 #define DEPARTMENT_BITFLAG_ASSISTANT (1<<8)
 #define DEPARTMENT_ASSISTANT "Assistant"
-#define DEPARTMENT_BITFLAG_CAPTAIN (1<<9)
-#define DEPARTMENT_CAPTAIN "Captain"
+#define DEPARTMENT_BITFLAG_PRINCE (1<<9)
+#define DEPARTMENT_PRINCE "Prince"
 
 DEFINE_BITFIELD(departments_bitflags, list(
 	"SECURITY" = DEPARTMENT_BITFLAG_SECURITY,
@@ -201,7 +201,7 @@ DEFINE_BITFIELD(departments_bitflags, list(
 	"MEDICAL" = DEPARTMENT_BITFLAG_MEDICAL,
 	"SILICON" = DEPARTMENT_BITFLAG_SILICON,
 	"ASSISTANT" = DEPARTMENT_BITFLAG_ASSISTANT,
-	"CAPTAIN" = DEPARTMENT_BITFLAG_CAPTAIN,
+	"PRINCE" = DEPARTMENT_BITFLAG_PRINCE,
 ))
 
 /* Job datum job_flags */
@@ -260,7 +260,7 @@ DEFINE_BITFIELD(job_flags, list(
 
 // Variable macros used to declare who is the supervisor for a given job, announced to the player when they join as any given job.
 //WOD13TODO: kill these
-#define SUPERVISOR_CAPTAIN "the Captain"
+#define SUPERVISOR_PRINCE "the Prince"
 #define SUPERVISOR_CE "the Chief Engineer"
 #define SUPERVISOR_CMO "the Chief Medical Officer"
 #define SUPERVISOR_HOP "the Head of Personnel"

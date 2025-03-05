@@ -60,20 +60,19 @@
 	return "The [nomadic_name] of [..()]"
 
 /// A special captain only department, for use by the preferences menu
-/datum/job_department/captain
-	department_name = DEPARTMENT_CAPTAIN
-	department_bitflags = DEPARTMENT_BITFLAG_CAPTAIN
-	department_head = /datum/job/captain
+/datum/job_department/prince
+	department_name = DEPARTMENT_PRINCE
+	department_bitflags = DEPARTMENT_BITFLAG_PRINCE
+	department_head = /datum/job/prince
 
 /datum/job_department/command
 	department_name = DEPARTMENT_COMMAND
 	department_bitflags = DEPARTMENT_BITFLAG_COMMAND
-	department_head = /datum/job/captain
+	department_head = /datum/job/prince
 	department_experience_type = EXP_TYPE_COMMAND
 	display_order = 1
 	label_class = "command"
 	ui_color = "#6681a5"
-
 
 /datum/job_department/security
 	department_name = DEPARTMENT_SECURITY

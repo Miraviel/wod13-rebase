@@ -80,9 +80,9 @@ SUBSYSTEM_DEF(id_access)
 	for(var/access in accesses_by_flag["[ACCESS_FLAG_PRV_COMMAND]"])
 		flags_by_access |= list("[access]" = ACCESS_FLAG_PRV_COMMAND)
 
-	accesses_by_flag["[ACCESS_FLAG_CAPTAIN]"] = CAPTAIN_ACCESS
-	for(var/access in accesses_by_flag["[ACCESS_FLAG_CAPTAIN]"])
-		flags_by_access |= list("[access]" = ACCESS_FLAG_CAPTAIN)
+	accesses_by_flag["[ACCESS_FLAG_PRINCE]"] = CAPTAIN_ACCESS
+	for(var/access in accesses_by_flag["[ACCESS_FLAG_PRINCE]"])
+		flags_by_access |= list("[access]" = ACCESS_FLAG_PRINCE)
 
 	accesses_by_flag["[ACCESS_FLAG_CENTCOM]"] = CENTCOM_ACCESS
 	for(var/access in accesses_by_flag["[ACCESS_FLAG_CENTCOM]"])
@@ -103,7 +103,7 @@ SUBSYSTEM_DEF(id_access)
 	access_flag_string_by_flag["[ACCESS_FLAG_COMMON]"] = ACCESS_FLAG_COMMON_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_COMMAND]"] = ACCESS_FLAG_COMMAND_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_PRV_COMMAND]"] = ACCESS_FLAG_PRV_COMMAND_NAME
-	access_flag_string_by_flag["[ACCESS_FLAG_CAPTAIN]"] = ACCESS_FLAG_CAPTAIN_NAME
+	access_flag_string_by_flag["[ACCESS_FLAG_PRINCE]"] = ACCESS_FLAG_PRINCE_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_CENTCOM]"] = ACCESS_FLAG_CENTCOM_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_SYNDICATE]"] = ACCESS_FLAG_SYNDICATE_NAME
 	access_flag_string_by_flag["[ACCESS_FLAG_AWAY]"] = ACCESS_FLAG_AWAY_NAME
@@ -152,9 +152,9 @@ SUBSYSTEM_DEF(id_access)
 		))
 
 	sub_department_managers_tgui = list(
-		"[ACCESS_CAPTAIN]" = list(
+		"[ACCESS_PRINCE]" = list(
 			"regions" = list(REGION_COMMAND),
-			"head" = JOB_CAPTAIN,
+			"head" = JOB_PRINCE,
 			"templates" = list(),
 			"pdas" = list(),
 		),
@@ -275,7 +275,7 @@ SUBSYSTEM_DEF(id_access)
 	desc_by_access["[ACCESS_TELEPORTER]"] = "Teleporter"
 	desc_by_access["[ACCESS_EVA]"] = "EVA"
 	desc_by_access["[ACCESS_COMMAND]"] = "Command"
-	desc_by_access["[ACCESS_CAPTAIN]"] = "Captain"
+	desc_by_access["[ACCESS_PRINCE]"] = "Prince"
 	desc_by_access["[ACCESS_ALL_PERSONAL_LOCKERS]"] = "Personal Lockers"
 	desc_by_access["[ACCESS_CHAPEL_OFFICE]"] = "Chapel Office"
 	desc_by_access["[ACCESS_TECH_STORAGE]"] = "Technical Storage"

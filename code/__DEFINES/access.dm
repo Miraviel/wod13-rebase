@@ -28,8 +28,8 @@
 #define ACCESS_ALL_PERSONAL_LOCKERS "all_personal_lockers"
 /// Access used for Access-Changing Programs, this one will unlock all options that can be ever given via that program.
 #define ACCESS_CHANGE_IDS "change_ids"
-/// Access used for the Captain's personal quarters in mapping, as well as what allows one to order emergency shuttles.
-#define ACCESS_CAPTAIN "captain"
+/// Access used for the Prince's personal quarters in mapping, as well as what allows one to order emergency shuttles.
+#define ACCESS_PRINCE "prince"
 /// Access used for the Head of Personnel's personal quarters in mapping, as well as the security console and other HoP-related things.
 #define ACCESS_HOP "hop"
 
@@ -220,9 +220,9 @@
 /// Bitflag for Private Command ID card accesses. See PRIVATE_COMMAND_ACCESS.
 #define ACCESS_FLAG_PRV_COMMAND (1 << 2)
 /// Displayed name for Captain ID card accesses.
-#define ACCESS_FLAG_CAPTAIN_NAME "Captain"
+#define ACCESS_FLAG_PRINCE_NAME "Prince"
 /// Bitflag for Captain ID card accesses. See CAPTAIN_ACCESS.
-#define ACCESS_FLAG_CAPTAIN (1 << 3)
+#define ACCESS_FLAG_PRINCE (1 << 3)
 /// Displayed name for Centcom ID card accesses.
 #define ACCESS_FLAG_CENTCOM_NAME "Centcom"
 /// Bitflag for Centcom ID card accesses. See CENTCOM_ACCESS.
@@ -257,15 +257,15 @@
 /// Name associated with the private command wildcard bitflag.
 #define WILDCARD_NAME_PRV_COMMAND ACCESS_FLAG_PRV_COMMAND_NAME
 /// Access flags that can be applied to captain wildcard slots.
-#define WILDCARD_FLAG_CAPTAIN ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN
+#define WILDCARD_FLAG_CAPTAIN ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_PRINCE
 /// Name associated with the captain wildcard bitflag.
-#define WILDCARD_NAME_CAPTAIN ACCESS_FLAG_CAPTAIN_NAME
+#define WILDCARD_NAME_CAPTAIN ACCESS_FLAG_PRINCE_NAME
 /// Access flags that can be applied to centcom wildcard slots.
-#define WILDCARD_FLAG_CENTCOM ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_CENTCOM
+#define WILDCARD_FLAG_CENTCOM ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_PRINCE | ACCESS_FLAG_CENTCOM
 /// Name associated with the centcom wildcard bitflag.
 #define WILDCARD_NAME_CENTCOM ACCESS_FLAG_CENTCOM_NAME
 /// Access flags that can be applied to syndicate wildcard slots.
-#define WILDCARD_FLAG_SYNDICATE ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_CAPTAIN | ACCESS_FLAG_SYNDICATE
+#define WILDCARD_FLAG_SYNDICATE ACCESS_FLAG_COMMON | ACCESS_FLAG_COMMAND | ACCESS_FLAG_PRV_COMMAND | ACCESS_FLAG_PRINCE | ACCESS_FLAG_SYNDICATE
 /// Name associated with the syndicate wildcard bitflag.
 #define WILDCARD_NAME_SYNDICATE ACCESS_FLAG_SYNDICATE_NAME
 /// Access flags that can be applied to offstation wildcard slots.
@@ -363,9 +363,9 @@
 	ACCESS_RD, \
 )
 
-/// Captains private rooms. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_CAPTAIN)
+/// Captains private rooms. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_PRINCE)
 #define CAPTAIN_ACCESS list( \
-	ACCESS_CAPTAIN, \
+	ACCESS_PRINCE, \
 )
 /// Centcom area stuff. Do not use direct, access via SSid_access.get_flag_access_list(ACCESS_FLAG_CENTCOM)
 #define CENTCOM_ACCESS list( \
@@ -512,7 +512,7 @@
 #define REGION_ACCESS_COMMAND list( \
 	ACCESS_AI_UPLOAD, \
 	ACCESS_ALL_PERSONAL_LOCKERS, \
-	ACCESS_CAPTAIN, \
+	ACCESS_PRINCE, \
 	ACCESS_CHANGE_IDS, \
 	ACCESS_COMMAND, \
 	ACCESS_EVA, \

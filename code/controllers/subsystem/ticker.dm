@@ -382,7 +382,7 @@ SUBSYSTEM_DEF(ticker)
 
 	// Find a suitable player to hold captaincy.
 	for(var/mob/dead/new_player/new_player_mob as anything in GLOB.new_player_list)
-		if(is_banned_from(new_player_mob.ckey, list(JOB_CAPTAIN)))
+		if(is_banned_from(new_player_mob.ckey, list(JOB_PRINCE)))
 			CHECK_TICK
 			continue
 		if(!ishuman(new_player_mob.new_character))
@@ -420,9 +420,9 @@ SUBSYSTEM_DEF(ticker)
 		player_assigned_role.after_roundstart_spawn(new_player_living, new_player_mob.client)
 		if(picked_spare_id_candidate == new_player_mob)
 			captainless = FALSE
-			var/acting_captain = !is_captain_job(player_assigned_role)
+			var/acting_captain = !is_prince_job(player_assigned_role)	//WOD13TODO: We likely don't need this
 			SSjob.promote_to_captain(new_player_living, acting_captain)
-			OnRoundstart(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(minor_announce), player_assigned_role.get_captaincy_announcement(new_player_living)))
+			OnRoundstart(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(minor_announce), player_assigned_role.get_prince_announcement(new_player_living)))
 		if((player_assigned_role.job_flags & JOB_ASSIGN_QUIRKS) && ishuman(new_player_living) && CONFIG_GET(flag/roundstart_traits))
 			if(new_player_mob.client?.prefs?.should_be_random_hardcore(player_assigned_role, new_player_living.mind))
 				new_player_mob.client.prefs.hardcore_random_setup(new_player_living)

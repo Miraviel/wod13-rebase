@@ -1,28 +1,3 @@
-/obj/structure/closet/secure_closet/captains
-	name = "captain's locker"
-	icon_state = "cap"
-	req_access = list(ACCESS_CAPTAIN)
-
-/obj/structure/closet/secure_closet/captains/PopulateContents()
-	..()
-
-	new /obj/item/storage/backpack/captain(src)
-	new /obj/item/storage/backpack/satchel/cap(src)
-	new /obj/item/storage/backpack/duffelbag/captain(src)
-	new /obj/item/storage/backpack/messenger/cap(src)
-	new /obj/item/clothing/neck/petcollar(src)
-	new /obj/item/pet_carrier(src)
-	new /obj/item/storage/bag/garment/captain(src)
-	new /obj/item/computer_disk/command/captain(src)
-	new /obj/item/radio/headset/heads/captain/alt(src)
-	new /obj/item/radio/headset/heads/captain(src)
-	new /obj/item/door_remote/captain(src)
-	new /obj/item/storage/photo_album/captain(src)
-
-/obj/structure/closet/secure_closet/captains/populate_contents_immediate()
-	new /obj/item/gun/energy/e_gun(src)
-	new /obj/item/storage/belt/sabre(src)
-
 /obj/structure/closet/secure_closet/hop
 	name = "head of personnel's locker"
 	icon_state = "hop"

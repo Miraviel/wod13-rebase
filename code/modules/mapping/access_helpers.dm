@@ -64,7 +64,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/any/command/captain/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_CAPTAIN
+	access_list += ACCESS_PRINCE
 	return access_list
 
 /obj/effect/mapping_helpers/airlock/access/any/command/maintenance/get_access()
@@ -550,7 +550,7 @@
 
 /obj/effect/mapping_helpers/airlock/access/all/command/captain/get_access()
 	var/list/access_list = ..()
-	access_list += ACCESS_CAPTAIN
+	access_list += ACCESS_PRINCE
 	return access_list
 
 // -------------------- Engineering access helpers

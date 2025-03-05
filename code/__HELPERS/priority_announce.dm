@@ -61,7 +61,7 @@
 			header = MAJOR_ANNOUNCEMENT_TITLE("Priority Announcement")
 			if(length(title) > 0)
 				header += SUBHEADER_ANNOUNCEMENT_TITLE(title)
-		if(ANNOUNCEMENT_TYPE_CAPTAIN)
+		if(ANNOUNCEMENT_TYPE_PRINCE)
 			header = MAJOR_ANNOUNCEMENT_TITLE("Captain's Announcement")
 			GLOB.news_network.submit_article(text, "Captain's Announcement", "Station Announcements", null)
 		if(ANNOUNCEMENT_TYPE_SYNDICATE)

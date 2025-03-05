@@ -135,7 +135,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 /obj/structure/noticeboard/captain
 	name = "Captain's Notice Board"
 	desc = "Important notices from the Captain."
-	req_access = list(ACCESS_CAPTAIN)
+	req_access = list(ACCESS_PRINCE)
 
 /obj/structure/noticeboard/hop
 	name = "Head of Personnel's Notice Board"
