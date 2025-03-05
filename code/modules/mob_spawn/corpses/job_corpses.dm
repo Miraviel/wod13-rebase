@@ -1,11 +1,6 @@
 
 //jobs from ss13 but DEAD.
 
-/obj/effect/mob_spawn/corpse/human/cook
-	name = JOB_COOK
-	outfit = /datum/outfit/job/cook
-	icon_state = "corpsecook"
-
 /obj/effect/mob_spawn/corpse/human/doctor
 	name = JOB_MEDICAL_DOCTOR
 	outfit = /datum/outfit/job/doctor

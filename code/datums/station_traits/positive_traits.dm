@@ -261,7 +261,6 @@
 		/datum/job/chaplain = /obj/item/organ/cyberimp/brain/anti_drop,
 		/datum/job/chief_engineer = /obj/item/organ/cyberimp/chest/thrusters,
 		/datum/job/chief_medical_officer = /obj/item/organ/cyberimp/chest/reviver,
-		/datum/job/cook = /obj/item/organ/cyberimp/chest/nutriment/plus,
 		/datum/job/coroner = /obj/item/organ/tongue/bone, //hes got a bone to pick with you
 		/datum/job/curator = /obj/item/organ/cyberimp/brain/connector,
 		/datum/job/detective = /obj/item/organ/lungs/cybernetic/tier3,

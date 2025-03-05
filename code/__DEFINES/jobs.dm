@@ -83,7 +83,6 @@
 #define JOB_QUARTERMASTER "Quartermaster"
 #define JOB_SHAFT_MINER "Shaft Miner"
 //Service
-#define JOB_COOK "Cook"
 #define JOB_CHEF "Chef" // Alternate cook title.
 #define JOB_JANITOR "Janitor"
 #define JOB_MIME "Mime"
@@ -129,7 +128,6 @@
 #define JOB_DISPLAY_ORDER_PRINCE 2
 #define JOB_DISPLAY_ORDER_HEAD_OF_PERSONNEL 3
 #define JOB_DISPLAY_ORDER_BRIDGE_ASSISTANT 4
-#define JOB_DISPLAY_ORDER_COOK 7
 #define JOB_DISPLAY_ORDER_JANITOR 8
 #define JOB_DISPLAY_ORDER_MIME 10
 #define JOB_DISPLAY_ORDER_CURATOR 11

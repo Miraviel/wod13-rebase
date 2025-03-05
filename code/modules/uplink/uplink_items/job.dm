@@ -40,14 +40,6 @@
 	restricted_roles = list(JOB_ROBOTICIST, JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_CORONER, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER)
 	surplus = 0
 
-/datum/uplink_item/role_restricted/combat_baking
-	name = "Combat Bakery Kit"
-	desc = "A kit of clandestine baked weapons. Contains a baguette which a skilled mime could use as a sword, \
-		a pair of throwing croissants, and the recipe to make more on demand. Once the job is done, eat the evidence."
-	item = /obj/item/storage/box/syndie_kit/combat_baking
-	cost = 7
-	restricted_roles = list(JOB_COOK, JOB_MIME)
-
 /datum/uplink_item/role_restricted/ez_clean_bundle
 	name = "EZ Clean Grenade Bundle"
 	desc = "A box with three cleaner grenades using the trademark Waffle Corp. formula. Serves as a cleaner and causes acid damage to anyone standing nearby. \
@@ -63,21 +55,6 @@
 	item = /obj/item/gun/syringe/dna
 	cost = 14
 	restricted_roles = list(JOB_GENETICIST, JOB_RESEARCH_DIRECTOR)
-
-/datum/uplink_item/role_restricted/meathook
-	name = "Butcher's Meat Hook"
-	desc = "A brutal cleaver on a long chain, it allows you to pull people to your location."
-	item = /obj/item/gun/magic/hook
-	cost = 11
-	restricted_roles = list(JOB_COOK)
-
-/datum/uplink_item/role_restricted/moltobeso
-	name = "Molt'Obeso Sauce Bottle"
-	desc = "A branded bottle of Molt'Obeso sauce. This sauce can stimulate hunger in people, leading them to eat more than they intended. \
-			It also enhances the absorption of calories from the food consumed."
-	item = /obj/item/storage/box/syndie_kit/moltobeso
-	cost = 2
-	restricted_roles = list(JOB_COOK)
 
 /datum/uplink_item/role_restricted/turretbox
 	name = "Disposable Sentry Gun"

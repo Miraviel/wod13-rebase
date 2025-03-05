@@ -377,36 +377,6 @@
 
 	to_chat(usr, "<b><i>In addition, by having your throw mode on when being attacked, you enter an active defense mode where you have a chance to block and sometimes even counter attacks done to you.</i></b>")
 
-///Subtype of CQC. Only used for the chef.
-/datum/martial_art/cqc/under_siege
-	name = "Close Quarters Cooking"
-	///List of all areas that CQC will work in, defaults to Kitchen.
-	var/list/kitchen_areas = list(/area/station/service/kitchen)
-
-/// Refreshes the valid areas from the cook's mapping config, adding areas in config to the list of possible areas.
-/datum/martial_art/cqc/under_siege/proc/refresh_valid_areas()
-	var/list/additional_cqc_areas = CHECK_MAP_JOB_CHANGE(JOB_COOK, "additional_cqc_areas")
-	if(!additional_cqc_areas)
-		return
-
-	if(!islist(additional_cqc_areas))
-		stack_trace("Incorrect CQC area format from mapping configs. Expected /list, got: \[[additional_cqc_areas.type]\]")
-		return
-
-	for(var/path_as_text in additional_cqc_areas)
-		var/path = text2path(path_as_text)
-		if(!ispath(path, /area))
-			stack_trace("Invalid path in mapping config for chef CQC: \[[path_as_text]\]")
-			continue
-
-		kitchen_areas |= path
-
-/// Limits where the chef's CQC can be used to only whitelisted areas.
-/datum/martial_art/cqc/under_siege/can_use(mob/living/martial_artist)
-	if(!is_type_in_list(get_area(martial_artist), kitchen_areas))
-		return FALSE
-	return ..()
-
 #undef SLAM_COMBO
 #undef KICK_COMBO
 #undef RESTRAIN_COMBO

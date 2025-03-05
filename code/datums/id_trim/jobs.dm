@@ -296,37 +296,6 @@
 	honorifics = list(", PhD.", ", MD.")
 	honorific_positions = HONORIFIC_POSITION_LAST_FULL | HONORIFIC_POSITION_NONE
 
-/datum/id_trim/job/cook
-	assignment = JOB_COOK
-	trim_state = "trim_cook"
-	department_color = COLOR_SERVICE_LIME
-	subdepartment_color = COLOR_SERVICE_LIME
-	sechud_icon_state = SECHUD_COOK
-	minimal_access = list(
-		ACCESS_KITCHEN,
-		ACCESS_MINERAL_STOREROOM,
-		ACCESS_MORGUE,
-		ACCESS_SERVICE,
-		)
-	extra_access = list(
-		ACCESS_BAR,
-		ACCESS_HYDROPONICS,
-		)
-	template_access = list(
-		ACCESS_PRINCE,
-		ACCESS_CHANGE_IDS,
-		ACCESS_HOP,
-		)
-	job = /datum/job/cook
-	honorifics = list("Cook")
-	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
-
-/datum/id_trim/job/cook/chef
-	assignment = JOB_CHEF
-	sechud_icon_state = SECHUD_CHEF
-	honorifics = list("Chef")
-	honorific_positions = HONORIFIC_POSITION_FIRST | HONORIFIC_POSITION_LAST | HONORIFIC_POSITION_FIRST_FULL | HONORIFIC_POSITION_NONE
-
 /datum/id_trim/job/coroner
 	assignment = JOB_CORONER
 	trim_state = "trim_coroner"

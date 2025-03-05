@@ -203,17 +203,6 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 /obj/item/gun/energy/recharge/kinetic_accelerator/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/gun/energy/recharge/kinetic_accelerator)
 
-/datum/objective_item/steal/traitor/chef_moustache
-	name = "a fancy fake moustache"
-	targetitem = /obj/item/clothing/mask/fakemoustache/italian
-	item_owner = list(JOB_COOK)
-	exists_on_map = TRUE
-	difficulty = 1
-	steal_hint = "The chef's fake Italian moustache, either found on their face or in the garbage, depending on who's on duty."
-
-/obj/item/clothing/mask/fakemoustache/italian/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/clothing/mask/fakemoustache/italian)
-
 /datum/objective_item/steal/traitor/det_revolver
 	name = "detective's revolver"
 	targetitem = /obj/item/gun/ballistic/revolver/c38/detective
