@@ -322,7 +322,6 @@ GLOBAL_LIST_EMPTY(announcement_systems)
 		return
 
 	announcement_lines_map["Message"] = pick(
-		replacetext(/datum/aas_config_entry/researched_node::announcement_lines_map["Message"], "%NODE", /datum/techweb_node/mech_clown::display_name),
 		"R/NT1M3 A= ANNOUN-*#nt_SY!?EM.dm, LI%£ 86: N=0DE NULL!",
 		"BEPIS BEPIS BEPIS",
 		"ERR)#R - B*@ TEXT F*O(ND!")
