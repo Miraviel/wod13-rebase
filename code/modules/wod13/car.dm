@@ -499,10 +499,10 @@ SUBSYSTEM_DEF(carpool)
 		for(var/datum/action/carr/C in owner.actions)
 			qdel(C)
 
-/mob/living/carbon/human/MouseDrop(atom/over_object)
+/obj/vampire_car/mouse_drop_receive(mob/living/M, mob/user, params)
 	. = ..()
-	if(istype(over_object, /obj/vampire_car) && get_dist(src, over_object) < 2)
-		var/obj/vampire_car/V = over_object
+	if (get_dist(M, src) < 2)
+		var/obj/vampire_car/V = src
 
 		if(V.locked)
 			to_chat(src, "<span class='warning'>[V] is locked.</span>")
@@ -512,11 +512,11 @@ SUBSYSTEM_DEF(carpool)
 			to_chat(src, "<span class='warning'>There's no space left for you in [V].")
 			return
 
-		visible_message("<span class='notice'>[src] begins entering [V]...</span>", \
-			"<span class='notice'>You begin entering [V]...</span>")
-		if(do_mob(src, over_object, 1 SECONDS))
+		visible_message("<span class='notice'>[M] begins entering [src]...</span>", \
+			"<span class='notice'>You begin entering [src]...</span>")
+		if(do_after(M, 1 SECONDS, src))
 			if(!V.driver)
-				forceMove(over_object)
+				M.forceMove(src)
 				V.driver = src
 				var/datum/action/carr/exit_car/E = new()
 				E.Grant(src)
@@ -531,7 +531,7 @@ SUBSYSTEM_DEF(carpool)
 				var/datum/action/carr/baggage/G = new()
 				G.Grant(src)
 			else if(length(V.passengers) < V.max_passengers)
-				forceMove(over_object)
+				M.forceMove(src)
 				V.passengers += src
 				var/datum/action/carr/exit_car/E = new()
 				E.Grant(src)
@@ -740,17 +740,6 @@ SUBSYSTEM_DEF(carpool)
 	var/total_y = abs(pixel_starts_y-pixel_ends_y)
 	return round(sqrt(total_x*total_x + total_y*total_y))
 
-/proc/get_angle_raw(start_x, start_y, start_pixel_x, start_pixel_y, end_x, end_y, end_pixel_x, end_pixel_y)
-	var/dy = (world.icon_size * end_y + end_pixel_y) - (world.icon_size * start_y + start_pixel_y)
-	var/dx = (world.icon_size * end_x + end_pixel_x) - (world.icon_size * start_x + start_pixel_x)
-	if(!dy)
-		return (dx >= 0) ? 90 : 270
-	. = arctan(dx/dy)
-	if(dy < 0)
-		. += 180
-	else if(dx < 0)
-		. += 360
-
 /proc/get_angle_diff(var/angle_a, var/angle_b)
 	return ((angle_b - angle_a) + 180) % 360 - 180;
 
@@ -768,18 +757,14 @@ SUBSYSTEM_DEF(carpool)
 	Fari.icon_state = "light"
 	Fari.pixel_x = -64
 	Fari.pixel_y = -64
-	Fari.layer = O_LIGHTING_VISUAL_LAYER
 	Fari.plane = O_LIGHTING_VISUAL_PLANE
 	Fari.appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
 	Fari.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-//	Fari.vis_flags = NONE
 	Fari.alpha = 110
 	gas = rand(100, 1000)
 	GLOB.car_list += src
 	last_pos["x"] = x
 	last_pos["y"] = y
-//	last_pos["x_pix"] = 32
-//	last_pos["y_pix"] = 32
 	switch(dir)
 		if(SOUTH)
 			movement_vector = 180
