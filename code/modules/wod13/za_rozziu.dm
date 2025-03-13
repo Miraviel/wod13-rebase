@@ -83,7 +83,7 @@ SUBSYSTEM_DEF(zombiepool)
 	if(istype(I, /obj/item/melee/vampirearms/tire))
 		if(!repairing)
 			repairing = TRUE
-			if(do_mob(user, src, 5 SECONDS))
+			if(do_after(user, 5 SECONDS, src))
 				punches_to_break = min(punches_to_break+5, initial(punches_to_break))
 				if(punches_to_break)
 					density = TRUE

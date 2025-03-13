@@ -116,7 +116,7 @@
 		return
 
 
-	if(!do_mob(user, bouncer, max(5 SECONDS, social_bypass_time - (user.get_total_social() * 2 SECONDS))))
+	if(!do_after(user, max(5 SECONDS, social_bypass_time - (user.get_total_social() * 2 SECONDS)), bouncer))
 		return
 
 

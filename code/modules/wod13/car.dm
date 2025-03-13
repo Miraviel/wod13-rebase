@@ -173,7 +173,7 @@ SUBSYSTEM_DEF(carpool)
 
 		user.visible_message("<span class='warning'>[user] begins pulling someone out of [src]!</span>", \
 			"<span class='warning'>You begin pulling [L] out of [src]...</span>")
-		if(do_mob(user, src, 5 SECONDS))
+		if(do_after(user, 5 SECONDS, src))
 			var/datum/action/carr/exit_car/C = locate() in L.actions
 			user.visible_message("<span class='warning'>[user] has managed to get [L] out of [src].</span>", \
 				"<span class='warning'>You've managed to get [L] out of [src].</span>")
@@ -199,7 +199,7 @@ SUBSYSTEM_DEF(carpool)
 		if(istype(I, /obj/item/vamp/keys/hack))
 			if(!repairing)
 				repairing = TRUE
-				if(do_mob(user, src, 20 SECONDS))
+				if(do_after(user, 20 SECONDS, src))
 					var/roll = rand(1, 20) + (user.get_total_lockpicking()+user.get_total_dexterity()) - 8
 					//(<= 1, break lockpick) (2-9, trigger car alarm), (>= 10, unlock car)
 					if (roll <= 1)
@@ -251,7 +251,7 @@ SUBSYSTEM_DEF(carpool)
 
 			user.visible_message("<span class='notice'>[user] begins repairing [src]...</span>", \
 				"<span class='notice'>You begin repairing [src]. Stop at any time to only partially repair it.</span>")
-			if(do_mob(user, src, time_to_repair SECONDS))
+			if(do_after(user, time_to_repair SECONDS, src))
 				health = maxhealth
 				playsound(src, 'code/modules/wod13/sounds/repair.ogg', 50, TRUE)
 				user.visible_message("<span class='notice'>[user] repairs [src].</span>", \

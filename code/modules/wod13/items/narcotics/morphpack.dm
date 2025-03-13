@@ -27,7 +27,7 @@
 	if(empty)
 		return
 	feeding = TRUE
-	if(do_mob(user, src, 3 SECONDS))
+	if(do_after(user, 3 SECONDS, src))
 		var/obj/item/reagent_containers/drug/morphpack/H = new(src) //setting up the drugged bag in question (and its contents) as a variable to be called later
 		feeding = FALSE
 		empty = TRUE

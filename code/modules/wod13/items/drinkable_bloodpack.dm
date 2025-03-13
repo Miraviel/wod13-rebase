@@ -25,7 +25,7 @@
 	if(empty)
 		return
 	feeding = TRUE
-	if(do_mob(user, src, 3 SECONDS))
+	if(do_after(user, 3 SECONDS, src))
 		feeding = FALSE
 		empty = TRUE
 		icon_state = "blood0"

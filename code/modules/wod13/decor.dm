@@ -1540,7 +1540,7 @@
 		if(!burying)
 			burying = TRUE
 			user.visible_message("<span class='warning'>[user] starts to dig [src]</span>", "<span class='warning'>You start to dig [src].</span>")
-			if(do_mob(user, src, 10 SECONDS))
+			if(do_after(user, 10 SECONDS, src))
 				burying = FALSE
 				if(icon_state == "pit0")
 					var/dead_amongst = FALSE
@@ -1568,7 +1568,7 @@
 /obj/structure/bury_pit/container_resist_act(mob/living/user)
 	if(!burying)
 		burying = TRUE
-		if(do_mob(user, src, 30 SECONDS))
+		if(do_after(user, 30 SECONDS, src))
 			for(var/mob/living/L in src)
 				L.forceMove(get_turf(src))
 			icon_state = "pit0"

@@ -67,7 +67,7 @@
 			catching = TRUE
 			user.isfishing = TRUE
 			playsound(loc, 'code/modules/wod13/sounds/catching.ogg', 50, FALSE)
-			if(do_mob(user, src, 15 SECONDS))
+			if(do_after(user, 15 SECONDS, src))
 				catching = FALSE
 				user.isfishing = FALSE
 				var/diceroll = rand(1, 20)

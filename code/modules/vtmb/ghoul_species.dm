@@ -173,7 +173,7 @@
 				if(VIT.bloodpool)
 					if(VIT.getBruteLoss() > 30)
 						taking = TRUE
-						if(do_mob(owner, VIT, 10 SECONDS))
+						if(do_after(owner, 10 SECONDS, VIT))
 							taking = FALSE
 							H.drunked_of |= "[VIT.dna.real_name]"
 							H.adjustBruteLoss(-25, TRUE)

@@ -130,7 +130,7 @@
 				if(C.auspice.name == "Theurge")
 					if(!opening)
 						opening = TRUE
-						if(do_mob(user, src, 10 SECONDS))
+						if(do_after(user, 10 SECONDS, src))
 							playsound(loc, 'code/modules/wod13/sounds/portal.ogg', 75, FALSE)
 							var/obj/umbra_portal/U = new (get_step(src, SOUTH))
 							U.id = "[tribe][rand(1, 999)]"

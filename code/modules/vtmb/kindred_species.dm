@@ -367,7 +367,7 @@
 				return
 			giving = TRUE
 			owner.visible_message("<span class='warning'>[owner] tries to feed [BLOODBONDED] with their own blood!</span>", "<span class='notice'>You started to feed [BLOODBONDED] with your own blood.</span>")
-			if(do_mob(owner, BLOODBONDED, 10 SECONDS))
+			if(do_after(owner, 10 SECONDS, BLOODBONDED))
 				H.bloodpool = max(0, H.bloodpool-2)
 				giving = FALSE
 

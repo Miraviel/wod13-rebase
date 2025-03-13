@@ -143,7 +143,7 @@
 
 /datum/discipline_power/valeren/unburden_the_bestial_soul/pre_activation_checks(mob/living/carbon/human/target)
 	to_chat(owner, span_warning("You begin cleansing [target]'s soul..."))
-	if (do_mob(owner, target, 10 SECONDS))
+	if (do_after(owner, 10 SECONDS, target))
 		return TRUE
 
 /datum/discipline_power/valeren/unburden_the_bestial_soul/activate(mob/living/carbon/human/target)
