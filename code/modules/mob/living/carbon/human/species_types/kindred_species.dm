@@ -30,7 +30,7 @@
 	punchdamagelow = 10
 	punchdamagehigh = 20
 	dust_anim = "dust-h"
-	var/datum/vampireclane/clane
+	var/datum/vampireclan/clane
 	var/list/datum/discipline/disciplines = list()
 	selectable = TRUE
 	COOLDOWN_DECLARE(torpor_timer)
@@ -426,14 +426,14 @@
 							if (H.clane.whitelisted)
 								if (!SSwhitelists.is_whitelisted(BLOODBONDED.ckey, H.clane.name))
 									if(H.clane.name == "True Brujah")
-										BLOODBONDED.clane = new /datum/vampireclane/brujah()
+										BLOODBONDED.clane = new /datum/vampireclan/brujah()
 										to_chat(BLOODBONDED,"<span class='warning'> You don't got that whitelist! Changing to the non WL Brujah</span>")
 									else if(H.clane.name == "Tzimisce")
-										BLOODBONDED.clane = new /datum/vampireclane/old_clan_tzimisce()
+										BLOODBONDED.clane = new /datum/vampireclan/old_clan_tzimisce()
 										to_chat(BLOODBONDED,"<span class='warning'> You don't got that whitelist! Changing to the non WL Old Tzmisce</span>")
 									else
 										to_chat(BLOODBONDED,"<span class='warning'> You don't got that whitelist! Changing to a random non WL clan.</span>")
-										var/list/non_whitelisted_clans = list(/datum/vampireclane/brujah,/datum/vampireclane/malkavian,/datum/vampireclane/nosferatu,/datum/vampireclane/gangrel,/datum/vampireclane/giovanni,/datum/vampireclane/ministry,/datum/vampireclane/salubri,/datum/vampireclane/toreador,/datum/vampireclane/tremere,/datum/vampireclane/ventrue)
+										var/list/non_whitelisted_clans = list(/datum/vampireclan/brujah,/datum/vampireclan/malkavian,/datum/vampireclan/nosferatu,/datum/vampireclan/gangrel,/datum/vampireclan/giovanni,/datum/vampireclan/ministry,/datum/vampireclan/salubri,/datum/vampireclan/toreador,/datum/vampireclan/tremere,/datum/vampireclan/ventrue)
 										var/random_clan = pick(non_whitelisted_clans)
 										BLOODBONDED.clane = new random_clan
 								else
@@ -459,7 +459,7 @@
 						else
 							BLOODBONDED.maxbloodpool = 10+((13-min(13, BLOODBONDED.generation))*3)
 							BLOODBONDED.generation = 14
-							BLOODBONDED.clane = new /datum/vampireclane/caitiff()
+							BLOODBONDED.clane = new /datum/vampireclan/caitiff()
 
 						//Verify if they accepted to save being a vampire
 						if (iskindred(BLOODBONDED) && save_data_v)
@@ -494,7 +494,7 @@
 
 							else
 								BLOODBONDED_prefs_v.generation = 13 // Game always set to 13 anyways, 14 is not possible.
-								BLOODBONDED_prefs_v.clane = new /datum/vampireclane/caitiff()
+								BLOODBONDED_prefs_v.clane = new /datum/vampireclan/caitiff()
 								BLOODBONDED_prefs_v.save_character()
 
 					else
@@ -816,12 +816,12 @@
 			student_prefs.discipline_levels += 0
 
 			if (alienation)
-				var/datum/vampireclane/main_clan
+				var/datum/vampireclan/main_clan
 				switch(student.clane.type)
-					if (/datum/vampireclane/true_brujah)
-						main_clan = new /datum/vampireclane/brujah
-					if (/datum/vampireclane/old_clan_tzimisce)
-						main_clan = new /datum/vampireclane/tzimisce
+					if (/datum/vampireclan/true_brujah)
+						main_clan = new /datum/vampireclan/brujah
+					if (/datum/vampireclan/old_clan_tzimisce)
+						main_clan = new /datum/vampireclan/tzimisce
 
 				student_prefs.clane = main_clan
 				student.clane = main_clan
@@ -876,8 +876,8 @@
 		return TRUE
 
 	//next, go through all Clans to check if they have access to any with the Discipline
-	for (var/clan_type in subtypesof(/datum/vampireclane))
-		var/datum/vampireclane/clan_checking = new clan_type
+	for (var/clan_type in subtypesof(/datum/vampireclan))
+		var/datum/vampireclan/clan_checking = new clan_type
 
 		//skip this if they can't access it due to whitelists
 		if (clan_checking.whitelisted)

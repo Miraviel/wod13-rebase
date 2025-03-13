@@ -397,7 +397,7 @@
 							A.Remove(H)
 				H.revive(TRUE)
 				H.set_species(/datum/species/kindred)
-				H.clane = new /datum/vampireclane/gargoyle()
+				H.clane = new /datum/vampireclan/gargoyle()
 				H.clane.on_gain(H)
 				H.clane.post_gain(H)
 				H.forceMove(get_turf(src))
